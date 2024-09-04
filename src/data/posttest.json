@@ -1,0 +1,334 @@
+{
+    "questions": [
+        {
+            "question": "1. The key step succeeding the collection of the input dataset and preceding the creation of the prediction refers to which of the following?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "Utilizing a learning algorithm"
+                },
+                {
+                    "id": "b",
+                    "text": "Fitting the dataset to the prompt"
+                },
+                {
+                    "id": "c",
+                    "text": "Finding the suitable program"
+                },
+                {
+                    "id": "d",
+                    "text": "Revising the dataset"
+                }
+            ],
+            "correct": "a"
+        },
+        {
+            "question": "2. If the algorithm of an artificial intelligence was only instructed to bake a red velvet cake, and yet included in the sequence of steps it performed was to clean the area where preparation of ingredients occurred, what can be said about the algorithm in general?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "The algorithm in itself is intelligent enough to not necessitate much of an instruction to perform with extra steps"
+                },
+                {
+                    "id": "b",
+                    "text": "The algorithm is opinionated in a way that it follows instructions but may modify them based on what they were taught, trained, or tested to"
+                },
+                {
+                    "id": "c",
+                    "text": "Further development is necessary for the algorithm to perform accordingly to the provided instructions"
+                },
+                {
+                    "id": "d",
+                    "text": "The algorithm has common sense much like humans do"
+                }
+            ],
+            "correct": "b"
+        },
+        {
+            "question": "3. Which of the following characteristics here may be the node that can complete the representing decision tree structure of the example electronics?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "Interconnectivity"
+                },
+                {
+                    "id": "b",
+                    "text": "Mobility"
+                },
+                {
+                    "id": "c",
+                    "text": "Rechargeability"
+                },
+                {
+                    "id": "d",
+                    "text": "Adjustability"
+                }
+            ],
+            "correct": "b"
+        },
+        {
+            "question": "4. How is the establishment of an ethical matrix generally relevant to the development of algorithms?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "The ethical matrix commercially helps algorithm developers and marketers to reach their target users"
+                },
+                {
+                    "id": "b",
+                    "text": "Taking into account what can be valued from an algorithm and who will benefit from such values are a consideration of algorithms being created to pursue different goals"
+                },
+                {
+                    "id": "c",
+                    "text": "An algorithm is created as is and the establishment of its ethical matrix is for those who plan to advertise it"
+                },
+                {
+                    "id": "d",
+                    "text": "The ethical matrix implicates limitations of an algorithm in terms of its performance value and marketability"
+                }
+            ],
+            "correct": "b"
+        },
+        {
+            "question": "5. Imagine a student-researcher aiming to advertise the product of their research project, a simple application for early education curricula, which among these then is a group of stakeholders to which the product can be advertised to so as for the ethical matrix of it is thought of?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "Grade schoolers, non-teaching staff, co-researchers"
+                },
+                {
+                    "id": "b",
+                    "text": "Grade schoolers, faculty, and parents or guardians"
+                },
+                {
+                    "id": "c",
+                    "text": "Adolescents, faculty, and the general public"
+                },
+                {
+                    "id": "d",
+                    "text": "Grade schoolers, faculty, and the general public"
+                }
+            ],
+            "correct": "b"
+        },
+        {
+            "question": "6. Though fairness has not been conclusively established in the community of artificial intelligence, what is the importance of realizing it on today’s technologies?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "To transmit information only exclusive to paying users"
+                },
+                {
+                    "id": "b",
+                    "text": "To create just, non-discriminatory machines that recognizes all groups"
+                },
+                {
+                    "id": "c",
+                    "text": "To selectively disseminate information that benefits every user on the surface"
+                },
+                {
+                    "id": "d",
+                    "text": "To create human-like machineries that can act like any group"
+                }
+            ],
+            "correct": "b"
+        },
+        {
+            "question": "7. Electronic mail filtering, advanced and filtered searching, and credit scoring are examples of what type of technology?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "Generative technology"
+                },
+                {
+                    "id": "b",
+                    "text": "Predictive technology"
+                },
+                {
+                    "id": "c",
+                    "text": "High technology"
+                },
+                {
+                    "id": "d",
+                    "text": "Classifying technology"
+                }
+            ],
+            "correct": "d"
+        },
+        {
+            "question": "8. How is the training dataset of an intelligence differentiated from the test dataset?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "The training dataset is evaluated of accuracy by the test dataset"
+                },
+                {
+                    "id": "b",
+                    "text": "The training dataset is, in actuality, semantically interchangeable with test dataset"
+                },
+                {
+                    "id": "c",
+                    "text": "The training dataset is the subset of data that serves as the initial database for the algorithm to create its first predictions"
+                },
+                {
+                    "id": "d",
+                    "text": "The training dataset is the subset of data that acts as the latter data for the algorithm to be a trained accurate predictor"
+                }
+            ],
+            "correct": "c"
+        },
+        {
+            "question": "9. In analyzing the flow of a neural network, what may be inferred about its relation with supervised machine learning?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "Neural networks and supervised machine learning are independent artificial intelligence types"
+                },
+                {
+                    "id": "b",
+                    "text": "Neural networks fit under the category of supervised machine learning due to the usage of labeled data for their creation"
+                },
+                {
+                    "id": "c",
+                    "text": "Supervised machine learning fit under the category of neural networks due to the tripartite process of creating predictions"
+                },
+                {
+                    "id": "d",
+                    "text": "Neural networks and supervised machine learning form two parts of a whole artificial intelligence"
+                }
+            ],
+            "correct": "b"
+        },
+        {
+            "question": "10. What main characteristic defines the difference of neural networks from decision trees?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "Number of branches leading to and from a node"
+                },
+                {
+                    "id": "b",
+                    "text": "The labeling of data"
+                },
+                {
+                    "id": "c",
+                    "text": "The measurement of data"
+                },
+                {
+                    "id": "d",
+                    "text": "Number of nodes leading to and from a branch"
+                }
+            ],
+            "correct": "a"
+        },
+        {
+            "question": "11. How does the adversary aspect of the Generative Adversarial Network (GAN) function?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "Oppose the feedback given by the users on the generality and replicability of the output"
+                },
+                {
+                    "id": "b",
+                    "text": "Oppose the generated output which was detected of apparent flaws or differences from the existing object the generated output based from"
+                },
+                {
+                    "id": "c",
+                    "text": "Compete with other machines having the same generative ability"
+                },
+                {
+                    "id": "d",
+                    "text": "Compete the importance and usage of the generated output and its based existing object"
+                }
+            ],
+            "correct": "b"
+        },
+        {
+            "question": "12. What may be the unanticipated consequence of an intelligent recommender system of online video sharing platforms to the general users?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "Personalization of the video-viewing experience"
+                },
+                {
+                    "id": "b",
+                    "text": "Opening of opportunities for video marketers"
+                },
+                {
+                    "id": "c",
+                    "text": "Increase of unfiltered views and streams on random videos"
+                },
+                {
+                    "id": "d",
+                    "text": "Suggestion of conspiratorial, extreme, or non-factual content to users"
+                }
+            ],
+            "correct": "d"
+        },
+        {
+            "question": "13. Generation of artificially made art from intelligent applications may precede the following three human steps, the last being inputting the drawing. How is the input drawing any significant for the steps that can be done by the generative applications?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "The input drawing provides the topping layer of the already created final artwork of the generative model"
+                },
+                {
+                    "id": "b",
+                    "text": "The input drawing writes out the specific details that the generative model must follow to create the final artwork"
+                },
+                {
+                    "id": "c",
+                    "text": "The input drawing serves as the outline for the generative model to base onto the final artwork"
+                },
+                {
+                    "id": "d",
+                    "text": "The input drawing is added of elements to which the generative model stores"
+                }
+            ],
+            "correct": "c"
+        },
+        {
+            "question": "14. Which of these points are referred to in the given pictures to pay attention to the determination of being Deepfakes?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "Side profile irregularities"
+                },
+                {
+                    "id": "b",
+                    "text": "Unusual emotions"
+                },
+                {
+                    "id": "c",
+                    "text": "Unintelligible background"
+                },
+                {
+                    "id": "d",
+                    "text": "Inconsistencies in video motion and audio"
+                }
+            ],
+            "correct": "d"
+        },
+        {
+            "question": "15. What is considered one limitation of the use of artificial intelligence in creating and handling big data?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "It still relies heavily on accurate, high-quality input data"
+                },
+                {
+                    "id": "b",
+                    "text": "It minimizes the risk of data breaches"
+                },
+                {
+                    "id": "c",
+                    "text": "It guarantees the correctness of predictions"
+                },
+                {
+                    "id": "d",
+                    "text": "It is cost-effective regardless of the data size"
+                }
+            ],
+            "correct": "a"
+        }
+    ]
+}

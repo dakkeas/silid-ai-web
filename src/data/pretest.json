@@ -1,0 +1,349 @@
+{
+    "questions": [
+        {
+            "question": "1. Which of the following is typically used as an analogy to explain the concepts of supervised machine learning?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "Teaching a toddler the name of colors by showing them the color and repeating its name over and over again."
+                },
+                {
+                    "id": "b",
+                    "text": "A teacher walking around the classroom during examinations to supervise the students and catch any cheating attempts."
+                },
+                {
+                    "id": "c",
+                    "text": "Parents giving a sermon to their children about what career path to aim for, what courses to take, and who to be friends with."
+                },
+                {
+                    "id": "d",
+                    "text": "The government keeps a copy of every citizen's data to use for statistical and research."
+                }
+            ],
+            "correct": "a",
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "2. Which of the following can be considered as stakeholders of a Generative AI technology?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "The internet provider of the user of the Generative AI technology."
+                },
+                {
+                    "id": "b",
+                    "text": "Creators whose content are being used to generate new media."
+                },
+                {
+                    "id": "c",
+                    "text": "Social media users who post content for personal use."
+                },
+                {
+                    "id": "d",
+                    "text": "All of the above"
+                }
+            ],
+            "correct": "d",
+            "difficulty": "easy"
+        },
+        {
+            "question": "3. Which of the following parts of a Neural Network are weighted to allow computer calculations?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "Nodes"
+                },
+                {
+                    "id": "b",
+                    "text": "Branches"
+                },
+                {
+                    "id": "c",
+                    "text": "Hidden layer"
+                },
+                {
+                    "id": "d",
+                    "text": "Input layer"
+                }
+            ],
+            "correct": "a",
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "4. Which of the following can be considered as a trace of bias in AI technology?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "A search engine only showing search results from sources near your location."
+                },
+                {
+                    "id": "b",
+                    "text": "Not being able to unlock your phone using an unregistered biometrics."
+                },
+                {
+                    "id": "c",
+                    "text": "Websites that reject photos of applicants with the memo saying, 'Subject's eyes closed.'"
+                },
+                {
+                    "id": "d",
+                    "text": "A camera not being able to detect a face in the dark."
+                }
+            ],
+            "correct": "c",
+            "difficulty": "easy"
+        },
+        {
+            "question": "5. Despite being a relatively novel technology, the use of AI across all fields of work has begun and is continually evolving. Which of the following unprecedented scenarios are most likely to happen if we do not use AI technology wisely?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "AI technology can take over human beings and we will all lose our jobs."
+                },
+                {
+                    "id": "b",
+                    "text": "Users with malice intent may use the technology to harm others."
+                },
+                {
+                    "id": "c",
+                    "text": "A global power outage may occur due to the large amount of resources needed to power AI."
+                },
+                {
+                    "id": "d",
+                    "text": "Our devices will end up obsolete and we will all have to catch up with AI technologies."
+                }
+            ],
+            "correct": "b",
+            "difficulty": "difficult"
+        },
+        {
+            "question": "6. Typically consists of a binary question answerable by 'yes' or 'no,' this model is one of the vital components of algorithm making.",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "Generative text"
+                },
+                {
+                    "id": "b",
+                    "text": "Decision tree"
+                },
+                {
+                    "id": "c",
+                    "text": "Numeral network"
+                },
+                {
+                    "id": "d",
+                    "text": "Yes or no tree"
+                }
+            ],
+            "correct": "b",
+            "difficulty": "easy"
+        },
+        {
+            "question": "7. What preventive measures can we take in order for us to be more cautious of what we see online especially in an era where deep fakes have surfaced?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "Delete social media."
+                },
+                {
+                    "id": "b",
+                    "text": "Report every photo online that you feel is fake and generated."
+                },
+                {
+                    "id": "c",
+                    "text": "Advocate against Generative AI and take action to be able to boycott it."
+                },
+                {
+                    "id": "d",
+                    "text": "Educate people about AI and the different techniques on how to spot deep fakes."
+                }
+            ],
+            "correct": "d",
+            "difficulty": "difficult"
+        },
+        {
+            "question": "8. Texts, images, videos, and audio recordings used to test algorithms that have been successfully trained are called _____",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "Datasets"
+                },
+                {
+                    "id": "b",
+                    "text": "Test data"
+                },
+                {
+                    "id": "c",
+                    "text": "Content"
+                },
+                {
+                    "id": "d",
+                    "text": "Prediction"
+                }
+            ],
+            "correct": "b",
+            "difficulty": "easy"
+        },
+        {
+            "question": "9. These machine learning frameworks consist of two main components, namely the 'generator' and the 'discriminator.'",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "Machine Learning Algorithms"
+                },
+                {
+                    "id": "b",
+                    "text": "Teachable Machines"
+                },
+                {
+                    "id": "c",
+                    "text": "General Adversarial Networks"
+                },
+                {
+                    "id": "d",
+                    "text": "Generative AI Frameworks"
+                }
+            ],
+            "correct": "c",
+            "difficulty": "difficult"
+        },
+        {
+            "question": "10. The following are examples of features of images and videos that will help you determine whether or not it is AI generated, EXCEPT:",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "Blurry eyelids"
+                },
+                {
+                    "id": "b",
+                    "text": "Side profile irregularities"
+                },
+                {
+                    "id": "c",
+                    "text": "Unintelligible backgrounds"
+                },
+                {
+                    "id": "d",
+                    "text": "None of the above"
+                }
+            ],
+            "correct": "d",
+            "difficulty": "difficult"
+        },
+        {
+            "question": "11. Algorithms are used by most of the technology that we use today. Which of the following features can be considered to have the same functions of algorithm?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "Spotify Wrapped, Facebook memories, Snapchat throwbacks."
+                },
+                {
+                    "id": "b",
+                    "text": "YouTube recommendations, Facebook's 'people you may know,' TikTok for you page."
+                },
+                {
+                    "id": "c",
+                    "text": "TikTok's profile views, Snapchat's screenshot alerts, YouTube's"
+                },
+                {
+                    "id": "d",
+                    "text": "All of the above"
+                }
+            ],
+            "correct": "d",
+            "difficulty": "difficult"
+        },
+        {
+            "question": "12. The following sets of data can be used to classify the difference between the two, EXCEPT:",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "Photos of dogs, photos of carabaos, photos of humans"
+                },
+                {
+                    "id": "b",
+                    "text": "Clips of bicycle races, clips of race car races, clips of people running"
+                },
+                {
+                    "id": "c",
+                    "text": "Photos of books, photos of tablets, voice recordings of a child's voice"
+                },
+                {
+                    "id": "d",
+                    "text": "Audio recordings of the Ab note, audio recordings of a child crying, audio recordings of rain"
+                }
+            ],
+            "correct": "c",
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "13. A neural network imitates what natural structure?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "The human brain"
+                },
+                {
+                    "id": "b",
+                    "text": "The Fibonacci sequence"
+                },
+                {
+                    "id": "c",
+                    "text": "Heart beat intervals"
+                },
+                {
+                    "id": "d",
+                    "text": "Albert Einstein's energy quantization theory"
+                }
+            ],
+            "correct": "a",
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "14. A Neural Network and a Decision Tree are identical and can be used for the same operations.",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "True"
+                },
+                {
+                    "id": "b",
+                    "text": "False"
+                },
+                {
+                    "id": "c",
+                    "text": "Partly true"
+                },
+                {
+                    "id": "d",
+                    "text": "Partly false"
+                }
+            ],
+            "correct": "b",
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "15. There are different types of algorithms that serve different purposes. In terms of social media feed algorithms, which of the following sets of user data are taken into account?",
+            "choices": [
+                {
+                    "id": "a",
+                    "text": "Age, location, gender"
+                },
+                {
+                    "id": "b",
+                    "text": "Liked content, screen time, following lists"
+                },
+                {
+                    "id": "c",
+                    "text": "Search engine results, filtered content, hashtags used"
+                },
+                {
+                    "id": "d",
+                    "text": "All of the above"
+                }
+            ],
+            "correct": "d",
+            "difficulty": "easy"
+        }
+    ]
+}
