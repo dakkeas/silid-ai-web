@@ -1,9 +1,27 @@
 import React from 'react'
 
-export const featureCard = () => {
+export const FeatureCard = ({ title, content, logoRef }) => {
     return (
         <>
-            <div>featureCard</div>
+            <div
+            // flex direction row
+            >
+
+                {/* <Logo></Logo> */}
+                <div
+                // text wrapper
+                >
+                    <p
+                    // title
+                    ></p>
+                    <p
+                    // content
+                    ></p>
+
+                </div>
+
+
+            </div>
         </>
     )
 }

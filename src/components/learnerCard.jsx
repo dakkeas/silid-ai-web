@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export const learnerCard = () => {
+const LearnerCard = () => {
     return (
         <>
             <div
@@ -20,3 +20,5 @@ export const learnerCard = () => {
         </>
     )
 }
+
+export default LearnerCard

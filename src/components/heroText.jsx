@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const heroText = () => {
+const HeroText = () => {
     return (
         <>
             <div>
@@ -18,3 +18,5 @@ export const heroText = () => {
 
     )
 }
+
+export default HeroText
