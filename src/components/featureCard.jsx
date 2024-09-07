@@ -1,45 +1,40 @@
-import React from 'react'
+import { useEffect, React, useState } from 'react'
 
 // import styles
 
+import '../css/global.css'
+import styles from '../css/FeatureCard.module.css'
 
-import globalStyle from '../css/App.module.css'
-import componentStyle from '../css/FeatureCard.module.css'
-import classNames from 'classnames'
+const FeatureCard = ({ feature }) => {
 
-const FeatureCard = ({ title, description }) => {
+    const { title, description, imgSrc } = feature;
+    const [textColor, setTextColor] = useState('');
 
+    useEffect(() => {
+        // load root style
+        // load color
+        const rootStyles = getComputedStyle(document.documentElement);
+        const primaryColor = rootStyles.getPropertyValue('--orange-theme').trim();
 
-    const card = classNames(
-        componentStyle['card'],
-        globalStyle['flex-row'],
-        globalStyle['padding-xy-med'],
-        globalStyle['flex-center-xy']
-    )
-
-    const imageWrapper = classNames(
-        globalStyle['flex-center-xy']
-    )
-
-
-    const textWrapper = classNames(
-        globalStyle['flex-column'],
-        globalStyle['flex-center-xy']
-    )
-
+        setTextColor(primaryColor);
+        // load on every type change
+    }, []);
 
 
     return (
         <>
-            <div className={card}>
-                <div className={imageWrapper}>
+            <div className={styles.card}>
+                <div className={styles.contentWrapper}>
+
+                    <div className={styles.logoWrapper}>
+                        <img src={imgSrc} alt={title} />
+                    </div>
+                    <div className={styles.textWrapper}>
+                        <p className={styles.title} style={{ color: textColor }}>{title}</p>
+                        <p className={styles.description}>{description}</p>
+                    </div>
 
                 </div>
-                <div className={textWrapper}>
-                    <p>{title}</p>
-                    <p>{description}</p>
-                </div>
-
             </div>
         </>
     )

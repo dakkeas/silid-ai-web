@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-
 import classNames from 'classnames'
+
 
 // import css
 import featureCardStyle from './css/FeatureCard.module.css'
 import globalStyle from "./css/App.module.css"
+import './css/global.css'
 
 // import components
 import NavBar from "./components/NavBar"
@@ -17,6 +18,15 @@ import CustomButton from './components/CustomButton'
 import InformationBlock from './components/InformationBlock'
 import About from './components/About'
 import Footer from './components/Footer'
+
+// import images
+
+import alarmClock from './assets/svg/alarm-clock.svg'
+import rocketLaunch from './assets/svg/rocket-launch.svg'
+import user from './assets/svg/user.svg'
+
+
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -49,19 +59,19 @@ function App() {
     {
       title: "Personalized Learning",
       description: "Experience tailor-made educational content that adapts to your individual learning style, pace, and preferences, maximizing comprehension and retention.",
-      imgSrc: "img/rocket-lunch.svg",
+      imgSrc: user,
       imgAlt: "engaging"
     },
     {
       title: "Engaging Experiences",
       description: "Immerse yourself in dynamic virtual environments that bring learning to life, fostering deeper understanding and engagement compared to traditional methods.",
-      imgSrc: "img/rocket-lunch.svg",
+      imgSrc: rocketLaunch,
       imgAlt: "engaging"
     },
     {
       title: "Flexible Accessibility",
       description: "Access learning opportunities anytime, anywhere, breaking down geographical barriers and allowing learners to engage in immersive experiences at their convenience.",
-      imgSrc: "img/alarm-clock.svg",
+      imgSrc: alarmClock,
       imgAlt: "engaging"
     }
   ];
@@ -113,6 +123,7 @@ function App() {
   )
 
   const learnerCardContainer = classNames(
+
     globalStyle['flex-row'],
     globalStyle['learners-section']
 
@@ -132,10 +143,10 @@ function App() {
           <HeroText></HeroText>
           <div className={featureCardContainer}>
             {
-              featureCardData.map((card, index) => (
+              featureCardData.map((feature, index) => (
                 <FeatureCard
-                  title={card.title}
-                  description={card.description}
+                  feature={feature}
+
                 ></FeatureCard>
               ))
             }

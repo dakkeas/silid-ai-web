@@ -1,4 +1,33 @@
-.header-wrapper {
-    justify-content: center;
+.headerWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.navigationWrapper {
+    display: flex;
     align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.listWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+.logoText {
+    color: white;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+
+a {
+    font-weight: 500;
+    color: white;
+    font-size: 18px;
 }

@@ -1,5 +1,10 @@
 import React from 'react'
+
+// import syles
 import styles from '../css/InformationBlock.module.css';
+import '../css/global.css'
+
+
 import exampleImage from "./../assets/vr-kids.jpg";
 
 const InformationBlock = ({ title, description, imageSrc }) => {

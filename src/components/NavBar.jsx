@@ -1,64 +1,40 @@
+
 import { React, useState } from 'react'
 
+// import styles 
+import styles from '../css/NavBar.module.css'
+import '../css/global.css'
+// import components
 import CustomButton from './CustomButton'
 
-import componentStyle from "../css/NavBar.module.css"
-import globalStyle from "../css/App.module.css"
-import classNames from 'classnames'
 
 
 const NavBar = () => {
-    const headerWrapper = classNames(
-        globalStyle['flex-center-xy'],
-        globalStyle['flex-column'],
-    )
-    const headerContent = classNames(
-
-        globalStyle['width-100'],
-        globalStyle['flex-row'],
-        globalStyle['space-between'],
-        // globalStyle['padding-x-med']
-    )
-
-    const navigationWrapper = classNames(
-        globalStyle['flex-row'],
-    )
-
-
-
-
-    // const header = 
-
-
     return (
         <>
-            <header className={headerWrapper}>
+            <header className={styles.headerWrapper}>
 
-                <div className={headerContent}>
-
-                    <div className="">
-                        <p>Silid AI</p>
-                    </div>
-
-
-
-                    <div className={navigationWrapper}>
-                        <nav>
-                            <ul className={`${globalStyle['flex-row']} ${globalStyle['column-gap-10']}`}>
-                                <li>
-                                    <p>Learn More</p>
-                                </li>
-                                <li>
-                                    <p>Contact</p>
-                                </li>
-                                <li></li>
-                            </ul>
-                        </nav>
-                        <CustomButton
-                            textContent={'Login'}
-                        ></CustomButton>
-                    </div>
+                <div>
+                    <p className={[styles.logoText]} >Silid AI</p>
                 </div>
+                <div className={styles.navigationWrapper}>
+                    <nav>
+                        <ul className={styles.listWrapper}>
+                            <li>
+                                <a>Learn More</a>
+                            </li>
+                            <li>
+                                <a>Contact</a>
+                            </li>
+                            <li></li>
+                        </ul>
+                    </nav>
+                    <CustomButton
+                        textContent={'Login'}
+                        type={'primary'}
+                    ></CustomButton>
+                </div>
+
 
             </header>
         </>
