@@ -1,0 +1,15 @@
+.sectionBreak {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.sectionTitle {
+    color: black;
+    text-align: center;
+}
+
+.sectionDescription {
+    font-size: 15px;
+    color: grey;
+    text-align: center;
+}

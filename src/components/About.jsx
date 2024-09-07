@@ -1,59 +1,77 @@
-import React from 'react';
+import {
+    React,
+    useState,
+    useEffect
+}
+    from 'react';
+
 import styles from '../css/About.module.css';
+import justine from '../assets/members/justine.jpg'
+import justin from '../assets/members/justin.jpg'
+import erika from '../assets/members/erika.jpg'
+import alfred from '../assets/members/alfred.jpg'
 
 const teamMembers = [
     {
-        name: "John Doe",
-        role: "CEO",
-        description: "John is the visionary behind our company, leading the team with a focus on innovation and excellence.",
-        imageSrc: "path/to/john-doe.jpg"
+        name: "Alfred Pagarigan",
+        role: "Lead Researcher",
+        description: "Alfred spearheads our research efforts, driving forward our knowledge and understanding with groundbreaking studies and data analysis.",
+        imageSrc: alfred
     },
     {
-        name: "Jane Smith",
-        role: "CTO",
-        description: "Jane is the tech guru, ensuring our technology stack is cutting-edge and scalable.",
-        imageSrc: "path/to/jane-smith.jpg"
+        name: "Justine Daquis",
+        role: "Web/System Developer",
+        description: "Justine is a key player in developing and maintaining our web and system infrastructure, ensuring seamless performance and innovative solutions.",
+        imageSrc: justine
     },
     {
-        name: "Alice Johnson",
-        role: "Lead Designer",
-        description: "Alice brings creativity to the team, designing user-friendly and aesthetically pleasing interfaces.",
-        imageSrc: "path/to/alice-johnson.jpg"
+        name: "Erika Magboo",
+        role: "Content Developer",
+        description: "Erika excels in crafting engaging and educational content, designing immersive and interactive learning experiences for our VR systems.",
+        imageSrc: erika
     },
     {
-        name: "Bob Brown",
-        role: "Lead Developer",
-        description: "Bob is the coding wizard, turning ideas into reality with clean and efficient code.",
-        imageSrc: "path/to/bob-brown.jpg"
+        name: "Justin Gambin",
+        role: "Content Developer",
+        description: "Justin focuses on creating and refining content for our projects, ensuring it is both interactive and user-centric, and integrating it effectively into our systems.",
+        imageSrc: justin
     }
 ];
 
+
 const About = () => {
+    const [textColor, setTextColor] = useState('');
+
+    useEffect(() => {
+        // load root style
+        // load color
+        const rootStyles = getComputedStyle(document.documentElement);
+        const color = rootStyles.getPropertyValue('--orange-theme').trim();
+
+        setTextColor(color);
+
+        // load on every type change
+    }, []);
+
+
     return (
         <div className={styles.container}>
-            <h1 className={styles.title}>About Us</h1>
-            <p className={styles.description}>
-                We are a team of passionate individuals committed to delivering the best VR adaptive learning experiences.
-            </p>
+
             <div className={styles.profiles}>
                 {teamMembers.map((member, index) => (
                     <div key={index} className={styles.profile}>
                         <img src={member.imageSrc} alt={member.name} className={styles.image} />
-                        <h2 className={styles.name}>{member.name}</h2>
+                        <h2 className={styles.name} style={{ color: textColor }}>{member.name}</h2>
                         <h3 className={styles.role}>{member.role}</h3>
                         <p className={styles.profileDescription}>{member.description}</p>
+                        <div className={styles.socialMediaLinks}>
+
+
+                        </div>
                     </div>
                 ))}
             </div>
-            <div className={styles.location}>
-                <h2 className={styles.locationTitle}>Our Office</h2>
-                <p className={styles.address}>
-                    123 VR Lane<br />
-                    Innovation City, Tech State, 12345<br />
-                    Phone: (123) 456-7890<br />
-                    Email: contact@vrlearning.com
-                </p>
-            </div>
+
         </div>
     );
 };

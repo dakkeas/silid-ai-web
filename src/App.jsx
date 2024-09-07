@@ -5,8 +5,8 @@ import classNames from 'classnames'
 
 
 // import css
-import featureCardStyle from './css/FeatureCard.module.css'
-import globalStyle from "./css/App.module.css"
+import styles from './css/App.module.css'
+import './css/global.css'
 import './css/global.css'
 
 // import components
@@ -18,12 +18,14 @@ import CustomButton from './components/CustomButton'
 import InformationBlock from './components/InformationBlock'
 import About from './components/About'
 import Footer from './components/Footer'
+import SectionBreak from './components/SectionBreak'
 
 // import images
 
 import alarmClock from './assets/svg/alarm-clock.svg'
 import rocketLaunch from './assets/svg/rocket-launch.svg'
 import user from './assets/svg/user.svg'
+import placeholder from './assets/vr-kids.jpg'
 
 
 
@@ -33,24 +35,9 @@ function App() {
 
   const InformationBlockData = [
     {
-      title: "Enhanced Engagement Metrics",
-      description: "Recent data indicates a 40% increase in user engagement and interaction within our VR learning modules. Learners spend more time actively participating in virtual environments, leading to improved information retention and satisfaction.",
+      title: "Transform Education with Our Cutting-Edge VR Adaptive Learning System",
+      description: "Our recent data collection at PUP Senior High School showcased the impressive effectiveness of our VR adaptive learning system. This cutting-edge technology delivers personalized, immersive experiences that significantly enhance student engagement and outcomes. Discover how our solution can transform your educational approach.",
       imageSrc: "../assets/vr-kids.jpg"
-    },
-    {
-      title: "Diverse Learning Styles Adaptation",
-      description: "Our VR system has successfully adapted to various learning styles, with visual, auditory, and kinesthetic learners each showing significant improvements in their learning outcomes. Visual aids, interactive audio, and hands-on activities are now effectively customized for individual needs.",
-      imageSrc: "assets/vr-kids.jpg"
-    },
-    {
-      title: "Real-Time Performance Tracking",
-      description: "We've implemented advanced real-time analytics that track learner progress and adapt content dynamically. This feature has led to a 25% improvement in personalized learning pathways and timely feedback for users.",
-      imageSrc: "assets/vr-kids.jpg"
-    },
-    {
-      title: "User Satisfaction and Feedback",
-      description: "Feedback from recent surveys shows a 90% satisfaction rate among users, with particular praise for the immersive experience and the system's ability to tailor learning content to individual preferences.",
-      imageSrc: "/assets/vr-kids.jpg"
     }
   ]
 
@@ -80,68 +67,37 @@ function App() {
     {
       title: 'Visual',
       description: 'Visual learners prefer learning through visual aids such as diagrams, videos, and infographics.',
-      imgSrc: 'img/vr-kids.jpg',
+      imgSrc: placeholder,
       imgAlt: 'Visual Learning'
     },
     {
       title: 'Audial',
       description: 'Auditory learners thrive on verbal communication, such as lectures and discussions.',
-      imgSrc: 'img/vr-kids.jpg',
+      imgSrc: placeholder,
       imgAlt: 'Audial Learning'
     },
     {
       title: 'Reading & Writing',
       description: 'Reading/Writing learners excel with written materials, including textbooks and note-taking.',
-      imgSrc: 'img/vr-kids.jpg',
+      imgSrc: placeholder,
       imgAlt: 'Reading & Writing Learning'
     },
     {
       title: 'Kinesthetic',
       description: 'Kinesthetic learners excel with hands-on activities like experiments and simulations.',
-      imgSrc: 'img/vr-kids.jpg',
+      imgSrc: placeholder,
       imgAlt: 'Kinesthetic Learning'
     }
   ];
 
-
-
-  const heroSection = classNames(
-    globalStyle['hero-image'],
-    globalStyle['flex-column'],
-    globalStyle['margin-bot-100'],
-  )
-  const featureCardContainer = classNames(
-    globalStyle['flex-row'],
-    globalStyle['flex-center-x'],
-    globalStyle['column-gap-10'],
-    featureCardStyle['card-container'],
-  )
-
-  const learnersSection = classNames(
-    globalStyle['flex-center-xy'],
-    globalStyle['flex-column']
-  )
-
-  const learnerCardContainer = classNames(
-
-    globalStyle['flex-row'],
-    globalStyle['learners-section']
-
-  )
-
-
-
-
-
-
   return (
     <>
-      <div className={heroSection}>
-        <div className={`${globalStyle['width-80']}`}>
+      <div className={styles.heroSection}>
+        <div className={styles.maxContentWidth}>
 
           <NavBar></NavBar>
           <HeroText></HeroText>
-          <div className={featureCardContainer}>
+          <div className={styles.featureCardContainer}>
             {
               featureCardData.map((feature, index) => (
                 <FeatureCard
@@ -155,49 +111,60 @@ function App() {
       </div>
 
 
-      <div className={learnersSection}>
-        <div className={`${globalStyle['width-80']}`}>
-          <h2 className={`${globalStyle['grey']}`}>Catered for all types of learners</h2>
-          <p>Our VR adaptive learning platform customizes educational experiences to fit every learning
-            style—visual, auditory, and kinesthetic. Dive into immersive environments where content adjusts
-            to your needs, making learning more engaging and effective. Explore how personalized VR can enhance your educational journey today!</p>
+      <div className={styles.learnersSection}>
+        <div className={styles.maxContentWidth}>
 
-          <div className={learnerCardContainer}>
-            {learnerCardData.map((card, index) => (
+          <SectionBreak
+            title={'Catered for all types of learners'}
+            description={'No one left behind.'}
+          >
+          </SectionBreak>
+
+          <div className={styles.learnerCardContainer}>
+            {learnerCardData.map((learner, index) => (
               <LearnerCard
-                title={card.title}
-                description={card.description}
-              ></LearnerCard>
-
-            ))
-
-            }
-
+                learner={learner}
+              />
+            ))}
           </div>
 
-
-
-          <h2 className={`${globalStyle['grey']}`}>Ready for the future</h2>
-
-          <div>
-
-            {
-              InformationBlockData.map((block, index) => (
-                <InformationBlock
-                  title={block.title}
-                  description={block.description}
-                  imgSrc={block.imageSrc}
-                ></InformationBlock>
-              ))
-            }
-          </div>
         </div>
 
       </div>
 
-      <div>
-        <About></About>
+      <div className={styles.researchSection}>
+
+        <div className={styles.maxContentWidth}>
+          <SectionBreak
+            title={'Ready for the future'}
+            description={'Making our mark for the future of education.'}
+          >
+          </SectionBreak>
+
+          <div>
+            {InformationBlockData.map((block, index) => (
+              <InformationBlock
+                key={index} // Added key prop
+                title={block.title}
+                description={block.description}
+                imgSrc={block.imageSrc}
+              />
+            ))}
+          </div>
+        </div>
       </div>
+
+      <div className={styles.aboutSection}>
+        <div className={styles.maxContentWidth}>
+          <SectionBreak
+            title={'About Us'}
+            description={'Dedicated and Striveful.'}
+          >
+          </SectionBreak>
+          <About></About>
+        </div>
+      </div>
+
       <Footer></Footer>
     </>
   )

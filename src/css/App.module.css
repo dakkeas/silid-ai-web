@@ -173,7 +173,22 @@
   margin-bottom: 100px;
 }
 
-.hero-image {
+
+/* App.css */
+
+.sectionTitle {
+  color: black;
+  text-align: center;
+}
+
+
+
+.maxContentWidth {
+  width: 80%;
+}
+
+.heroSection {
+  /* Combine styles from globalStyle['hero-image'], globalStyle['flex-column'], globalStyle['margin-bot-100'] */
   background-image: url(../assets/vr-kids-2.jpg);
   background-size: cover;
   background-position: center;
@@ -182,7 +197,42 @@
   flex-direction: column;
   position: relative;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.featureCardContainer {
+  /* Combine styles from globalStyle['flex-row'], globalStyle['flex-center-x'], globalStyle['column-gap-10'], featureCardStyle['card-container'] */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  /* Add styles from featureCardStyle['card-container'] */
+  /* Example: */
+  padding: 20px;
+  position: relative;
+  top: 100px;
 }
 
 
-.learners-section {}
+.learnersSection {
+  padding-top: 100px;
+}
+
+.learnersSection,
+.researchSection,
+.aboutSection {
+  /* Combine styles from globalStyle['flex-center-xy'], globalStyle['flex-column'] */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.learnerCardContainer {
+  /* Combine styles from globalStyle['flex-row'], globalStyle['learners-section'] */
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+  /* Add styles from globalStyle['learners-section'] */
+  /* Example: */
+}
