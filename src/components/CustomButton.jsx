@@ -1,14 +1,12 @@
-import React from 'react'
+import React from 'react';
+import styles from '../css/CustomButton.module.css';
 
 const CustomButton = ({ textContent }) => {
     return (
-        <>
-            <div>
-                <button>{textContent}</button>
-            </div>
+        <button className={styles.button}>
+            {textContent}
+        </button>
+    );
+};
 
-        </>
-    )
-}
-
-export default CustomButton
+export default CustomButton;

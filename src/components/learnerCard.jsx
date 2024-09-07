@@ -1,24 +1,54 @@
+import classNames from 'classnames'
 import React from 'react'
 
 
-const LearnerCard = () => {
+import componentStyle from '../css/LearnerCard.module.css'
+import globalStyle from "../css/App.module.css"
+
+
+
+
+
+const LearnerCard = ({ title, description }) => {
+
+    const card = classNames(
+        componentStyle['card'],
+        globalStyle['flex-column']
+    )
+
+    const imageWrapper = classNames(
+        componentStyle['image-wrapper']
+
+    )
+
+    const image = classNames(
+        componentStyle['image']
+    )
+
+    const textWrapper = classNames(
+        componentStyle['text-wrapper'],
+        globalStyle['padding-xy-med'],
+        globalStyle['flex-column'],
+        globalStyle['row-gap-10']
+    )
+
     return (
         <>
-            <div
-            // flex direction column
-            >
-                <CustomImage>
-                </CustomImage>
-                <p
-                // title
-                ></p>
-                <p
-                // content
-                ></p>
+            <div className={card}>
+                <div className={imageWrapper}>
+                    {/* image */}
+                    <div className={image}></div>
+                </div>
+
+                <div className={textWrapper}>
+                    <p>{title}</p>
+                    <p>{description}</p>
+                </div>
 
             </div>
         </>
     )
 }
 
-export default LearnerCard
+
+export default LearnerCard 

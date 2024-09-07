@@ -1,0 +1,11 @@
+.card {
+    background-color: whitesmoke;
+    color: black;
+    flex: 1;
+    overflow: hidden;
+}
+
+.card-container {
+    position: relative;
+    top: 100px;
+}

@@ -1,42 +1,66 @@
 import { React, useState } from 'react'
+
 import CustomButton from './CustomButton'
-import './css/App.css'
 
-
+import componentStyle from "../css/NavBar.module.css"
+import globalStyle from "../css/App.module.css"
+import classNames from 'classnames'
 
 
 const NavBar = () => {
+    const headerWrapper = classNames(
+        globalStyle['flex-center-xy'],
+        globalStyle['flex-column'],
+    )
+    const headerContent = classNames(
+
+        globalStyle['width-100'],
+        globalStyle['flex-row'],
+        globalStyle['space-between'],
+        // globalStyle['padding-x-med']
+    )
+
+    const navigationWrapper = classNames(
+        globalStyle['flex-row'],
+    )
+
+
+
+
+    // const header = 
+
 
     return (
         <>
-            <div>
-                asdhss
-                <header>
-                    {/* <Logo
-                    // silid ai logo
-                    // pass in custom styling
-                    // reuse component for logo of cards
-                    >
-                    </Logo> */}
-                    <nav>
-                        <ul>
-                            <li>
-                                <p>Learn More</p>
-                            </li>
-                            <li>
-                                <p>contact</p>
-                            </li>
-                            <li></li>
-                        </ul>
-                    </nav>
-                    <CustomButton
-                    // reusable button template
-                    // props for button color & button name
-                    // login button
-                    ></CustomButton>
+            <header className={headerWrapper}>
 
-                </header>
-            </div>
+                <div className={headerContent}>
+
+                    <div className="">
+                        <p>Silid AI</p>
+                    </div>
+
+
+
+                    <div className={navigationWrapper}>
+                        <nav>
+                            <ul className={`${globalStyle['flex-row']} ${globalStyle['column-gap-10']}`}>
+                                <li>
+                                    <p>Learn More</p>
+                                </li>
+                                <li>
+                                    <p>Contact</p>
+                                </li>
+                                <li></li>
+                            </ul>
+                        </nav>
+                        <CustomButton
+                            textContent={'Login'}
+                        ></CustomButton>
+                    </div>
+                </div>
+
+            </header>
         </>
     )
 
