@@ -3,8 +3,9 @@ import { React, useEffect, useState } from 'react';
 // import styles
 import styles from '../css/CustomButton.module.css';
 import '../css/global.css';
+import { Link } from 'react-router-dom';
 
-const CustomButton = ({ textContent, type }) => {
+const CustomButton = ({ textContent, type, routeTo}) => {
 
     const [backgroundColor, setBackgroundColor] = useState('');
 
@@ -25,9 +26,9 @@ const CustomButton = ({ textContent, type }) => {
 
 
     return (
-        <button className={styles.button} style={{ backgroundColor }}>
+        <Link to={routeTo} className={styles.button} style={{ backgroundColor }}>
             {textContent}
-        </button>
+        </Link>
     );
 };
 

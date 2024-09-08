@@ -20,6 +20,7 @@ const HeroText = () => {
                 <CustomButton
                     textContent={'Get Started'}
                     type={'secondary'}
+                    routeTo='/signup'
                 ></CustomButton>
 
             </div>

@@ -1,0 +1,135 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.mainContainer {
+    /* max-width: 400px; */
+    /* padding: 20px; */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    max-width: 1000px;
+}
+
+.heroImageContainer {
+    flex: 1;
+    display: flex;
+
+    position: relative;
+    border-radius: 8px;
+}
+
+.heroTextWrapper {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.heroTextWrapper>* {
+    color: white;
+}
+
+.heroTextWrapper>h2 {
+    font-size: 30px;
+}
+
+.heroTextWrapper>p {
+    font-size: 18px;
+}
+
+.heroImageContainer img {
+    height: 100%;
+    width: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+
+}
+
+.fnamelnameWrapper {}
+
+.signUpContainer {
+    padding: 30px
+}
+
+
+.signUpContainer h2 {
+    /* text-align: center; */
+    color: black;
+}
+
+.signUpContainer p {
+    /* text-align: center; */
+    color: grey;
+    margin-bottom: 20px;
+}
+
+form:first-child {
+    display: flex;
+    background-color: red;
+
+}
+
+.formGroup {
+    margin-bottom: 10px;
+}
+
+.formGroup select {
+    background-color: white;
+    border: 2px solid #ececec;
+    border-radius: 8px;
+    outline: 0px;
+    padding: 10px;
+    width: 100%;
+}
+
+.formGroup select::placeholder {
+    color: lightgrey;
+}
+
+.formGroup label {
+    display: block;
+    /* background-color: red; */
+    font-size: 15px;
+    color: grey;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+
+.formGroup input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 2px solid #ececec;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.formGroup input::placeholder {
+    color: lightgrey;
+}
+
+.formGroup input:focus {
+    outline: 0;
+    border: 2px solid #ececec;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background-color: #0056b3;
+}

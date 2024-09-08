@@ -1,36 +1,38 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import reactLogo from '../assets/react.svg'
+import viteLogo from '../../public/vite.svg'
 import classNames from 'classnames'
 
 
 // import css
-import styles from './css/App.module.css'
-import './css/global.css'
-import './css/global.css'
+import styles from '../css/App.module.css'
+import '../css/global.css'
+
 
 // import components
-import NavBar from "./components/NavBar"
-import HeroText from "./components/HeroText"
-import FeatureCard from './components/FeatureCard'
-import LearnerCard from './components/LearnerCard'
-import CustomButton from './components/CustomButton'
-import InformationBlock from './components/InformationBlock'
-import About from './components/About'
-import Footer from './components/Footer'
-import SectionBreak from './components/SectionBreak'
+import NavBar from "../components/NavBar"
+import HeroText from "../components/HeroText"
+import FeatureCard from '../components/FeatureCard'
+import LearnerCard from '../components/LearnerCard'
+import CustomButton from '../components/CustomButton'
+import InformationBlock from '../components/InformationBlock'
+import About from '../components/About'
+import Footer from '../components/Footer'
+import SectionBreak from '../components/SectionBreak'
+import LoginModal from '../components/LoginModal'
 
 // import images
 
-import alarmClock from './assets/svg/alarm-clock.svg'
-import rocketLaunch from './assets/svg/rocket-launch.svg'
-import user from './assets/svg/user.svg'
-import placeholder from './assets/vr-kids.jpg'
+import alarmClock from '../assets/svg/alarm-clock.svg'
+import rocketLaunch from '../assets/svg/rocket-launch.svg'
+import user from '../assets/svg/user.svg'
+import placeholder from '../assets/vr-kids.jpg'
 
 
 
 
 function App() {
+
   const [count, setCount] = useState(0)
 
   const InformationBlockData = [

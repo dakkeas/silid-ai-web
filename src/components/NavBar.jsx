@@ -32,6 +32,7 @@ const NavBar = () => {
                     <CustomButton
                         textContent={'Login'}
                         type={'primary'}
+                        routeTo='/signup'
                     ></CustomButton>
                 </div>
 
