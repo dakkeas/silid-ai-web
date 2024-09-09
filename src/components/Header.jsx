@@ -2,20 +2,21 @@
 import { React, useState } from 'react'
 
 // import styles 
-import styles from '../css/NavBar.module.css'
+import styles from '../css/Header.module.css'
 import '../css/global.css'
 // import components
 import CustomButton from './CustomButton'
 
 
 
-const NavBar = () => {
+const Header = ({ loginBtnFunction }) => {
+
     return (
         <>
             <header className={styles.headerWrapper}>
 
                 <div>
-                    <p className={[styles.logoText]} >Silid AI</p>
+                    <p className={[styles.logoText]} >PAILON VR</p>
                 </div>
                 <div className={styles.navigationWrapper}>
                     <nav>
@@ -30,9 +31,11 @@ const NavBar = () => {
                         </ul>
                     </nav>
                     <CustomButton
+
                         textContent={'Login'}
                         type={'primary'}
-                        routeTo='/signup'
+                        routeTo=''
+                        onPress={loginBtnFunction}
                     ></CustomButton>
                 </div>
 
@@ -43,4 +46,4 @@ const NavBar = () => {
 
 }
 
-export default NavBar
+export default Header

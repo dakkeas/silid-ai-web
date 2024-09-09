@@ -19,7 +19,7 @@ const HeroText = () => {
                     personalized just for you, with cutting-edge Adaptive VR Learning.</p>
                 <CustomButton
                     textContent={'Get Started'}
-                    type={'secondary'}
+                    type={'primary'}
                     routeTo='/signup'
                 ></CustomButton>
 

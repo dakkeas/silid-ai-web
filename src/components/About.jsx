@@ -6,10 +6,10 @@ import {
     from 'react';
 
 import styles from '../css/About.module.css';
-import justine from '../assets/members/justine.jpg'
-import justin from '../assets/members/justin.jpg'
-import erika from '../assets/members/erika.jpg'
-import alfred from '../assets/members/alfred.jpg'
+import justine from '/public/members/justine.jpg'
+import justin from '/public/members/justin.jpg'
+import erika from '/public/members/erika.jpg'
+import alfred from '/public/members/alfred.jpg'
 
 const teamMembers = [
     {

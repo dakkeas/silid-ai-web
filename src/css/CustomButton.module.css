@@ -6,14 +6,16 @@
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: var(--orange-theme);
 }
 
 .button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
+    transform: translatey(-2px);
+    background-color: var(--orange-darker-theme);
 }
 
 .button:active {
-    background-color: #004494;
-    transform: translateY(0);
+    /* background-color: #004494; */
+    transform: translatey(0);
+    background-color: var(--orange-darker-theme);
 }

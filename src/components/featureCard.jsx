@@ -5,7 +5,7 @@ import { useEffect, React, useState } from 'react'
 import '../css/global.css'
 import styles from '../css/FeatureCard.module.css'
 
-const FeatureCard = ({ feature }) => {
+const FeatureCard = ({ feature, id}) => {
 
     const { title, description, imgSrc } = feature;
     const [textColor, setTextColor] = useState('');

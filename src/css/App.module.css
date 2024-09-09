@@ -9,7 +9,6 @@
   padding: 0;
 }
 
-
 * {
   color: grey
 }
@@ -19,14 +18,6 @@
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 @keyframes logo-spin {
@@ -45,143 +36,12 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
 
-.read-the-docs {
-  color: #888;
-}
-
-/* ------------------------ FLEX REUSABLE --------------------------- */
-
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.space-between {
-  justify-content: space-between;
-  align-items: center;
-}
-
-
-/* spacing */
-
-.column-gap-5 {
-  column-gap: 5px;
-}
-
-.row-gap-5 {
-  row-gap: 5px;
-}
-
-.column-gap-10 {
-  column-gap: 10px;
-}
-
-.row-gap-10 {
-  row-gap: 10px;
-}
-
-/* padding */
-
-.padding-xy-small {
-  padding: 10px
-}
-
-.padding-xy-med {
-  padding: 20px
-}
-
-.padding-x-small {
-  padding-left: 5px;
-  padding-right: 5px
-}
-
-.padding-y-small {
-  padding-top: 5px;
-  padding-bottom: 5px
-}
-
-.padding-x-med {
-  padding-left: 10px;
-  padding-right: 10px
-}
-
-.padding-y-med {
-  padding-top: 10px;
-  padding-bottom: 10px
-}
-
-.flex-center-xy {
-  justify-content: center;
-  align-items: center;
-}
-
-.flex-center-x {
-  justify-content: center;
-}
-
-.flex-center-y {
-  align-items: center;
-}
-
-.width-80 {
-  width: 80%
-}
-
-.width-100 {
-  width: 100%
-}
-
-/* ----------------------- CONTAINER STYLING ----------------------- */
-
-.border-radius-10 {
-  border-radius: 10px;
-}
-
-.box-shadow-subtle {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
-
-.box-shadow-dark {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.box-shadow-elevate {
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-}
-
-.debug {
-  border: 1px solid red;
-  background-color: lightgrey;
-}
-
-
-/* ----------------------- COMPONENT STYLING ------------------------ */
-
-
-.margin-bot-100 {
-  margin-bottom: 100px;
-}
-
-
-/* App.css */
 
 .sectionTitle {
   color: black;
   text-align: center;
 }
-
-
 
 .maxContentWidth {
   width: 80%;
@@ -189,7 +49,7 @@
 
 .heroSection {
   /* Combine styles from globalStyle['hero-image'], globalStyle['flex-column'], globalStyle['margin-bot-100'] */
-  background-image: url(../assets/vr-kids-2.jpg);
+  background-image: url(/public/vr-kids-2.jpg);
   background-size: cover;
   background-position: center;
   background-color: #4bc4a4;

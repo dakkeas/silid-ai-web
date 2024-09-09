@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import reactLogo from '../assets/react.svg'
+
+import reactLogo from '/public/react.svg'
+
 import viteLogo from '../../public/vite.svg'
 import classNames from 'classnames'
 
@@ -10,7 +12,7 @@ import '../css/global.css'
 
 
 // import components
-import NavBar from "../components/NavBar"
+import Header from "../components/Header"
 import HeroText from "../components/HeroText"
 import FeatureCard from '../components/FeatureCard'
 import LearnerCard from '../components/LearnerCard'
@@ -20,89 +22,41 @@ import About from '../components/About'
 import Footer from '../components/Footer'
 import SectionBreak from '../components/SectionBreak'
 import LoginModal from '../components/LoginModal'
+import staticData from '../data/static.json'
 
 // import images
-
-import alarmClock from '../assets/svg/alarm-clock.svg'
-import rocketLaunch from '../assets/svg/rocket-launch.svg'
-import user from '../assets/svg/user.svg'
-import placeholder from '../assets/vr-kids.jpg'
-
 
 
 
 function App() {
 
-  const [count, setCount] = useState(0)
 
-  const InformationBlockData = [
-    {
-      title: "Transform Education with Our Cutting-Edge VR Adaptive Learning System",
-      description: "Our recent data collection at PUP Senior High School showcased the impressive effectiveness of our VR adaptive learning system. This cutting-edge technology delivers personalized, immersive experiences that significantly enhance student engagement and outcomes. Discover how our solution can transform your educational approach.",
-      imageSrc: "../assets/vr-kids.jpg"
-    }
-  ]
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
+  const handleCloseModal = () => {
+    setIsModalOpen(false)
+  }
 
-  const featureCardData = [
-    {
-      title: "Personalized Learning",
-      description: "Experience tailor-made educational content that adapts to your individual learning style, pace, and preferences, maximizing comprehension and retention.",
-      imgSrc: user,
-      imgAlt: "engaging"
-    },
-    {
-      title: "Engaging Experiences",
-      description: "Immerse yourself in dynamic virtual environments that bring learning to life, fostering deeper understanding and engagement compared to traditional methods.",
-      imgSrc: rocketLaunch,
-      imgAlt: "engaging"
-    },
-    {
-      title: "Flexible Accessibility",
-      description: "Access learning opportunities anytime, anywhere, breaking down geographical barriers and allowing learners to engage in immersive experiences at their convenience.",
-      imgSrc: alarmClock,
-      imgAlt: "engaging"
-    }
-  ];
+  const handleOpenModal = () => {
+    setIsModalOpen(true)
+  }
 
-  const learnerCardData = [
-    {
-      title: 'Visual',
-      description: 'Visual learners prefer learning through visual aids such as diagrams, videos, and infographics.',
-      imgSrc: placeholder,
-      imgAlt: 'Visual Learning'
-    },
-    {
-      title: 'Audial',
-      description: 'Auditory learners thrive on verbal communication, such as lectures and discussions.',
-      imgSrc: placeholder,
-      imgAlt: 'Audial Learning'
-    },
-    {
-      title: 'Reading & Writing',
-      description: 'Reading/Writing learners excel with written materials, including textbooks and note-taking.',
-      imgSrc: placeholder,
-      imgAlt: 'Reading & Writing Learning'
-    },
-    {
-      title: 'Kinesthetic',
-      description: 'Kinesthetic learners excel with hands-on activities like experiments and simulations.',
-      imgSrc: placeholder,
-      imgAlt: 'Kinesthetic Learning'
-    }
-  ];
 
   return (
-    <>
+    <div className={styles.background}>
+
       <div className={styles.heroSection}>
         <div className={styles.maxContentWidth}>
 
-          <NavBar></NavBar>
+          <Header
+            loginBtnFunction={handleOpenModal}
+          ></Header>
           <HeroText></HeroText>
           <div className={styles.featureCardContainer}>
             {
-              featureCardData.map((feature, index) => (
+              staticData.featureCardData.map((feature, index) => (
                 <FeatureCard
+                  key={index}
                   feature={feature}
 
                 ></FeatureCard>
@@ -123,7 +77,7 @@ function App() {
           </SectionBreak>
 
           <div className={styles.learnerCardContainer}>
-            {learnerCardData.map((learner, index) => (
+            {staticData.learnerCardData.map((learner, index) => (
               <LearnerCard
                 learner={learner}
               />
@@ -144,7 +98,7 @@ function App() {
           </SectionBreak>
 
           <div>
-            {InformationBlockData.map((block, index) => (
+            {staticData.informationBlockData.map((block, index) => (
               <InformationBlock
                 key={index} // Added key prop
                 title={block.title}
@@ -166,9 +120,13 @@ function App() {
           <About></About>
         </div>
       </div>
+      <LoginModal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      ></LoginModal>
 
       <Footer></Footer>
-    </>
+    </div>
   )
 }
 

@@ -1,55 +1,96 @@
 .modalOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modalContent {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  width: 300px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: relative;
+    background-color: white;
+    padding: 40px 40px 30px 40px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.modalContent h2 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.modalContent p {
+    margin-top: 2px;
+    margin-bottom: 20px;
+    font-size: 15px;
+
+}
+
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
 }
 
 .closeButton {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
+    outline: 0
 }
 
 .formGroup {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .inputField {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  box-sizing: border-box;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ececec;
+    border-radius: 8px;
+    background-color: white;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+.inputField:focus {
+
+    outline: 0;
+    border: 2px solid #c7c7c7;
+}
+
+.inputField::placeholder {
+    color: lightgrey
 }
 
 .submitButton {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--orange-theme);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
 }
 
 .submitButton:hover {
-  background-color: #0056b3;
+    background-color: var(--orange-darker-theme);
+    transform: translateY(-2px);
+}
+
+.submitButtonWrapper {
+    display: flex;
+    /* background-color: yellow; */
+    justify-content: center;
+    margin-top: 30px;
 }

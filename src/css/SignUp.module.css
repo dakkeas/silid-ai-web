@@ -1,35 +1,32 @@
-body {
+.background {
     display: flex;
     justify-content: center;
+    background-color: lightblue;
     align-items: center;
-
+    background-image: url('/public/white.jpg');
+    background-size: cover;
+    height: 100vh;
 }
 
-
 .mainContainer {
-    /* max-width: 400px; */
-    /* padding: 20px; */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     background-color: #fff;
     display: flex;
-    flex-direction: row;
-    column-gap: 20px;
-    max-width: 1000px;
+    max-width: 900px;
 }
 
 .heroImageContainer {
     flex: 1;
     display: flex;
-
     position: relative;
-    border-radius: 8px;
+    border-radius: 15px;
 }
 
 .heroTextWrapper {
     position: absolute;
-    top: 50px;
-    left: 50px;
+    bottom: 40px;
+    left: 40px;
 }
 
 .heroTextWrapper>* {
@@ -37,25 +34,25 @@ body {
 }
 
 .heroTextWrapper>h2 {
-    font-size: 30px;
+    font-size: 24px;
 }
 
 .heroTextWrapper>p {
-    font-size: 18px;
+    font-size: 12px;
 }
 
 .heroImageContainer img {
     height: 100%;
-    width: 500px;
+    width: 100%;
     object-fit: cover;
-    border-radius: 8px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
 
 }
 
-.fnamelnameWrapper {}
-
 .signUpContainer {
-    padding: 30px
+    padding: 40px
 }
 
 
@@ -80,7 +77,21 @@ form:first-child {
     margin-bottom: 10px;
 }
 
-.formGroup select {
+
+
+.fnamelnameWrapper {
+    display: flex;
+    column-gap: 10px;
+}
+
+
+.fnamelnameWrapper div {
+    flex: 1
+}
+
+
+.formGroup select,
+.fnamelnamewrapper select {
     background-color: white;
     border: 2px solid #ececec;
     border-radius: 8px;
@@ -89,11 +100,13 @@ form:first-child {
     width: 100%;
 }
 
-.formGroup select::placeholder {
+.formGroup select::placeholder,
+.fnamelnameWrapper select::placeholder {
     color: lightgrey;
 }
 
-.formGroup label {
+.formGroup label,
+.fnamelnameWrapper label {
     display: block;
     /* background-color: red; */
     font-size: 15px;
@@ -102,34 +115,41 @@ form:first-child {
     margin-bottom: 7px;
 }
 
-.formGroup input {
+.formGroup input,
+.fnamelnameWrapper input {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     box-sizing: border-box;
     border: 2px solid #ececec;
     background-color: white;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
-.formGroup input::placeholder {
+.formGroup input::placeholder,
+.fnamelnameWrapper input::placeholder {
     color: lightgrey;
 }
 
-.formGroup input:focus {
+.formGroup input:focus,
+.fnamelnameWrapper input:focus {
     outline: 0;
-    border: 2px solid #ececec;
+    border: 2px solid #c7c7c7;
 }
 
 .submitButton {
     width: 100%;
+    margin-top: 25 px;
     padding: 10px;
-    background-color: #007bff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: var(--orange-theme);
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
+
 }
 
 .submitButton:hover {
-    background-color: #0056b3;
+    background-color: var(--orange-darker-theme);
+    transform: translatey(-2px);
 }

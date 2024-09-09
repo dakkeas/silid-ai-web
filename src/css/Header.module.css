@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 10px;
+    column-gap: 15px;
 }
 
 .listWrapper {
@@ -16,13 +16,13 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    column-gap: 10px;
+    column-gap: 15px;
 }
 
 .logoText {
     color: white;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 32px;
 }
 
 

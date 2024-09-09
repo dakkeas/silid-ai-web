@@ -5,7 +5,7 @@ import styles from '../css/CustomButton.module.css';
 import '../css/global.css';
 import { Link } from 'react-router-dom';
 
-const CustomButton = ({ textContent, type, routeTo}) => {
+const CustomButton = ({ textContent, type, routeTo, onPress }) => {
 
     const [backgroundColor, setBackgroundColor] = useState('');
 
@@ -26,7 +26,8 @@ const CustomButton = ({ textContent, type, routeTo}) => {
 
 
     return (
-        <Link to={routeTo} className={styles.button} style={{ backgroundColor }}>
+        <Link to={routeTo} className={styles.button}  onClick={onPress}>
+
             {textContent}
         </Link>
     );

@@ -1,0 +1,55 @@
+{
+    "informationBlockData": [
+        {
+            "title": "Transform Education with Our Cutting-Edge VR Adaptive Learning System",
+            "description": "Our recent data collection at PUP Senior High School showcased the impressive effectiveness of our VR adaptive learning system. This cutting-edge technology delivers personalized, immersive experiences that significantly enhance student engagement and outcomes. Discover how our solution can transform your educational approach.",
+            "imageSrc": "/public/vr-kids.jpg"
+        }
+    ],
+    "featureCardData": [
+        {
+            "title": "Personalized Learning",
+            "description": "Experience tailor-made educational content that adapts to your individual learning style, pace, and preferences, maximizing comprehension and retention.",
+            "imgSrc": "/public/svg/user.svg",
+            "imgAlt": "engaging"
+        },
+        {
+            "title": "Engaging Experiences",
+            "description": "Immerse yourself in dynamic virtual environments that bring learning to life, fostering deeper understanding and engagement compared to traditional methods.",
+            "imgSrc": "/public/svg/rocket-launch.svg",
+            "imgAlt": "engaging"
+        },
+        {
+            "title": "Flexible Accessibility",
+            "description": "Access learning opportunities anytime, anywhere, breaking down geographical barriers and allowing learners to engage in immersive experiences at their convenience.",
+            "imgSrc": "/public/svg/rocket-launch.svg",
+            "imgAlt": "engaging"
+        }
+    ],
+    "learnerCardData": [
+        {
+            "title": "Visual",
+            "description": "Visual learners prefer learning through visual aids such as diagrams, videos, and infographics.",
+            "imgSrc": "/public/vr-kids-2.jpg",
+            "imgAlt": "Visual Learning"
+        },
+        {
+            "title": "Audial",
+            "description": "Auditory learners thrive on verbal communication, such as lectures and discussions.",
+            "imgSrc": "/public/vr-kids-2.jpg",
+            "imgAlt": "Audial Learning"
+        },
+        {
+            "title": "Reading & Writing",
+            "description": "Reading/Writing learners excel with written materials, including textbooks and note-taking.",
+            "imgSrc": "/public/vr-kids-2.jpg",
+            "imgAlt": "Reading & Writing Learning"
+        },
+        {
+            "title": "Kinesthetic",
+            "description": "Kinesthetic learners excel with hands-on activities like experiments and simulations.",
+            "imgSrc": "/public/vr-kids-2.jpg",
+            "imgAlt": "Kinesthetic Learning"
+        }
+    ]
+}
