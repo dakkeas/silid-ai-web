@@ -138,7 +138,7 @@ form:first-child {
 
 .submitButton {
     width: 100%;
-    margin-top: 25 px;
+    margin-top: 25px;
     padding: 10px;
     transition: background-color 0.3s ease, transform 0.2s ease;
     background-color: var(--orange-theme);

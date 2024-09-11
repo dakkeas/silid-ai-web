@@ -10,7 +10,7 @@
 }
 
 .button:hover {
-    transform: translatey(-2px);
+    /* transform: translatey(-2px); */
     background-color: var(--orange-darker-theme);
 }
 
@@ -19,3 +19,5 @@
     transform: translatey(0);
     background-color: var(--orange-darker-theme);
 }
+
+

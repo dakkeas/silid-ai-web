@@ -1,0 +1,43 @@
+
+/* task progress component */
+
+.taskProgressContainer {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: grey; */
+  align-items: center;
+  transition: background-color 0.2s, transform 0.2s;
+  border-radius: 30px;
+}
+
+.taskProgressContainer:hover {
+  background-color: rgb(246, 246, 246);
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+
+.taskProgressContainer h3 {
+  color: black;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.taskNameWrapper,
+.taskStatusWrapper,
+.taskResultWrapper {
+  flex: 1;
+}
+
+.taskLogoWrapper {
+  margin-right: 20px;
+}
+
+.logoWrapper {
+  background-color: rgba(255, 111, 0, 0.101);
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  padding: 10px;
+}

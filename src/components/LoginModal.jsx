@@ -63,7 +63,7 @@ const LoginModal = ({ isOpen, onClose }) => {
                     <div className={styles.submitButtonWrapper}>
                         <CustomButton
                             textContent={'Login'}
-                            routeTo={'/'}
+                            routeTo={'/dashboard'}
                         ></CustomButton>
                     </div>
                 </form>

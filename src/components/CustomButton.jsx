@@ -27,7 +27,6 @@ const CustomButton = ({ textContent, type, routeTo, onPress }) => {
 
     return (
         <Link to={routeTo} className={styles.button}  onClick={onPress}>
-
             {textContent}
         </Link>
     );

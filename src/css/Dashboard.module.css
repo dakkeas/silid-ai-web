@@ -1,45 +1,201 @@
+.mainContainer {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  /* Full viewport height */
+  background-color: whitesmoke;
+}
 
 .dashboardContainer {
   display: flex;
-  height: 100vh; /* Full viewport height */
+  height: 90%;
+  width: 90%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 15px;
+  background-color: white;
 }
+
+
+.logoWrapper {
+  background-color: rgba(255, 111, 0, 0.101);
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  padding: 10px;
+}
+
+/* sidebar */
 
 .sidebar {
-  width: 250px;
-  background-color: #2c3e50;
+  /* width: 250px; */
+  background-color: white;
+  border-right: 3px solid rgb(247, 245, 245);
   color: white;
-  padding: 20px;
+  padding: 30px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
 }
 
-.sidebar h2 {
-  margin-top: 0;
+
+
+.sidebar p {
+  color: black;
+  margin-bottom: 50px;
+  font-size: 24px;
+  font-weight: 700;
+
 }
 
 .sidebar ul {
   list-style: none;
-  padding: 0;
 }
 
-.sidebar ul li {
-  margin: 15px 0;
+.sidebar li {
+  margin-top: 5px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 8px;
+  display: flex;
+  column-gap: 15px;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.bottomNav {
+  justify-self: flex-end;
+  margin-top: auto;
+}
+
+.bottomNav li {
+  display: flex;
+  align-items: center;
 }
 
 .sidebar ul li a {
-  color: white;
+  color: grey;
   text-decoration: none;
   display: block;
-  padding: 10px;
-  border-radius: 4px;
+  /* padding: 10px; */
+  transition: background-color 0.3s;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+
+.sidebar svg {
   transition: background-color 0.3s;
 }
 
-.sidebar ul li a:hover {
-  background-color: #34495e;
+
+.sidebar li:hover a {
+  color: black;
 }
+
+.sidebar li:hover svg {
+  stroke: black;
+}
+
+.sidebar li:hover {
+  background-color: rgb(224, 224, 224);
+  cursor: pointer;
+}
+
+/* main content */
 
 .mainContent {
   flex-grow: 1;
-  padding: 20px;
-  background-color: #ecf0f1;
+  padding: 30px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.mainContentGreet {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dateWrapper {
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.dateWrapper p {
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+}
+
+.heroWrapper>h2 {
+  color: black;
+}
+
+.heroWrapper>p {
+  color: grey;
+}
+
+.mainSection {
+  border-top: 3px solid rgb(247, 245, 245);
+  padding-top: 20px;
+  /* background-color: whitwe; */
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.mainSection h2 {
+  color: black;
+
+}
+
+.tasksContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+
+}
+
+
+
+/* profile section */
+
+
+.profileSection {
+  border-left: 3px solid rgb(247, 245, 245);
+  padding: 30px;
+  width: 300px;
+}
+
+.profileWrapper {
+  background-color: rgb(233, 233, 233);
+  border-radius: 8px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.profilePicWrapper img {
+  height: 100px;
+  border-radius: 100px;
+  border: 3px solid white;
+}
+
+.profileTextWrapper h3 {
+  text-align: center;
+}
+
+.profileTextWrapper p {
+  text-align: center;
 }
