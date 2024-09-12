@@ -53,7 +53,7 @@ const SignUp = () => {
 
                         <div className={styles.fnamelnameWrapper}>
                             <div>
-                                <label htmlFor="firstName">First name</label>
+                                <label htmlFor="firstName" className={styles.innerLabel}>First name</label>
                                 <input
                                     type="text"
                                     id="firstName"
@@ -66,7 +66,7 @@ const SignUp = () => {
                                 />
                             </div>
                             <div>
-                                <label htmlFor="lastName">Last Name:</label>
+                                <label htmlFor="lastName" className={styles.innerLabel}>Last Name</label>
                                 <input
                                     type="text"
                                     id="lastName"
@@ -79,7 +79,7 @@ const SignUp = () => {
                             </div>
                         </div>
                         <div className={styles.formGroup}>
-                            <label htmlFor="email">Email:</label>
+                            <label htmlFor="email" className={styles.innerLabel}>Email</label>
                             <input
                                 type="email"
                                 id="email"
@@ -91,7 +91,7 @@ const SignUp = () => {
                             />
                         </div>
                         <div className={styles.formGroup}>
-                            <label htmlFor="password">Password:</label>
+                            <label htmlFor="password" className={styles.innerLabel}>Password</label>
                             <input
                                 type="password"
                                 id="password"
@@ -103,7 +103,7 @@ const SignUp = () => {
                             />
                         </div>
                         <div className={styles.formGroup}>
-                            <label htmlFor="confirmPassword">Confirm Password:</label>
+                            <label htmlFor="confirmPassword" className={styles.innerLabel}>Confirm Password</label>
                             <input
                                 type="password"
                                 id="confirmPassword"
@@ -116,7 +116,7 @@ const SignUp = () => {
                         </div>
 
                         <div className={styles.formGroup}>
-                            <label htmlFor="program">Program:</label>
+                            <label htmlFor="program"className={styles.innerLabel}>Program</label>
                             <select
                                 id="program"
                                 name="program"
@@ -132,7 +132,7 @@ const SignUp = () => {
                             </select>
                         </div>
                         <div className={styles.formGroup}>
-                            <label>Learning Preference:</label>
+                            <label className={styles.innerLabel} >Learning Preference</label>
                             <select
                                 id="learningPreference"
                                 name="learningPreference"

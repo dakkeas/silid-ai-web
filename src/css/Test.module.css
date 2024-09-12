@@ -1,29 +1,37 @@
-.mainContainer {
-    height: 100vh;
-    background-color: whitesmoke;
-    display: flex;
-    justify-self: center;
-    align-items: center;
-}
-
-
 .card {
-    border-radius: 15px;
-    background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    flex: 1;
+    max-width: 600px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    border-radius: 15px;
 }
 
 
 .header {
-    padding: 30;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    background-color: var(--orange-theme);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.header h2 {
+    color: white;
+}
+
+
+.header p {
+    color: white;
 }
 
 .formContainer form {
+    margin-top: 10px;
+    padding: 20px;
     display: flex;
-    row-gap: 10px;
+    row-gap: 30px;
     flex-direction: column;
 }
 
@@ -31,5 +39,42 @@
     display: flex;
     row-gap: 20px;
     flex-direction: column;
+}
 
+.questionContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.questionContainer img {
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+
+
+.questionContainer p {
+    font-weight: 500;
+    color: black;
+}
+
+.choiceWrapper {
+    display: flex;
+    column-gap: 10px;
+
+}
+
+
+.choiceWrapper input[type="radio"] {
+    accent-color: var(--orange-theme);
+    background-color: white;
+    min-width: 15px;
+}
+
+.btnWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

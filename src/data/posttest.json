@@ -67,7 +67,7 @@
                 }
             ],
             "correct": "b",
-            "image": "img/q3.png"
+            "image": "/public/questions/q3.png"
         },
         {
             "question": "4. How is the establishment of an ethical matrix generally relevant to the development of algorithms?",
@@ -113,7 +113,7 @@
                 }
             ],
             "correct": "b",
-            "image": "img/q5.png"
+            "image": "/public/questions/q5.png"
         },
         {
             "question": "6. Though fairness has not been conclusively established in the community of artificial intelligence, what is the importance of realizing it on today’s technologies?",
@@ -205,7 +205,7 @@
                 }
             ],
             "correct": "b",
-            "image": "img/q9.png"
+            "image": "/public/questions/q9.png"
         },
         {
             "question": "10. What main characteristic defines the difference of neural networks from decision trees?",
@@ -251,7 +251,7 @@
                 }
             ],
             "correct": "b",
-            "image": "img/q11.png"
+            "image": "/public/questions/q11.png"
         },
         {
             "question": "12. What may be the unanticipated consequence of an intelligent recommender system of online video sharing platforms to the general users?",
@@ -297,7 +297,7 @@
                 }
             ],
             "correct": "a",
-            "image": ""
+            "image": "/public/questions/q13.png"
         },
         {
             "question": "14. In the context of artificial intelligence ethics, what does the term 'bias' refer to?",
@@ -320,8 +320,7 @@
                 }
             ],
             "correct": "c",
-            "image": "img/q14.png"
-        },
+            "image": "/public/questions/q14.png" },
         {
             "question": "15. What is the primary goal of using cross-validation in machine learning?",
             "choices": [

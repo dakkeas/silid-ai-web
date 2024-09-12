@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../css/Test.module.css';
+import CustomButton from '../components/CustomButton'
 
 
 const Test = ({
@@ -7,7 +8,6 @@ const Test = ({
     testTitle,
     testDescription,
 }) => {
-    console.log(data)
     return (
         <div className={styles.mainContainer}>
 
@@ -18,15 +18,18 @@ const Test = ({
                 </div>
                 <div className={styles.formContainer}>
                     <form id='post-test'>
-                        {data.map((item, index) => (
+                        {data.questions.map((item, index) => (
                             <div className={styles.questionContainer}>
                                 <p>{item.question}</p>
+                                {item.image && <img src={item.image} alt={item.question}></img>}
                                 <div className={styles.choicesContainer}>
+
                                     {
                                         item.choices.map((choice, index) => (
-                                            <div key={index} className={styles.formGroup}>
+
+                                            <div key={index} className={styles.choiceWrapper}>
+                                                <input type="radio" value={choice.id} name={`${item.question} - ${item.id}`}/>
                                                 <label htmlFor="">{choice.text}</label>
-                                                <input type="radio" value={choice.id} />
                                             </div>
                                         ))
 
@@ -36,7 +39,11 @@ const Test = ({
                         ))
 
                         }
-                        <button type="submit">Submit</button>
+                        <div className={styles.btnWrapper}>
+                            <CustomButton
+                                textContent="Submit"
+                            ></CustomButton>
+                        </div>
                     </form>
                 </div>
             </div>

@@ -2,7 +2,7 @@
     font-family: inter, system-ui, avenir, helvetica, arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
-    color-scheme: light dark;
+    /* color-scheme: light dark; */
     background-color: white;
     font-synthesis: none;
     text-rendering: optimizelegibility;
@@ -71,7 +71,7 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
     :root {
-        color: #213546;
+        /* color: #213546; */
         background-color: #ffffff;
     }
 

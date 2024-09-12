@@ -64,28 +64,33 @@
 .signUpContainer p {
     /* text-align: center; */
     color: grey;
-    margin-bottom: 20px;
-}
-
-form:first-child {
-    display: flex;
-    background-color: red;
-
-}
-
-.formGroup {
     margin-bottom: 10px;
 }
 
+.signUpContainer form:first-child {
+    display: flex;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    /* ќ wmargin-bottom: 10px; */
+}
+
+
+.innerLabel {}
 
 
 .fnamelnameWrapper {
+    position: relative;
     display: flex;
     column-gap: 10px;
 }
 
 
 .fnamelnameWrapper div {
+    display: flex;
+    flex-direction: column;
     flex: 1
 }
 
@@ -107,12 +112,16 @@ form:first-child {
 
 .formGroup label,
 .fnamelnameWrapper label {
-    display: block;
-    /* background-color: red; */
-    font-size: 15px;
+    position: relative;
+    background-color: white;
+    left: 13px;
+    top: 10px;
+    /* background-color: yellow; */
+    align-self: flex-start;
+    flex-grow: 0;
+    font-size: 12px;
     color: grey;
     font-weight: 500;
-    margin-bottom: 7px;
 }
 
 .formGroup input,

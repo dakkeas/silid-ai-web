@@ -1,9 +1,8 @@
-
 import React from 'react';
 import Test from './Test';
-import data from '../data/posttest.json';
+import data from '../data/pretest.json';
 
-const PostTest = () => {
+const PreTest = () => {
     return (
         <div style={{
             height: '100%',
@@ -14,7 +13,7 @@ const PostTest = () => {
         }}>
             <Test
                 data={data}
-                testTitle={"PAILON VR Post Test"}
+                testTitle={"PAILON VR PreTest"}
                 testDescription={"Choose the answer that you believe is correct based on your understanding of the material."}
             ></Test>
         </div>
@@ -22,4 +21,4 @@ const PostTest = () => {
     );
 };
 
-export default PostTest;
+export default PreTest;

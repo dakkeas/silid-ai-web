@@ -11,6 +11,7 @@ import HomePage from './pages/Home.jsx'
 import NotFound from './pages/NotFound.jsx'
 import Dashboard from './pages/Dashboard.jsx'
 import PostTest from './pages/PostTest.jsx'
+import PreTest from './pages/PreTest.jsx'
 import ProtectedRoutes from './utils/ProtectedRoutes.jsx'
 
 const isAuthenticated = () => {
@@ -45,7 +46,12 @@ const router = createBrowserRouter([
   {
     path: '/posttest',
     element: <ProtectedRoutes Component={PostTest} />,
+  },
+  {
+    path: '/pretest',
+    element: <ProtectedRoutes Component={PreTest} />,
   }
+
 ])
 
 createRoot(document.getElementById('root')).render(
