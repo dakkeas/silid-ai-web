@@ -5,400 +5,432 @@
             "choices": [
                 {
                     "id": "a",
-                    "label": "Find out where the shop is in relation to somewhere I know.",
-                    "mode": "kinesthetic"
+                    "text": "Find out where the shop is in relation to somewhere I know.",
+                    "value": "kinesthetic"
                 },
                 {
                     "id": "b",
-                    "label": "Ask my friend to tell me the directions.",
-                    "mode": "aural"
+                    "text": "Ask my friend to tell me the directions.",
+                    "value": "aural"
                 },
                 {
                     "id": "c",
-                    "label": "Write down the street directions I need to remember.",
-                    "mode": "reading"
+                    "text": "Write down the street directions I need to remember.",
+                    "value": "reading"
                 },
                 {
                     "id": "d",
-                    "label": "Use a map.",
-                    "mode": "visual"
+                    "text": "Use a map.",
+                    "value": "visual"
                 }
-            ]
+            ],
+            "correct": "",
+            "difficulty": ""
         },
         {
             "question": "2. A website has a video showing how to make a special graph or chart. There is a person speaking, some lists and words describing what to do and some diagrams. I would learn most from:",
             "choices": [
                 {
                     "id": "a",
-                    "label": "Seeing the diagrams.",
-                    "mode": "visual"
+                    "text": "Seeing the diagrams.",
+                    "value": "visual"
                 },
                 {
                     "id": "b",
-                    "label": "Listening.",
-                    "mode": "aural"
+                    "text": "Listening.",
+                    "value": "aural"
                 },
                 {
                     "id": "c",
-                    "label": "Reading the words.",
-                    "mode": "reading"
+                    "text": "Reading the words.",
+                    "value": "reading"
                 },
                 {
                     "id": "d",
-                    "label": "Watching the actions.",
-                    "mode": "kinesthetic"
+                    "text": "Watching the actions.",
+                    "value": "kinesthetic"
                 }
-            ]
+            ],
+            "correct": "",
+            "difficulty": ""
         },
         {
             "question": "3. I want to find out more about a tour that I am going on. I would:",
             "choices": [
                 {
                     "id": "a",
-                    "label": "Look at details about the highlights and activities on the tour.",
-                    "mode": "kinesthetic"
+                    "text": "Look at details about the highlights and activities on the tour.",
+                    "value": "kinesthetic"
                 },
                 {
                     "id": "b",
-                    "label": "Use a map and see where the places are.",
-                    "mode": "visual"
+                    "text": "Use a map and see where the places are.",
+                    "value": "visual"
                 },
                 {
                     "id": "c",
-                    "label": "Read about the tour on the itinerary.",
-                    "mode": "reading"
+                    "text": "Read about the tour on the itinerary.",
+                    "value": "reading"
                 },
                 {
                     "id": "d",
-                    "label": "Talk with the person who planned the tour or others who are going on the tour.",
-                    "mode": "aural"
+                    "text": "Talk with the person who planned the tour or others who are going on the tour.",
+                    "value": "aural"
                 }
-            ]
+            ],
+            "correct": "",
+            "difficulty": ""
         },
         {
             "question": "4. When choosing a career or area of study, these are important for me:",
             "choices": [
                 {
                     "id": "a",
-                    "label": "Applying my knowledge in real situations.",
-                    "mode": "kinesthetic"
+                    "text": "Applying my knowledge in real situations.",
+                    "value": "kinesthetic"
                 },
                 {
                     "id": "b",
-                    "label": "Communicating with others through discussion.",
-                    "mode": "aural"
+                    "text": "Communicating with others through discussion.",
+                    "value": "aural"
                 },
                 {
                     "id": "c",
-                    "label": "Working with designs, maps or charts.",
-                    "mode": "visual"
+                    "text": "Working with designs, maps or charts.",
+                    "value": "visual"
                 },
                 {
                     "id": "d",
-                    "label": "Using words well in written communications.",
-                    "mode": "reading"
+                    "text": "Using words well in written communications.",
+                    "value": "reading"
                 }
-            ]
+            ],
+            "correct": "",
+            "difficulty": ""
         },
         {
             "question": "5. When I am learning I:",
             "choices": [
                 {
                     "id": "a",
-                    "label": "Like to talk things through.",
-                    "mode": "aural"
+                    "text": "Like to talk things through.",
+                    "value": "aural"
                 },
                 {
                     "id": "b",
-                    "label": "See patterns in things.",
-                    "mode": "visual"
+                    "text": "See patterns in things.",
+                    "value": "visual"
                 },
                 {
                     "id": "c",
-                    "label": "Use examples and applications.",
-                    "mode": "kinesthetic"
+                    "text": "Use examples and applications.",
+                    "value": "kinesthetic"
                 },
                 {
                     "id": "d",
-                    "label": "Read books, articles and handouts.",
-                    "mode": "reading"
+                    "text": "Read books, articles and handouts.",
+                    "value": "reading"
                 }
-            ]
+            ],
+            "correct": "",
+            "difficulty": ""
         },
         {
             "question": "6. I want to save more money and to decide between a range of options. I would:",
             "choices": [
                 {
                     "id": "a",
-                    "label": "Consider examples of each option using my financial information.",
-                    "mode": "kinesthetic"
+                    "text": "Consider examples of each option using my financial information.",
+                    "value": "kinesthetic"
                 },
                 {
                     "id": "b",
-                    "label": "Read a print brochure that describes the options in detail.",
-                    "mode": "reading"
+                    "text": "Read a print brochure that describes the options in detail.",
+                    "value": "reading"
                 },
                 {
                     "id": "c",
-                    "label": "Use graphs showing different options for different time periods.",
-                    "mode": "visual"
+                    "text": "Use graphs showing different options for different time periods.",
+                    "value": "visual"
                 },
                 {
                     "id": "d",
-                    "label": "Talk with an expert about the options.",
-                    "mode": "aural"
+                    "text": "Talk with an expert about the options.",
+                    "value": "aural"
                 }
-            ]
+            ],
+            "correct": "",
+            "difficulty": ""
         },
         {
             "question": "7. I want to learn how to play a new board game or card game. I would:",
             "choices": [
                 {
                     "id": "a",
-                    "label": "Watch others play the game before joining in.",
-                    "mode": "kinesthetic"
+                    "text": "Watch others play the game before joining in.",
+                    "value": "kinesthetic"
                 },
                 {
                     "id": "b",
-                    "label": "Listen to somebody explaining it and ask questions.",
-                    "mode": "aural"
+                    "text": "Listen to somebody explaining it and ask questions.",
+                    "value": "aural"
                 },
                 {
                     "id": "c",
-                    "label": "Use the diagrams that explain the various stages, moves and strategies in the game.",
-                    "mode": "visual"
+                    "text": "Use the diagrams that explain the various stages, moves and strategies in the game.",
+                    "value": "visual"
                 },
                 {
                     "id": "d",
-                    "label": "Read the instructions.",
-                    "mode": "reading"
+                    "text": "Read the instructions.",
+                    "value": "reading"
                 }
-            ]
+            ],
+            "correct": "",
+            "difficulty": ""
         },
         {
             "question": "8. I have a problem with my heart. I would prefer that the doctor:",
             "choices": [
                 {
                     "id": "a",
-                    "label": "Gave me something to read to explain what was wrong.",
-                    "mode": "reading"
+                    "text": "Gave me something to read to explain what was wrong.",
+                    "value": "reading"
                 },
                 {
                     "id": "b",
-                    "label": "Used a plastic model to show me what was wrong.",
-                    "mode": "kinesthetic"
+                    "text": "Used a plastic model to show me what was wrong.",
+                    "value": "kinesthetic"
                 },
                 {
                     "id": "c",
-                    "label": "Described what was wrong.",
-                    "mode": "aural"
+                    "text": "Described what was wrong.",
+                    "value": "aural"
                 },
                 {
                     "id": "d",
-                    "label": "Showed me a diagram of what was wrong.",
-                    "mode": "visual"
+                    "text": "Showed me a diagram of what was wrong.",
+                    "value": "visual"
                 }
-            ]
+            ],
+            "correct": "",
+            "difficulty": ""
         },
         {
             "question": "9. I want to learn to do something new on a computer. I would:",
             "choices": [
                 {
                     "id": "a",
-                    "label": "Read the written instructions that came with the program.",
-                    "mode": "reading"
+                    "text": "Read the written instructions that came with the program.",
+                    "value": "reading"
                 },
                 {
                     "id": "b",
-                    "label": "Talk with people who know about the program.",
-                    "mode": "aural"
+                    "text": "Talk with people who know about the program.",
+                    "value": "aural"
                 },
                 {
                     "id": "c",
-                    "label": "Start using it and learn by trial and error.",
-                    "mode": "kinesthetic"
+                    "text": "Start using it and learn by trial and error.",
+                    "value": "kinesthetic"
                 },
                 {
                     "id": "d",
-                    "label": "Follow the diagrams in a book.",
-                    "mode": "visual"
+                    "text": "Follow the diagrams in a book.",
+                    "value": "visual"
                 }
-            ]
+            ],
+            "correct": "",
+            "difficulty": ""
         },
         {
             "question": "10. When learning from the Internet I like:",
             "choices": [
                 {
                     "id": "a",
-                    "label": "Videos showing how to do or make things.",
-                    "mode": "kinesthetic"
+                    "text": "Videos showing how to do or make things.",
+                    "value": "kinesthetic"
                 },
                 {
                     "id": "b",
-                    "label": "Interesting design and visual features.",
-                    "mode": "visual"
+                    "text": "Interesting design and visual features.",
+                    "value": "visual"
                 },
                 {
                     "id": "c",
-                    "label": "Interesting written descriptions, lists and explanations.",
-                    "mode": "reading"
+                    "text": "Interesting written descriptions, lists and explanations.",
+                    "value": "reading"
                 },
                 {
                     "id": "d",
-                    "label": "Audio channels where I can listen to podcasts or interviews.",
-                    "mode": "aural"
+                    "text": "Audio channels where I can listen to podcasts or interviews.",
+                    "value": "aural"
                 }
-            ]
+            ],
+            "correct": "",
+            "difficulty": ""
         },
         {
             "question": "11. I want to learn about a new project. I would ask for:",
             "choices": [
                 {
                     "id": "a",
-                    "label": "Diagrams to show the project stages with charts of benefits and costs.",
-                    "mode": "visual"
+                    "text": "Diagrams to show the project stages with charts of benefits and costs.",
+                    "value": "visual"
                 },
                 {
                     "id": "b",
-                    "label": "A written report describing the main features of the project.",
-                    "mode": "reading"
+                    "text": "A written report describing the main features of the project.",
+                    "value": "reading"
                 },
                 {
                     "id": "c",
-                    "label": "An opportunity to discuss the project.",
-                    "mode": "aural"
+                    "text": "An opportunity to discuss the project.",
+                    "value": "aural"
                 },
                 {
                     "id": "d",
-                    "label": "Examples where the project has been used successfully.",
-                    "mode": "kinesthetic"
+                    "text": "Examples where the project has been used successfully.",
+                    "value": "kinesthetic"
                 }
-            ]
+            ],
+            "correct": "",
+            "difficulty": ""
         },
         {
             "question": "12. I want to learn how to take better photos. I would:",
             "choices": [
                 {
                     "id": "a",
-                    "label": "Ask questions and talk about the camera and its features.",
-                    "mode": "aural"
+                    "text": "Ask questions and talk about the camera and its features.",
+                    "value": "aural"
                 },
                 {
                     "id": "b",
-                    "label": "Use the written instructions about what to do.",
-                    "mode": "reading"
+                    "text": "Use the written instructions about what to do.",
+                    "value": "reading"
                 },
                 {
                     "id": "c",
-                    "label": "Use diagrams showing the camera and what each part does.",
-                    "mode": "kinesthetic"
+                    "text": "Use diagrams showing the camera and what each part does.",
+                    "value": "kinesthetic"
                 },
                 {
                     "id": "d",
-                    "label": "Use examples of good and poor photos showing how to improve them.",
-                    "mode": "visual"
+                    "text": "Use examples of good and poor photos showing how to improve them.",
+                    "value": "visual"
                 }
-            ]
+            ],
+            "correct": "",
+            "difficulty": ""
         },
         {
             "question": "13. I prefer a presenter or a teacher who uses:",
             "choices": [
                 {
                     "id": "a",
-                    "label": "Demonstrations, models or practical sessions.",
-                    "mode": "kinesthetic"
+                    "text": "Demonstrations, models or practical sessions.",
+                    "value": "kinesthetic"
                 },
                 {
                     "id": "b",
-                    "label": "Question and answer, talk, group discussion, or guest speakers.",
-                    "mode": "aural"
+                    "text": "Question and answer, talk, group discussion, or guest speakers.",
+                    "value": "aural"
                 },
                 {
                     "id": "c",
-                    "label": "Handouts, books, or readings.",
-                    "mode": "reading"
+                    "text": "Handouts, books, or readings.",
+                    "value": "reading"
                 },
                 {
                     "id": "d",
-                    "label": "Diagrams, charts, maps or graphs.",
-                    "mode": "visual"
+                    "text": "Diagrams, charts, maps or graphs.",
+                    "value": "visual"
                 }
-            ]
+            ],
+            "correct": "",
+            "difficulty": ""
         },
         {
             "question": "14. I have finished a competition or test and I would like some feedback. I would like to have feedback:",
             "choices": [
                 {
                     "id": "a",
-                    "label": "Using examples from what I have done.",
-                    "mode": "kinesthetic"
+                    "text": "Using examples from what I have done.",
+                    "value": "kinesthetic"
                 },
                 {
                     "id": "b",
-                    "label": "Using a written description of my results.",
-                    "mode": "reading"
+                    "text": "Using a written description of my results.",
+                    "value": "reading"
                 },
                 {
                     "id": "c",
-                    "label": "From somebody who talks it through with me.",
-                    "mode": "aural"
+                    "text": "From somebody who talks it through with me.",
+                    "value": "aural"
                 },
                 {
                     "id": "d",
-                    "label": "Using graphs showing what I achieved.",
-                    "mode": "visual"
+                    "text": "Using graphs showing what I achieved.",
+                    "value": "visual"
                 }
-            ]
+            ],
+            "correct": "",
+            "difficulty": ""
         },
         {
             "question": "15. I want to find out about a house or an apartment. Before visiting it I would want:",
             "choices": [
                 {
                     "id": "a",
-                    "label": "To view a video of the property.",
-                    "mode": "kinesthetic"
+                    "text": "To view a video of the property.",
+                    "value": "kinesthetic"
                 },
                 {
                     "id": "b",
-                    "label": "A discussion with the owner.",
-                    "mode": "aural"
+                    "text": "A discussion with the owner.",
+                    "value": "aural"
                 },
                 {
                     "id": "c",
-                    "label": "A printed description of the rooms and features.",
-                    "mode": "reading"
+                    "text": "A printed description of the rooms and features.",
+                    "value": "reading"
                 },
                 {
                     "id": "d",
-                    "label": "A plan showing the rooms and a map of the area.",
-                    "mode": "visual"
+                    "text": "A plan showing the rooms and a map of the area.",
+                    "value": "visual"
                 }
-            ]
+            ],
+            "correct": "",
+            "difficulty": ""
         },
         {
             "question": "16. I want to assemble a wooden table that came in parts (kitset). I would learn best from:",
             "choices": [
                 {
                     "id": "a",
-                    "label": "Diagrams showing each stage of the assembly.",
-                    "mode": "visual"
+                    "text": "Diagrams showing each stage of the assembly.",
+                    "value": "visual"
                 },
                 {
                     "id": "b",
-                    "label": "Advice from someone who has done it before.",
-                    "mode": "aural"
+                    "text": "Advice from someone who has done it before.",
+                    "value": "aural"
                 },
                 {
                     "id": "c",
-                    "label": "Written instructions that came with the parts for the table.",
-                    "mode": "reading"
+                    "text": "Written instructions that came with the parts for the table.",
+                    "value": "reading"
                 },
                 {
                     "id": "d",
-                    "label": "Watching a video of a person assembling a similar table.",
-                    "mode": "kinesthetic"
+                    "text": "Watching a video of a person assembling a similar table.",
+                    "value": "kinesthetic"
                 }
-            ]
+            ],
+            "correct": "",
+            "difficulty": ""
         }
     ]
 }

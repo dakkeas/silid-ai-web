@@ -15,6 +15,7 @@ const PreTest = () => {
                 data={data}
                 testTitle={"PAILON VR PreTest"}
                 testDescription={"Choose the answer that you believe is correct based on your understanding of the material."}
+                inputType="radio"
             ></Test>
         </div>
 

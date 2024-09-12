@@ -7,6 +7,7 @@ const Test = ({
     data,
     testTitle,
     testDescription,
+    inputType
 }) => {
     return (
         <div className={styles.mainContainer}>
@@ -27,8 +28,8 @@ const Test = ({
                                     {
                                         item.choices.map((choice, index) => (
 
-                                            <div key={index} className={styles.choiceWrapper}>
-                                                <input type="radio" value={choice.id} name={`${item.question} - ${item.id}`}/>
+                                            <div key={choice.id} className={styles.choiceWrapper}>
+                                                <input type={inputType} value={choice.value} name={`${item.question} - ${item.id}`} />
                                                 <label htmlFor="">{choice.text}</label>
                                             </div>
                                         ))

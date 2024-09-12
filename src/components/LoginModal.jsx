@@ -35,7 +35,7 @@ const LoginModal = ({ isOpen, onClose }) => {
                 <p>Welcome back, user. </p>
                 <form onSubmit={handleSubmit}>
                     <div className={styles.formGroup}>
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor="email" className={styles.innerLabel}>Email</label>
                         <input
                             type="email"
                             id="email"

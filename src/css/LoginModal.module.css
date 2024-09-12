@@ -26,7 +26,6 @@
 
 .modalContent p {
     margin-top: 2px;
-    margin-bottom: 20px;
     font-size: 15px;
 
 }
@@ -34,7 +33,7 @@
 
 .closeButton {
     position: absolute;
-    top: 10px;
+    top: 15px;
     right: 16px;
     background: none;
     border: none;
@@ -47,7 +46,21 @@
 }
 
 .formGroup {
-    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup label {
+    position: relative;
+    background-color: white;
+    left: 13px;
+    font-size: 14px;
+    flex-grow: 0;
+    align-self: flex-start;
+    color: grey;
+    font-weight: 400;
+    top: 15px;
+    /* background-color: yellow; */
 }
 
 .inputField {

@@ -26,7 +26,7 @@ const TaskProgress = ({ id, taskName, status, result }) => {
             case 2:
                 // setNavigateTo('/pretest');
                 console.log('navigating to vark')
-                navigate('/');
+                navigate('/vark');
                 break;
         }
 

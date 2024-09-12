@@ -5,344 +5,420 @@
             "choices": [
                 {
                     "id": "a",
-                    "text": "Utilizing a learning algorithm"
+                    "text": "Utilizing a learning algorithm",
+                    "value": "a"
                 },
                 {
                     "id": "b",
-                    "text": "Fitting the dataset to the prompt"
+                    "text": "Fitting the dataset to the prompt",
+                    "value": "b"
                 },
                 {
                     "id": "c",
-                    "text": "Finding the suitable program"
+                    "text": "Finding the suitable program",
+                    "value": "c"
                 },
                 {
                     "id": "d",
-                    "text": "Revising the dataset"
+                    "text": "Revising the dataset",
+                    "value": "d"
                 }
             ],
             "correct": "a",
-            "image": ""
+            "image": "",
+            "difficulty": ""
         },
         {
             "question": "2. If the algorithm of an artificial intelligence was only instructed to bake a red velvet cake, and yet included in the sequence of steps it performed was to clean the area where preparation of ingredients occurred, what can be said about the algorithm in general?",
             "choices": [
                 {
                     "id": "a",
-                    "text": "The algorithm in itself is intelligent enough to not necessitate much of an instruction to perform with extra steps"
+                    "text": "The algorithm in itself is intelligent enough to not necessitate much of an instruction to perform with extra steps",
+                    "value": "a"
                 },
                 {
                     "id": "b",
-                    "text": "The algorithm is opinionated in a way that it follows instructions but may modify them based on what they were taught, trained, or tested to"
+                    "text": "The algorithm is opinionated in a way that it follows instructions but may modify them based on what they were taught, trained, or tested to",
+                    "value": "b"
                 },
                 {
                     "id": "c",
-                    "text": "Further development is necessary for the algorithm to perform accordingly to the provided instructions"
+                    "text": "Further development is necessary for the algorithm to perform accordingly to the provided instructions",
+                    "value": "c"
                 },
                 {
                     "id": "d",
-                    "text": "The algorithm has common sense much like humans do"
+                    "text": "The algorithm has common sense much like humans do",
+                    "value": "d"
                 }
             ],
             "correct": "b",
-            "image": ""
+            "image": "",
+            "difficulty": ""
         },
         {
             "question": "3. Which of the following characteristics here may be the node that can complete the representing decision tree structure of the example electronics?",
             "choices": [
                 {
                     "id": "a",
-                    "text": "Interconnectivity"
+                    "text": "Interconnectivity",
+                    "value": "a"
                 },
                 {
                     "id": "b",
-                    "text": "Mobility"
+                    "text": "Mobility",
+                    "value": "b"
                 },
                 {
                     "id": "c",
-                    "text": "Rechargeability"
+                    "text": "Rechargeability",
+                    "value": "c"
                 },
                 {
                     "id": "d",
-                    "text": "Adjustability"
+                    "text": "Adjustability",
+                    "value": "d"
                 }
             ],
             "correct": "b",
-            "image": "/public/questions/q3.png"
+            "image": "/public/questions/q3.png",
+            "difficulty": ""
         },
         {
             "question": "4. How is the establishment of an ethical matrix generally relevant to the development of algorithms?",
             "choices": [
                 {
                     "id": "a",
-                    "text": "The ethical matrix commercially helps algorithm developers and marketers to reach their target users"
+                    "text": "The ethical matrix commercially helps algorithm developers and marketers to reach their target users",
+                    "value": "a"
                 },
                 {
                     "id": "b",
-                    "text": "Taking into account what can be valued from an algorithm and who will benefit from such values are a consideration of algorithms being created to pursue different goals"
+                    "text": "Taking into account what can be valued from an algorithm and who will benefit from such values are a consideration of algorithms being created to pursue different goals",
+                    "value": "b"
                 },
                 {
                     "id": "c",
-                    "text": "An algorithm is created as is and the establishment of its ethical matrix is for those who plan to advertise it"
+                    "text": "An algorithm is created as is and the establishment of its ethical matrix is for those who plan to advertise it",
+                    "value": "c"
                 },
                 {
                     "id": "d",
-                    "text": "The ethical matrix implicates limitations of an algorithm in terms of its performance value and marketability"
+                    "text": "The ethical matrix implicates limitations of an algorithm in terms of its performance value and marketability",
+                    "value": "d"
                 }
             ],
             "correct": "b",
-            "image": ""
+            "image": "",
+            "difficulty": ""
         },
         {
             "question": "5. Imagine a student-researcher aiming to advertise the product of their research project, a simple application for early education curricula, which among these then is a group of stakeholders to which the product can be advertised to so as for the ethical matrix of it is thought of?",
             "choices": [
                 {
                     "id": "a",
-                    "text": "Grade schoolers, non-teaching staff, co-researchers"
+                    "text": "Grade schoolers, non-teaching staff, co-researchers",
+                    "value": "a"
                 },
                 {
                     "id": "b",
-                    "text": "Grade schoolers, faculty, and parents or guardians"
+                    "text": "Grade schoolers, faculty, and parents or guardians",
+                    "value": "b"
                 },
                 {
                     "id": "c",
-                    "text": "Adolescents, faculty, and the general public"
+                    "text": "Adolescents, faculty, and the general public",
+                    "value": "c"
                 },
                 {
                     "id": "d",
-                    "text": "Grade schoolers, faculty, and the general public"
+                    "text": "Grade schoolers, faculty, and the general public",
+                    "value": "d"
                 }
             ],
             "correct": "b",
-            "image": "/public/questions/q5.png"
+            "image": "/public/questions/q5.png",
+            "difficulty": ""
         },
         {
             "question": "6. Though fairness has not been conclusively established in the community of artificial intelligence, what is the importance of realizing it on today’s technologies?",
             "choices": [
                 {
                     "id": "a",
-                    "text": "To transmit information only exclusive to paying users"
+                    "text": "To transmit information only exclusive to paying users",
+                    "value": "a"
                 },
                 {
                     "id": "b",
-                    "text": "To create just, non-discriminatory machines that recognizes all groups"
+                    "text": "To create just, non-discriminatory machines that recognizes all groups",
+                    "value": "b"
                 },
                 {
                     "id": "c",
-                    "text": "To selectively disseminate information that benefits every user on the surface"
+                    "text": "To selectively disseminate information that benefits every user on the surface",
+                    "value": "c"
                 },
                 {
                     "id": "d",
-                    "text": "To create human-like machineries that can act like any group"
+                    "text": "To create human-like machineries that can act like any group",
+                    "value": "d"
                 }
             ],
             "correct": "b",
-            "image": ""
+            "image": "",
+            "difficulty": ""
         },
         {
             "question": "7. Electronic mail filtering, advanced and filtered searching, and credit scoring are examples of what type of technology?",
             "choices": [
                 {
                     "id": "a",
-                    "text": "Generative technology"
+                    "text": "Generative technology",
+                    "value": "a"
                 },
                 {
                     "id": "b",
-                    "text": "Predictive technology"
+                    "text": "Predictive technology",
+                    "value": "b"
                 },
                 {
                     "id": "c",
-                    "text": "High technology"
+                    "text": "High technology",
+                    "value": "c"
                 },
                 {
                     "id": "d",
-                    "text": "Classifying technology"
+                    "text": "Classifying technology",
+                    "value": "d"
                 }
             ],
             "correct": "d",
-            "image": ""
+            "image": "",
+            "difficulty": ""
         },
         {
             "question": "8. How is the training dataset of an intelligence differentiated from the test dataset? _____",
             "choices": [
                 {
                     "id": "a",
-                    "text": "The training dataset is evaluated of accuracy by the test dataset"
+                    "text": "The training dataset is evaluated of accuracy by the test dataset",
+                    "value": "a"
                 },
                 {
                     "id": "b",
-                    "text": "The training dataset is, in actuality, semantically interchangeable with test dataset"
+                    "text": "The training dataset is, in actuality, semantically interchangeable with test dataset",
+                    "value": "b"
                 },
                 {
                     "id": "c",
-                    "text": "The training dataset is the subset of data that serves as the initial database for the algorithm to create its first predictions"
+                    "text": "The training dataset is the subset of data that serves as the initial database for the algorithm to create its first predictions",
+                    "value": "c"
                 },
                 {
                     "id": "d",
-                    "text": "The training dataset is the subset of data that acts as the latter data for the algorithm to be a trained accurate predictor"
+                    "text": "The training dataset is the subset of data that acts as the latter data for the algorithm to be a trained accurate predictor",
+                    "value": "d"
                 }
             ],
             "correct": "c",
-            "image": ""
+            "image": "",
+            "difficulty": ""
         },
         {
             "question": "9. In analyzing the flow of a neural network, what may be inferred about its relation with supervised machine learning?",
             "choices": [
                 {
                     "id": "a",
-                    "text": "Neural networks and supervised machine learning are independent artificial intelligence types"
+                    "text": "Neural networks and supervised machine learning are independent artificial intelligence types",
+                    "value": "a"
                 },
                 {
                     "id": "b",
-                    "text": "Neural networks fit under the category of supervised machine learning due to the usage of labeled data for their creation"
+                    "text": "Neural networks fit under the category of supervised machine learning due to the usage of labeled data for their creation",
+                    "value": "b"
                 },
                 {
                     "id": "c",
-                    "text": "Supervised machine learning fit under the category of neural networks due to the tripartite process of creating predictions"
+                    "text": "Supervised machine learning fit under the category of neural networks due to the tripartite process of creating predictions",
+                    "value": "c"
                 },
                 {
                     "id": "d",
-                    "text": "Neural networks and supervised machine learning form two parts of a whole artificial intelligence"
+                    "text": "Neural networks and supervised machine learning form two parts of a whole artificial intelligence",
+                    "value": "d"
                 }
             ],
             "correct": "b",
-            "image": "/public/questions/q9.png"
+            "image": "/public/questions/q9.png",
+            "difficulty": ""
         },
         {
             "question": "10. What main characteristic defines the difference of neural networks from decision trees?",
             "choices": [
                 {
                     "id": "a",
-                    "text": "Number of branches leading to and from a node"
+                    "text": "Number of branches leading to and from a node",
+                    "value": "a"
                 },
                 {
                     "id": "b",
-                    "text": "The labeling of data"
+                    "text": "The labeling of data",
+                    "value": "b"
                 },
                 {
                     "id": "c",
-                    "text": "The measurement of data"
+                    "text": "The measurement of data",
+                    "value": "c"
                 },
                 {
                     "id": "d",
-                    "text": "Number of nodes leading to and from a branch"
+                    "text": "Number of nodes leading to and from a branch",
+                    "value": "d"
                 }
             ],
             "correct": "a",
-            "image": ""
+            "image": "",
+            "difficulty": ""
         },
         {
             "question": "11. How does the adversary aspect of the Generative Adversarial Network (GAN) function?",
             "choices": [
                 {
                     "id": "a",
-                    "text": "Oppose the feedback given by the users on the generality and replicability of the output"
+                    "text": "Oppose the feedback given by the users on the generality and replicability of the output",
+                    "value": "a"
                 },
                 {
                     "id": "b",
-                    "text": "Oppose the generated output which was detected of apparent flaws or differences from the existing object the generated output based from"
+                    "text": "Oppose the generated output which was detected of apparent flaws or differences from the existing object the generated output based from",
+                    "value": "b"
                 },
                 {
                     "id": "c",
-                    "text": "Compete with other machines having the same generative ability"
+                    "text": "Compete with other machines having the same generative ability",
+                    "value": "c"
                 },
                 {
                     "id": "d",
-                    "text": "Compete the importance and usage of the generated output and its based existing object"
+                    "text": "Compete the importance and usage of the generated output and its based existing object",
+                    "value": "d"
                 }
             ],
             "correct": "b",
-            "image": "/public/questions/q11.png"
+            "image": "/public/questions/q11.png",
+            "difficulty": ""
         },
         {
             "question": "12. What may be the unanticipated consequence of an intelligent recommender system of online video sharing platforms to the general users?",
             "choices": [
                 {
                     "id": "a",
-                    "text": "Personalization of the video-viewing experience"
+                    "text": "Personalization of the video-viewing experience",
+                    "value": "a"
                 },
                 {
                     "id": "b",
-                    "text": "Opening of opportunities for video marketers"
+                    "text": "Opening of opportunities for video marketers",
+                    "value": "b"
                 },
                 {
                     "id": "c",
-                    "text": "Increase of unfiltered views and streams on random videos"
+                    "text": "Increase of unfiltered views and streams on random videos",
+                    "value": "c"
                 },
                 {
                     "id": "d",
-                    "text": "Suggestion of conspiratorial, extreme, or misleading content"
+                    "text": "Suggestion of conspiratorial, extreme, or misleading content",
+                    "value": "d"
                 }
             ],
             "correct": "d",
-            "image": ""
+            "image": "",
+            "difficulty": ""
         },
         {
             "question": "13. Which of these actions in machine learning would most likely improve the performance of an algorithm?",
             "choices": [
                 {
                     "id": "a",
-                    "text": "Increasing the size of the training dataset"
+                    "text": "Increasing the size of the training dataset",
+                    "value": "a"
                 },
                 {
                     "id": "b",
-                    "text": "Reducing the complexity of the algorithm"
+                    "text": "Reducing the complexity of the algorithm",
+                    "value": "b"
                 },
                 {
                     "id": "c",
-                    "text": "Decreasing the number of features in the dataset"
+                    "text": "Decreasing the number of features in the dataset",
+                    "value": "c"
                 },
                 {
                     "id": "d",
-                    "text": "Simplifying the data preprocessing steps"
+                    "text": "Simplifying the data preprocessing steps",
+                    "value": "d"
                 }
             ],
             "correct": "a",
-            "image": "/public/questions/q13.png"
+            "image": "/public/questions/q13.png",
+            "difficulty": ""
         },
         {
             "question": "14. In the context of artificial intelligence ethics, what does the term 'bias' refer to?",
             "choices": [
                 {
                     "id": "a",
-                    "text": "The tendency of an algorithm to produce inconsistent results"
+                    "text": "The tendency of an algorithm to produce inconsistent results",
+                    "value": "a"
                 },
                 {
                     "id": "b",
-                    "text": "The introduction of errors due to inaccurate data"
+                    "text": "The introduction of errors due to inaccurate data",
+                    "value": "b"
                 },
                 {
                     "id": "c",
-                    "text": "The favoritism or unfair treatment towards certain groups or outcomes"
+                    "text": "The favoritism or unfair treatment towards certain groups or outcomes",
+                    "value": "c"
                 },
                 {
                     "id": "d",
-                    "text": "The tendency of an algorithm to overfit the training data"
+                    "text": "The tendency of an algorithm to overfit the training data",
+                    "value": "d"
                 }
             ],
             "correct": "c",
-            "image": "/public/questions/q14.png" },
+            "image": "/public/questions/q14.png",
+            "difficulty": ""
+        },
         {
             "question": "15. What is the primary goal of using cross-validation in machine learning?",
             "choices": [
                 {
                     "id": "a",
-                    "text": "To select the best features for the model"
+                    "text": "To select the best features for the model",
+                    "value": "a"
                 },
                 {
                     "id": "b",
-                    "text": "To evaluate the model's performance on unseen data"
+                    "text": "To evaluate the model's performance on unseen data",
+                    "value": "b"
                 },
                 {
                     "id": "c",
-                    "text": "To increase the size of the training dataset"
+                    "text": "To increase the size of the training dataset",
+                    "value": "c"
                 },
                 {
                     "id": "d",
-                    "text": "To reduce the computational complexity of the model"
+                    "text": "To reduce the computational complexity of the model",
+                    "value": "d"
                 }
             ],
             "correct": "b",
-            "image": ""
+            "image": "",
+            "difficulty": ""
         }
     ]
 }
