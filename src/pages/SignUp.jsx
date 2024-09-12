@@ -1,8 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from '../css/SignUp.module.css';
-import placeholder from '../../public/vr-kids-2.jpg';
+import placeholder from '../../public/vr-kids-2.jpg'
+import CustomButton from '../components/CustomButton'
+import { useNavigate } from "react-router-dom"
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getDatabase } from "firebase/database";
+import { initFirebase, createNewUser } from "../utils/firebase"
+
 
 const SignUp = () => {
+    // firebase authentication functions
+    const navigate = useNavigate()
+    useEffect(() => {
+        // run onlu once!
+        console.log("initializing firebase app ...")
+        initFirebase()
+    }, [])
+
+
+
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -34,6 +50,51 @@ const SignUp = () => {
         // Handle form submission logic here
         console.log('Form submitted:', formData);
     };
+
+    /*
+    firebase authentication
+    */
+    const routeToHome = () => {
+        navigate('/')
+    }
+
+
+    const handleSignUp = () => {
+        console.log('signing up..')
+        // initialize app here
+        const auth = getAuth();
+        /*
+        handle username, password validation here!
+        */
+
+        createUserWithEmailAndPassword(auth, formData.email, formData.password)
+            .then((userCredential) => {
+                console.log('signing up .....')
+                // Signed up 
+                const db = getDatabase()
+                const user = userCredential.user;
+                console.log(user)
+                createNewUser(
+                    db,
+                    user.uid,
+                    formData
+                )
+
+                // after signing in is completed...
+                routeToHome()
+
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // ..
+
+                console.log(errorCode)
+                console.log(errorMessage)
+            });
+    }
+
+
 
     return (
 
@@ -116,7 +177,7 @@ const SignUp = () => {
                         </div>
 
                         <div className={styles.formGroup}>
-                            <label htmlFor="program"className={styles.innerLabel}>Program</label>
+                            <label htmlFor="program" className={styles.innerLabel}>Program</label>
                             <select
                                 id="program"
                                 name="program"
@@ -146,8 +207,10 @@ const SignUp = () => {
                             </select>
 
                         </div>
-                        <button type="submit" className={styles.submitButton}>Sign Up</button>
+                        <button className={styles.submitButton} type="submit" onClick={handleSignUp}>Sign Up</button>
                     </form>
+                    <div className={styles.signUpBtnWrapper}>
+                    </div>
                 </div>
 
             </div>

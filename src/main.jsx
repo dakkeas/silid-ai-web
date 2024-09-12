@@ -15,18 +15,6 @@ import PreTest from './pages/PreTest.jsx'
 import Vark from './pages/Vark.jsx'
 import ProtectedRoutes from './utils/ProtectedRoutes.jsx'
 
-const isAuthenticated = () => {
-  // store local token
-  // return localStorage.getItem('authToken') !== null;
-  return null
-}
-
-const PrivateRoute = ({ element }) => {
-  // if authenticated, return the dashboard page, if not, navigate to login!
-  return isAuthenticated() ? element : <Navigate to="/" />;
-  // return element
-
-};
 
 
 const router = createBrowserRouter([

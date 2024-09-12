@@ -161,3 +161,10 @@
     background-color: var(--orange-darker-theme);
     transform: translatey(-2px);
 }
+
+.signUpBtnWrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
