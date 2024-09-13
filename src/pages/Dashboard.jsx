@@ -1,30 +1,43 @@
-import React from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import styles from '../css/Dashboard.module.css';
 import CustomButton from '../components/CustomButton';
+import { ref, set, onValue } from "firebase/database";
+import { getDatabase } from 'firebase/database';
 import TaskProgress from '../components/TaskProgress';
-import { BookOpen, House, Settings, Calendar, LogOut, Info, StickyNote } from 'lucide-react'
-import { Link, useNavigate } from 'react-router-dom';
+import { House, Settings, Calendar, LogOut, Info, StickyNote } from 'lucide-react'
+import { useNavigate } from 'react-router-dom';
+import { signOutUser, checkAuthState } from '../utils/firebase';
+import Loading from '../components/Loading';
+import { Context } from '../utils/AuthContext'
+
 
 
 
 const availableTests = [
     {
         logo: "https://example.com/pretest-logo.png",
-        taskName: "Pretest",
-        status: "Completed",
-        result: "85%"
+        nodeName: "pretest",
+        taskName: "Pre Test",
+        status: "",
+        result: "--",
+        learners: ['adaptive', 'traditional']
     },
     {
         logo: "https://example.com/posttest-logo.png",
-        taskName: "Posttest",
-        status: "Pending",
-        result: "N/A"
+        nodeName: "posttest",
+        taskName: "Post Test",
+        status: "",
+        result: "--",
+        learners: ['adaptive', 'traditional']
+
     },
     {
         logo: "https://example.com/vark-logo.png",
         taskName: "VARK Questionnaire",
+        nodeName: "vark",
         status: "In Progress",
-        result: "N/A"
+        result: "N/A",
+        learners: ['adaptive']
     }
 ];
 
@@ -33,11 +46,116 @@ const availableTests = [
 const Dashboard = () => {
 
     const navigate = useNavigate();
+    const { user } = useContext(Context)
+    const [userData, setUserData] = useState({})
+    const [isLoading, setIsLoading] = useState(true)
+    const [currentDate, setCurrentDate] = useState('')
+    const [tests, setTests] = useState([
+        {
+            taskName: "Pre Test",
+            status: "",
+            result: "--",
+            learners: ['adaptive', 'traditional']
+        },
+        {
+            taskName: "Post Test",
+            status: "",
+            result: "--",
+            learners: ['adaptive', 'traditional']
+
+        },
+        {
+            taskName: "VARK Questionnaire",
+            status: "",
+            result: "--",
+            learners: ['adaptive', ]
+        }
+    ])
+
+    const getCurrentDate = () => {
+        const date = new Date();
+        const day = date.getDate();
+        const month = date.toLocaleString('default', { month: 'short' });
+        const year = date.getFullYear();
+        setCurrentDate(`${day} ${month}, ${year}`)
+
+    };
+
+    const handleFetchUserData = (dataObject) => {
+        setUserData(dataObject)
+
+    }
+
+
+    const updateTestStatus = (index, newStatus) => {
+        setTests(prevTests => 
+            prevTests.map((test, i) => 
+                i === index ? { ...test, status: newStatus } : test
+            )
+        );
+    };
+ 
+    useEffect(() => {
+        checkAuthState()
+        const db = getDatabase();
+
+        const userDataRef = ref(db, `users/${user.uid}`);
+
+        onValue(userDataRef, (snapshot) => {
+            console.log(user.uid)
+            const data = snapshot.val();
+            console.log(data)
+            if (data) {
+                handleFetchUserData(data)
+                setIsLoading(false)
+                tests.forEach((test, index) => {
+                    switch (index) {
+                        case 0:
+                            console.log(data.pretest.completed);
+                            updateTestStatus(index, data.pretest.completed === false ? 'Not Started' : 'Completed');
+                            break;
+                        case 1:
+                            console.log(data.posttest.completed);
+                            updateTestStatus(index, data.posttest.completed === false ? 'Not Started' : 'Completed');
+                            break;
+                        case 2:
+                            console.log(data.vark.completed);
+                            updateTestStatus(index, data.vark.completed === false ? 'Not Started' : 'Completed');
+                            break;
+                        default:
+                            console.log('Invalid index');
+                    }
+                });
+
+            } else {
+                setIsLoading(false)
+                console.log('error fetching data...')
+            }
+
+        });
+
+        getCurrentDate()
+
+    }, [])
+
+    const handleNavigation = (id) => {
+        console.log('Button clicked!')
+
+        switch (id) {
+            case 0:
+                return () => navigate('/pretest')
+            case 1:
+                return () => navigate('/posttest')
+
+            case 2:
+                return () => navigate('/vark')
+        }
+    }
 
     const handleLogOut = () => {
-        console.log("logging out user ....")
-        navigate('/');
+        signOutUser(navigate)
     }
+
     return (
 
 
@@ -82,12 +200,12 @@ const Dashboard = () => {
                 <div className={styles.mainContent}>
                     <div className={styles.mainContentGreet}>
                         <div style={{ display: 'flex', flexDirection: "column" }} className={styles.heroWrapper}>
-                            <h2>Hello, Juan Dela Cruz</h2>
+                            <h2>Hello, {isLoading ? <Loading color="lightgrey"></Loading> : `${userData.firstName} ${userData.lastName}`}</h2>
                             <p>Track all of your progress with Pailon VR here.</p>
                         </div>
 
                         <div style={{ display: 'flex', flexDirection: "row" }} className={styles.dateWrapper}>
-                            <p>16 May, 2024</p>
+                            <p>{isLoading ? <Loading color="lightgrey"></Loading> : currentDate}</p>
                             <div className={styles.logoWrapper}>
                                 <Calendar color={'#e06156'} size={24}></Calendar>
                             </div>
@@ -97,22 +215,26 @@ const Dashboard = () => {
 
                     <div className={styles.mainSection}>
                         <h2>Tasks</h2>
-                        <div className={styles.tasksContainer}>
-                            {
-                                availableTests.map((test, index) => {
-                                    return (
-                                        <TaskProgress
-                                            key={index}
-                                            logo={test.logo}
-                                            taskName={test.taskName}
-                                            status={test.status}
-                                            result={test.result}
-                                            id={index}
-                                        />
-                                    )
-                                })
-                            }
-                        </div>
+                        {isLoading ? <Loading color="lightgrey"></Loading> :
+                            <div className={styles.tasksContainer}>
+                                {
+                                    tests.filter((test) => test.learners.includes(userData.learningPreference)).map((test, index) => {
+                                        return (
+                                            <TaskProgress
+                                                key={index}
+                                                logo={test.logo}
+                                                taskName={test.taskName}
+                                                status={test.status}
+                                                result={test.result}
+                                                id={index}
+                                                taskRoute={handleNavigation(index)}
+
+                                            />
+                                        )
+                                    })
+                                }
+                            </div>
+                        }
                     </div>
                     <div className={styles.mainSection}>
                         <h2>Progress</h2>
@@ -126,7 +248,7 @@ const Dashboard = () => {
                             <img src="/public/anonymous.jpg" alt="pfp" />
                         </div>
                         <div className={styles.profileTextWrapper}>
-                            <h3>Juan dela Cruz</h3>
+                            <h3>{isLoading ? <Loading color="lightgrey"></Loading> : `${userData.firstName} ${userData.lastName}`}</h3>
                             <p>Polytechnic University of the Philippines</p>
                         </div>
                     </div>

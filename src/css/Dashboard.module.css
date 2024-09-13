@@ -137,6 +137,7 @@
 
 .heroWrapper>h2 {
   color: black;
+  /* background-color: yellow; */
 }
 
 .heroWrapper>p {
@@ -149,7 +150,7 @@
   /* background-color: whitwe; */
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 20px;
 }
 
 .mainSection h2 {
@@ -161,7 +162,6 @@
   display: flex;
   flex-direction: column;
   row-gap: 15px;
-
 }
 
 

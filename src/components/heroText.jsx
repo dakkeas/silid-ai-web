@@ -8,7 +8,11 @@ import '../css/global.css'
 // import components
 import CustomButton from '../components/CustomButton'
 
+import { useNavigate } from 'react-router-dom'
+
+
 const HeroText = () => {
+    const navigate = useNavigate()
 
     return (
         <>
@@ -19,8 +23,7 @@ const HeroText = () => {
                     personalized just for you, with cutting-edge Adaptive VR Learning.</p>
                 <CustomButton
                     textContent={'Get Started'}
-                    type={'primary'}
-                    routeTo='/signup'
+                    onClick={() => navigate('/signup')}
                 ></CustomButton>
 
             </div>

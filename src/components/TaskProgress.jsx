@@ -4,34 +4,8 @@ import CustomButton from './CustomButton'
 import styles from '../css/TaskProgress.module.css'
 import { useNavigate } from 'react-router-dom'
 
-const TaskProgress = ({ id, taskName, status, result }) => {
-    const navigate = useNavigate()
-
-    const handleNavigation = () => {
-        console.log('Button clicked!')
-        console.log(id)
-
-        switch (id) {
-            case 0:
-                // setNavigateTo('/pretest');
-                console.log('navigating to pretest')
-                navigate('/pretest');
-                break;
-            case 1:
-                // setNavigateTo('/pretest');
-                console.log('navigating to posttest')
-                navigate('/posttest');
-                break;
-
-            case 2:
-                // setNavigateTo('/pretest');
-                console.log('navigating to vark')
-                navigate('/vark');
-                break;
-        }
-
-
-    }
+const TaskProgress = ({ id, taskName, status, result, taskRoute }) => {
+    const indicatorColor = status == "Completed" ? {color: "#239b56", bg: "#d5f5e3"} :  {color: "#a93226", bg: "#fadbd8"}
 
     return (
         <div className={styles.taskProgressContainer}>
@@ -44,14 +18,17 @@ const TaskProgress = ({ id, taskName, status, result }) => {
                 <h3>{taskName}</h3>
             </div>
             <div className={styles.taskStatusWrapper}>
-                <h3>{status}</h3>
+                <div style={{backgroundColor: indicatorColor.bg}} className={styles.taskStatusBackground}>
+                    <div style={{backgroundColor: indicatorColor.color}} className={styles.indicator}></div>
+                    <h3 >{status}</h3>
+                </div>
             </div>
             <div className={styles.taskResultWrapper}>
                 <h3>{result}</h3>
             </div>
             <CustomButton
                 textContent={'Start'}
-                onPress={handleNavigation}
+                onClick={taskRoute}
             ></CustomButton>
         </div>
     )

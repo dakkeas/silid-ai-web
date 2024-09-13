@@ -14,6 +14,7 @@ import PostTest from './pages/PostTest.jsx'
 import PreTest from './pages/PreTest.jsx'
 import Vark from './pages/Vark.jsx'
 import ProtectedRoutes from './utils/ProtectedRoutes.jsx'
+import AuthContext from './utils/AuthContext.jsx'
 
 
 
@@ -30,24 +31,24 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard',
-    element: <ProtectedRoutes Component={Dashboard} />,
+    element: <ProtectedRoutes><Dashboard></Dashboard></ProtectedRoutes>
   },
   {
     path: '/posttest',
-    element: <ProtectedRoutes Component={PostTest} />,
+    element: <ProtectedRoutes><PostTest></PostTest></ProtectedRoutes>
   },
   {
     path: '/pretest',
-    element: <ProtectedRoutes Component={PreTest} />,
+    element: <ProtectedRoutes><PreTest></PreTest></ProtectedRoutes>
   },
   {
     path: '/vark',
-    element: <ProtectedRoutes Component={Vark} />,
+    element: <ProtectedRoutes><Vark></Vark></ProtectedRoutes>
   }
 ])
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  <AuthContext>
     <RouterProvider router={router} />
-  </StrictMode>
+  </AuthContext>
 );

@@ -6,6 +6,7 @@ import styles from '../css/Header.module.css'
 import '../css/global.css'
 // import components
 import CustomButton from './CustomButton'
+import { useNavigate } from 'react-router-dom'
 
 
 
@@ -31,11 +32,8 @@ const Header = ({ loginBtnFunction }) => {
                         </ul>
                     </nav>
                     <CustomButton
-
                         textContent={'Login'}
-                        type={'primary'}
-                        routeTo=''
-                        onPress={loginBtnFunction}
+                        onClick={loginBtnFunction}
                     ></CustomButton>
                 </div>
 

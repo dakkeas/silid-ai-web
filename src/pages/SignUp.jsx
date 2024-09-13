@@ -2,23 +2,18 @@ import React, { useState, useEffect } from 'react';
 import styles from '../css/SignUp.module.css';
 import placeholder from '../../public/vr-kids-2.jpg'
 import CustomButton from '../components/CustomButton'
-import { useNavigate } from "react-router-dom"
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { getDatabase } from "firebase/database";
-import { initFirebase, createNewUser } from "../utils/firebase"
+import { signUpNewUser } from "../utils/firebase"
+import Loading from '../components/Loading'
+import { useNavigate } from 'react-router-dom';
 
 
 const SignUp = () => {
-    // firebase authentication functions
+
+    // loading hook
+    const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate()
-    useEffect(() => {
-        // run onlu once!
-        console.log("initializing firebase app ...")
-        initFirebase()
-    }, [])
 
-
-
+    // form data
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -30,9 +25,79 @@ const SignUp = () => {
 
     });
 
+    // form errors
+    const [formErrors, setFormErrors] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        confirmPassword: '',
+        program: '',
+        learningPreference: '',
+    });
+
+    // whether to show error on UI
+    const [showErrors, setShowErrors] = useState(false);
+
+    const handleFormErrors = (name, value) => {
+        setFormErrors({
+            ...formErrors,
+            [name]: value
+        })
+
+    }
+
+    const handleIsLoading = (boolean) => {
+        setIsLoading(boolean)
+    }
+
+    const validateField = (name, value) => {
+        // checks if the input fields are valid or not  
+        let errors = formErrors;
+
+        switch (name) {
+            case 'firstName':
+                errors.firstName = value.length < 2 ? 'Must be at least 2 characters long' : '';
+                break;
+            case 'lastName':
+                errors.lastName = value.length < 2 ? 'Must be at least 2 characters long' : '';
+                break;
+            case 'email':
+                errors.email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) ? '' : 'Email is not valid';
+                break;
+            case 'password':
+                errors.password = value.length < 6 ? 'Must be at least 6 characters long' : '';
+                break;
+            case 'confirmPassword':
+                errors.confirmPassword = value !== formData.password ? 'Passwords do not match' : '';
+                break;
+            case 'program':
+                errors.program = value === '' ? 'Please select a program' : '';
+                break;
+            case 'learningPreference':
+                errors.learningPreference = value === '' ? 'Please select a learning preference' : '';
+                break;
+            default:
+                break;
+        }
+
+        setFormErrors(errors);
+    };
+
+    const validateForm = () => {
+        let valid = true;
+        Object.values(formErrors).forEach(error => {
+            if (error.length > 0) valid = false;
+        });
+        Object.values(formData).forEach(value => {
+            if (value === '') valid = false;
+        });
+        return valid;
+    };
+
     const handleChange = (e) => {
         // this function is called everytime the value changes
         // in the input fields
+        setShowErrors(false)
         const { name, value } = e.target;
         // destructure the name and value from the event target
 
@@ -43,58 +108,22 @@ const SignUp = () => {
             // update
             [name]: value,
         });
+
+        // update error log
+        validateField(name, value);
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Handle form submission logic here
-        console.log('Form submitted:', formData);
-    };
-
-    /*
-    firebase authentication
-    */
-    const routeToHome = () => {
-        navigate('/')
+    const handleSignUp = (e) => {
+        e.preventDefault()
+        setShowErrors(true)
+        setIsLoading(true)
+        if (validateForm()) {
+            signUpNewUser(formData, handleFormErrors, handleIsLoading, navigate)
+        } else {
+            setIsLoading(false)
+            console.log('there is an error!')
+        }
     }
-
-
-    const handleSignUp = () => {
-        console.log('signing up..')
-        // initialize app here
-        const auth = getAuth();
-        /*
-        handle username, password validation here!
-        */
-
-        createUserWithEmailAndPassword(auth, formData.email, formData.password)
-            .then((userCredential) => {
-                console.log('signing up .....')
-                // Signed up 
-                const db = getDatabase()
-                const user = userCredential.user;
-                console.log(user)
-                createNewUser(
-                    db,
-                    user.uid,
-                    formData
-                )
-
-                // after signing in is completed...
-                routeToHome()
-
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                // ..
-
-                console.log(errorCode)
-                console.log(errorMessage)
-            });
-    }
-
-
 
     return (
 
@@ -110,7 +139,7 @@ const SignUp = () => {
                 <div className={styles.signUpContainer}>
                     <h2>Sign Up</h2>
                     <p>Fill in the forms below to get started.</p>
-                    <form onSubmit={handleSubmit}>
+                    <form >
 
                         <div className={styles.fnamelnameWrapper}>
                             <div>
@@ -126,6 +155,7 @@ const SignUp = () => {
                                     required
                                 />
                             </div>
+                            {showErrors && <div className={styles.errorLog}>{formErrors.firstName}</div>}
                             <div>
                                 <label htmlFor="lastName" className={styles.innerLabel}>Last Name</label>
                                 <input
@@ -138,6 +168,7 @@ const SignUp = () => {
                                     required
                                 />
                             </div>
+                            {showErrors && <div className={styles.errorLogLastName}>{formErrors.lastName}</div>}
                         </div>
                         <div className={styles.formGroup}>
                             <label htmlFor="email" className={styles.innerLabel}>Email</label>
@@ -150,6 +181,7 @@ const SignUp = () => {
                                 onChange={handleChange}
                                 required
                             />
+                            {showErrors && <div className={styles.errorLog}>{formErrors.email}</div>}
                         </div>
                         <div className={styles.formGroup}>
                             <label htmlFor="password" className={styles.innerLabel}>Password</label>
@@ -162,6 +194,7 @@ const SignUp = () => {
                                 onChange={handleChange}
                                 required
                             />
+                            {showErrors && <div className={styles.errorLog}>{formErrors.password}</div>}
                         </div>
                         <div className={styles.formGroup}>
                             <label htmlFor="confirmPassword" className={styles.innerLabel}>Confirm Password</label>
@@ -174,6 +207,7 @@ const SignUp = () => {
                                 onChange={handleChange}
                                 required
                             />
+                            {showErrors && <div className={styles.errorLog}>{formErrors.confirmPassword}</div>}
                         </div>
 
                         <div className={styles.formGroup}>
@@ -191,6 +225,7 @@ const SignUp = () => {
                                 <option value="HUMMS">HUMMS</option>
                                 <option value="Faculty">Faculty</option>
                             </select>
+                            {showErrors && <div className={styles.errorLog}>{formErrors.program}</div>}
                         </div>
                         <div className={styles.formGroup}>
                             <label className={styles.innerLabel} >Learning Preference</label>
@@ -205,12 +240,17 @@ const SignUp = () => {
                                 <option value="traditional">Traditional</option>
                                 <option value="adaptive">Adaptive</option>
                             </select>
+                            {showErrors && <div className={styles.errorLog}>{formErrors.learningPreference}</div>}
 
                         </div>
-                        <button className={styles.submitButton} type="submit" onClick={handleSignUp}>Sign Up</button>
+                        <div className={styles.signUpBtnWrapper}>
+                            <CustomButton
+                                // type='submit'
+                                textContent={isLoading ? <Loading color="white"></Loading> : 'Sign Up'}
+                                onClick={handleSignUp}
+                            ></CustomButton>
+                        </div>
                     </form>
-                    <div className={styles.signUpBtnWrapper}>
-                    </div>
                 </div>
 
             </div>

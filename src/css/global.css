@@ -24,7 +24,6 @@
 
 * {
     font-family: inter, system-ui, avenir, helvetica, arial, sans-serif;
-    color: white;
     margin: 0px;
     padding: 0px;
 }
@@ -110,8 +109,4 @@ button:focus-visible {
 
 .bold {
     font-weight: 700;
-}
-
-.grey {
-    color: grey
 }

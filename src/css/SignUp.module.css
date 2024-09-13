@@ -1,9 +1,9 @@
 .background {
     display: flex;
     justify-content: center;
-    background-color: lightblue;
+    background-color: whitesmoke;
     align-items: center;
-    background-image: url('/public/white.jpg');
+    /* background-image: url('/public/white.jpg'); */
     background-size: cover;
     height: 100vh;
 }
@@ -55,6 +55,12 @@
     padding: 40px
 }
 
+.signUpContainer form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
 
 .signUpContainer h2 {
     /* text-align: center; */
@@ -67,16 +73,12 @@
     margin-bottom: 10px;
 }
 
-.signUpContainer form:first-child {
-    display: flex;
-}
 
 .formGroup {
     display: flex;
     flex-direction: column;
-    /* ќ wmargin-bottom: 10px; */
+    position: relative;
 }
-
 
 
 
@@ -93,6 +95,9 @@
     flex: 1
 }
 
+.formGroup select option {
+    color: black;
+}
 
 .formGroup select,
 .fnamelnamewrapper select {
@@ -102,6 +107,7 @@
     outline: 0px;
     padding: 10px;
     width: 100%;
+    color: black;
 }
 
 .formGroup select::placeholder,
@@ -131,6 +137,7 @@
     border: 2px solid #ececec;
     background-color: white;
     border-radius: 8px;
+    color: black;
 }
 
 .formGroup input::placeholder,
@@ -167,4 +174,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.errorLog,
+.errorLogLastName
+ {
+    color: red;
+    font-weight: 500;
+    position: absolute;
+    font-size: 10px;
+    top: 63px;
+    left: 5px;
+}
+.errorLogLastName {
+
+    top: 63px;
+    left: 195px;
 }

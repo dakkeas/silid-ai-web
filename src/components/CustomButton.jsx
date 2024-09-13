@@ -4,8 +4,9 @@ import { React, useEffect, useState } from 'react';
 import styles from '../css/CustomButton.module.css';
 import '../css/global.css';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-const CustomButton = ({ textContent, type, routeTo, onPress }) => {
+const CustomButton = ({ textContent, type, onClick}) => {
 
     const [backgroundColor, setBackgroundColor] = useState('');
 
@@ -26,9 +27,10 @@ const CustomButton = ({ textContent, type, routeTo, onPress }) => {
 
 
     return (
-        <Link to={routeTo} className={styles.button}  onClick={onPress}>
-            {textContent}
-        </Link>
+        <button 
+        className={styles.button}
+        onClick={onClick}
+        >{textContent}</button>
     );
 };
 

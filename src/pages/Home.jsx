@@ -1,5 +1,6 @@
-import { useState } from 'react'
-
+import { useState, useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { Context } from '../utils/AuthContext'
 import reactLogo from '/public/react.svg'
 
 import viteLogo from '../../public/vite.svg'
@@ -24,7 +25,6 @@ import SectionBreak from '../components/SectionBreak'
 import LoginModal from '../components/LoginModal'
 import staticData from '../data/static.json'
 
-// import images
 
 
 
@@ -32,13 +32,22 @@ function App() {
 
 
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const navigate = useNavigate()
+  const { user } = useContext(Context)
 
   const handleCloseModal = () => {
     setIsModalOpen(false)
   }
 
   const handleOpenModal = () => {
-    setIsModalOpen(true)
+
+    if (!user) {
+      setIsModalOpen(true)
+    } else {
+      navigate('/dashboard')
+
+    }
+
   }
 
 

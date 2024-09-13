@@ -7,17 +7,28 @@
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     background-color: var(--orange-theme);
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .button:hover {
     /* transform: translatey(-2px); */
     background-color: var(--orange-darker-theme);
+}
+button, button:hover, button:active, button:focus {
+  outline: 0;
 }
 
 .button:active {
     /* background-color: #004494; */
     transform: translatey(0);
     background-color: var(--orange-darker-theme);
+    border: none;
+    outline: none;
 }
 
 

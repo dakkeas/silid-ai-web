@@ -3,6 +3,9 @@ import Test from './Test';
 import data from '../data/pretest.json';
 
 const PreTest = () => {
+    const handleSubmit = (data) => {
+        console.log(data)
+    }
     return (
         <div style={{
             height: '100%',
@@ -13,9 +16,10 @@ const PreTest = () => {
         }}>
             <Test
                 data={data}
-                testTitle={"PAILON VR PreTest"}
+                testTitle={"PAILON VR Pre Test"}
                 testDescription={"Choose the answer that you believe is correct based on your understanding of the material."}
                 inputType="radio"
+                handleSubmit={handleSubmit}
             ></Test>
         </div>
 
