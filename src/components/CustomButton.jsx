@@ -6,7 +6,7 @@ import '../css/global.css';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
-const CustomButton = ({ textContent, type, onClick}) => {
+const CustomButton = ({ textContent, type, onClick, disabled }) => {
 
     const [backgroundColor, setBackgroundColor] = useState('');
 
@@ -27,9 +27,11 @@ const CustomButton = ({ textContent, type, onClick}) => {
 
 
     return (
-        <button 
-        className={styles.button}
-        onClick={onClick}
+        <button
+            className={styles.button}
+            onClick={onClick}
+            disabled={disabled}
+            style={{ backgroundColor: disabled ? 'lightgrey' : backgroundColor }}
         >{textContent}</button>
     );
 };

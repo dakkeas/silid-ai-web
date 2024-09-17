@@ -4,22 +4,22 @@
             "question": "1. I need to find the way to a shop that a friend has recommended. I would:",
             "choices": [
                 {
-                    "id": "a",
+                    "id": "1-a",
                     "text": "Find out where the shop is in relation to somewhere I know.",
                     "value": "kinesthetic"
                 },
                 {
-                    "id": "b",
+                    "id": "1-b",
                     "text": "Ask my friend to tell me the directions.",
                     "value": "aural"
                 },
                 {
-                    "id": "c",
+                    "id": "1-c",
                     "text": "Write down the street directions I need to remember.",
-                    "value": "reading"
+                    "value": "read"
                 },
                 {
-                    "id": "d",
+                    "id": "1-d",
                     "text": "Use a map.",
                     "value": "visual"
                 }
@@ -31,22 +31,22 @@
             "question": "2. A website has a video showing how to make a special graph or chart. There is a person speaking, some lists and words describing what to do and some diagrams. I would learn most from:",
             "choices": [
                 {
-                    "id": "a",
+                    "id": "2-a",
                     "text": "Seeing the diagrams.",
                     "value": "visual"
                 },
                 {
-                    "id": "b",
+                    "id": "2-b",
                     "text": "Listening.",
                     "value": "aural"
                 },
                 {
-                    "id": "c",
+                    "id": "2-c",
                     "text": "Reading the words.",
-                    "value": "reading"
+                    "value": "read"
                 },
                 {
-                    "id": "d",
+                    "id": "2-d",
                     "text": "Watching the actions.",
                     "value": "kinesthetic"
                 }
@@ -58,22 +58,22 @@
             "question": "3. I want to find out more about a tour that I am going on. I would:",
             "choices": [
                 {
-                    "id": "a",
+                    "id": "3-a",
                     "text": "Look at details about the highlights and activities on the tour.",
                     "value": "kinesthetic"
                 },
                 {
-                    "id": "b",
+                    "id": "3-b",
                     "text": "Use a map and see where the places are.",
                     "value": "visual"
                 },
                 {
-                    "id": "c",
+                    "id": "3-c",
                     "text": "Read about the tour on the itinerary.",
-                    "value": "reading"
+                    "value": "read"
                 },
                 {
-                    "id": "d",
+                    "id": "3-d",
                     "text": "Talk with the person who planned the tour or others who are going on the tour.",
                     "value": "aural"
                 }
@@ -85,24 +85,24 @@
             "question": "4. When choosing a career or area of study, these are important for me:",
             "choices": [
                 {
-                    "id": "a",
+                    "id": "4-a",
                     "text": "Applying my knowledge in real situations.",
                     "value": "kinesthetic"
                 },
                 {
-                    "id": "b",
+                    "id": "4-b",
                     "text": "Communicating with others through discussion.",
                     "value": "aural"
                 },
                 {
-                    "id": "c",
+                    "id": "4-c",
                     "text": "Working with designs, maps or charts.",
                     "value": "visual"
                 },
                 {
-                    "id": "d",
+                    "id": "4-d",
                     "text": "Using words well in written communications.",
-                    "value": "reading"
+                    "value": "read"
                 }
             ],
             "correct": "",
@@ -112,24 +112,24 @@
             "question": "5. When I am learning I:",
             "choices": [
                 {
-                    "id": "a",
+                    "id": "5-a",
                     "text": "Like to talk things through.",
                     "value": "aural"
                 },
                 {
-                    "id": "b",
+                    "id": "5-b",
                     "text": "See patterns in things.",
                     "value": "visual"
                 },
                 {
-                    "id": "c",
+                    "id": "5-c",
                     "text": "Use examples and applications.",
                     "value": "kinesthetic"
                 },
                 {
-                    "id": "d",
+                    "id": "5-d",
                     "text": "Read books, articles and handouts.",
-                    "value": "reading"
+                    "value": "read"
                 }
             ],
             "correct": "",
@@ -139,22 +139,22 @@
             "question": "6. I want to save more money and to decide between a range of options. I would:",
             "choices": [
                 {
-                    "id": "a",
+                    "id": "6-a",
                     "text": "Consider examples of each option using my financial information.",
                     "value": "kinesthetic"
                 },
                 {
-                    "id": "b",
+                    "id": "6-b",
                     "text": "Read a print brochure that describes the options in detail.",
-                    "value": "reading"
+                    "value": "read"
                 },
                 {
-                    "id": "c",
+                    "id": "6-c",
                     "text": "Use graphs showing different options for different time periods.",
                     "value": "visual"
                 },
                 {
-                    "id": "d",
+                    "id": "6-d",
                     "text": "Talk with an expert about the options.",
                     "value": "aural"
                 }
@@ -166,24 +166,24 @@
             "question": "7. I want to learn how to play a new board game or card game. I would:",
             "choices": [
                 {
-                    "id": "a",
+                    "id": "7-a",
                     "text": "Watch others play the game before joining in.",
                     "value": "kinesthetic"
                 },
                 {
-                    "id": "b",
+                    "id": "7-b",
                     "text": "Listen to somebody explaining it and ask questions.",
                     "value": "aural"
                 },
                 {
-                    "id": "c",
+                    "id": "7-c",
                     "text": "Use the diagrams that explain the various stages, moves and strategies in the game.",
                     "value": "visual"
                 },
                 {
-                    "id": "d",
+                    "id": "7-d",
                     "text": "Read the instructions.",
-                    "value": "reading"
+                    "value": "read"
                 }
             ],
             "correct": "",
@@ -193,22 +193,22 @@
             "question": "8. I have a problem with my heart. I would prefer that the doctor:",
             "choices": [
                 {
-                    "id": "a",
+                    "id": "8-a",
                     "text": "Gave me something to read to explain what was wrong.",
-                    "value": "reading"
+                    "value": "read"
                 },
                 {
-                    "id": "b",
+                    "id": "8-b",
                     "text": "Used a plastic model to show me what was wrong.",
                     "value": "kinesthetic"
                 },
                 {
-                    "id": "c",
+                    "id": "8-c",
                     "text": "Described what was wrong.",
                     "value": "aural"
                 },
                 {
-                    "id": "d",
+                    "id": "8-d",
                     "text": "Showed me a diagram of what was wrong.",
                     "value": "visual"
                 }
@@ -220,22 +220,22 @@
             "question": "9. I want to learn to do something new on a computer. I would:",
             "choices": [
                 {
-                    "id": "a",
+                    "id": "9-a",
                     "text": "Read the written instructions that came with the program.",
-                    "value": "reading"
+                    "value": "read"
                 },
                 {
-                    "id": "b",
+                    "id": "9-b",
                     "text": "Talk with people who know about the program.",
                     "value": "aural"
                 },
                 {
-                    "id": "c",
+                    "id": "9-c",
                     "text": "Start using it and learn by trial and error.",
                     "value": "kinesthetic"
                 },
                 {
-                    "id": "d",
+                    "id": "9-d",
                     "text": "Follow the diagrams in a book.",
                     "value": "visual"
                 }
@@ -247,22 +247,22 @@
             "question": "10. When learning from the Internet I like:",
             "choices": [
                 {
-                    "id": "a",
+                    "id": "10-a",
                     "text": "Videos showing how to do or make things.",
                     "value": "kinesthetic"
                 },
                 {
-                    "id": "b",
+                    "id": "10-b",
                     "text": "Interesting design and visual features.",
                     "value": "visual"
                 },
                 {
-                    "id": "c",
+                    "id": "10-c",
                     "text": "Interesting written descriptions, lists and explanations.",
-                    "value": "reading"
+                    "value": "read"
                 },
                 {
-                    "id": "d",
+                    "id": "10-d",
                     "text": "Audio channels where I can listen to podcasts or interviews.",
                     "value": "aural"
                 }
@@ -274,22 +274,22 @@
             "question": "11. I want to learn about a new project. I would ask for:",
             "choices": [
                 {
-                    "id": "a",
+                    "id": "11-a",
                     "text": "Diagrams to show the project stages with charts of benefits and costs.",
                     "value": "visual"
                 },
                 {
-                    "id": "b",
+                    "id": "11-b",
                     "text": "A written report describing the main features of the project.",
-                    "value": "reading"
+                    "value": "read"
                 },
                 {
-                    "id": "c",
+                    "id": "11-c",
                     "text": "An opportunity to discuss the project.",
                     "value": "aural"
                 },
                 {
-                    "id": "d",
+                    "id": "11-d",
                     "text": "Examples where the project has been used successfully.",
                     "value": "kinesthetic"
                 }
@@ -301,22 +301,22 @@
             "question": "12. I want to learn how to take better photos. I would:",
             "choices": [
                 {
-                    "id": "a",
+                    "id": "12-a",
                     "text": "Ask questions and talk about the camera and its features.",
                     "value": "aural"
                 },
                 {
-                    "id": "b",
+                    "id": "12-b",
                     "text": "Use the written instructions about what to do.",
-                    "value": "reading"
+                    "value": "read"
                 },
                 {
-                    "id": "c",
+                    "id": "12-c",
                     "text": "Use diagrams showing the camera and what each part does.",
                     "value": "kinesthetic"
                 },
                 {
-                    "id": "d",
+                    "id": "12-d",
                     "text": "Use examples of good and poor photos showing how to improve them.",
                     "value": "visual"
                 }
@@ -328,22 +328,22 @@
             "question": "13. I prefer a presenter or a teacher who uses:",
             "choices": [
                 {
-                    "id": "a",
+                    "id": "13-a",
                     "text": "Demonstrations, models or practical sessions.",
                     "value": "kinesthetic"
                 },
                 {
-                    "id": "b",
+                    "id": "13-b",
                     "text": "Question and answer, talk, group discussion, or guest speakers.",
                     "value": "aural"
                 },
                 {
-                    "id": "c",
+                    "id": "13-c",
                     "text": "Handouts, books, or readings.",
-                    "value": "reading"
+                    "value": "read"
                 },
                 {
-                    "id": "d",
+                    "id": "13-d",
                     "text": "Diagrams, charts, maps or graphs.",
                     "value": "visual"
                 }
@@ -355,22 +355,22 @@
             "question": "14. I have finished a competition or test and I would like some feedback. I would like to have feedback:",
             "choices": [
                 {
-                    "id": "a",
+                    "id": "14-a",
                     "text": "Using examples from what I have done.",
                     "value": "kinesthetic"
                 },
                 {
-                    "id": "b",
+                    "id": "14-b",
                     "text": "Using a written description of my results.",
-                    "value": "reading"
+                    "value": "read"
                 },
                 {
-                    "id": "c",
+                    "id": "14-c",
                     "text": "From somebody who talks it through with me.",
                     "value": "aural"
                 },
                 {
-                    "id": "d",
+                    "id": "14-d",
                     "text": "Using graphs showing what I achieved.",
                     "value": "visual"
                 }
@@ -382,22 +382,22 @@
             "question": "15. I want to find out about a house or an apartment. Before visiting it I would want:",
             "choices": [
                 {
-                    "id": "a",
+                    "id": "15-a",
                     "text": "To view a video of the property.",
                     "value": "kinesthetic"
                 },
                 {
-                    "id": "b",
+                    "id": "15-b",
                     "text": "A discussion with the owner.",
                     "value": "aural"
                 },
                 {
-                    "id": "c",
+                    "id": "15-c",
                     "text": "A printed description of the rooms and features.",
-                    "value": "reading"
+                    "value": "read"
                 },
                 {
-                    "id": "d",
+                    "id": "15-d",
                     "text": "A plan showing the rooms and a map of the area.",
                     "value": "visual"
                 }
@@ -409,22 +409,22 @@
             "question": "16. I want to assemble a wooden table that came in parts (kitset). I would learn best from:",
             "choices": [
                 {
-                    "id": "a",
+                    "id": "16-a",
                     "text": "Diagrams showing each stage of the assembly.",
                     "value": "visual"
                 },
                 {
-                    "id": "b",
+                    "id": "16-b",
                     "text": "Advice from someone who has done it before.",
                     "value": "aural"
                 },
                 {
-                    "id": "c",
+                    "id": "16-c",
                     "text": "Written instructions that came with the parts for the table.",
-                    "value": "reading"
+                    "value": "read"
                 },
                 {
-                    "id": "d",
+                    "id": "16-d",
                     "text": "Watching a video of a person assembling a similar table.",
                     "value": "kinesthetic"
                 }

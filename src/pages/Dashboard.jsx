@@ -68,9 +68,11 @@ const Dashboard = () => {
             taskName: "VARK Questionnaire",
             status: "",
             result: "--",
-            learners: ['adaptive', ]
+            learners: ['adaptive',]
         }
     ])
+
+    console.log(tests)
 
     const getCurrentDate = () => {
         const date = new Date();
@@ -88,13 +90,13 @@ const Dashboard = () => {
 
 
     const updateTestStatus = (index, newStatus) => {
-        setTests(prevTests => 
-            prevTests.map((test, i) => 
+        setTests(prevTests =>
+            prevTests.map((test, i) =>
                 i === index ? { ...test, status: newStatus } : test
             )
         );
     };
- 
+
     useEffect(() => {
         checkAuthState()
         const db = getDatabase();
@@ -139,7 +141,6 @@ const Dashboard = () => {
     }, [])
 
     const handleNavigation = (id) => {
-        console.log('Button clicked!')
 
         switch (id) {
             case 0:
@@ -228,6 +229,7 @@ const Dashboard = () => {
                                                 result={test.result}
                                                 id={index}
                                                 taskRoute={handleNavigation(index)}
+                                                isDisabled={test.status === 'Completed' ? true : false}
 
                                             />
                                         )

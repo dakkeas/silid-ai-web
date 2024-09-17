@@ -4,22 +4,22 @@
       "question": "1. Which of the following is typically used as an analogy to explain the concepts of supervised machine learning?",
       "choices": [
         {
-          "id": "a",
+          "id": "1-a",
           "text": "Teaching a toddler the name of colors by showing them the color and repeating its name over and over again.",
           "value": "a"
         },
         {
-          "id": "b",
+          "id": "1-b",
           "text": "A teacher walking around the classroom during examinations to supervise the students and catch any cheating attempts.",
           "value": "b"
         },
         {
-          "id": "c",
+          "id": "1-c",
           "text": "Parents giving a sermon to their children about what career path to aim for, what courses to take, and who to be friends with.",
           "value": "c"
         },
         {
-          "id": "d",
+          "id": "1-d",
           "text": "The government keeps a copy of every citizen's data to use for statistical and research.",
           "value": "d"
         }
@@ -31,22 +31,22 @@
       "question": "2. Which of the following can be considered as stakeholders of a Generative AI technology?",
       "choices": [
         {
-          "id": "a",
+          "id": "2-a",
           "text": "The internet provider of the user of the Generative AI technology.",
           "value": "a"
         },
         {
-          "id": "b",
+          "id": "2-b",
           "text": "Creators whose content are being used to generate new media.",
           "value": "b"
         },
         {
-          "id": "c",
+          "id": "2-c",
           "text": "Social media users who post content for personal use.",
           "value": "c"
         },
         {
-          "id": "d",
+          "id": "2-d",
           "text": "All of the above",
           "value": "d"
         }
@@ -58,22 +58,22 @@
       "question": "3. Which of the following parts of a Neural Network are weighted to allow computer calculations?",
       "choices": [
         {
-          "id": "a",
+          "id": "3-a",
           "text": "Nodes",
           "value": "a"
         },
         {
-          "id": "b",
+          "id": "3-b",
           "text": "Branches",
           "value": "b"
         },
         {
-          "id": "c",
+          "id": "3-c",
           "text": "Hidden layer",
           "value": "c"
         },
         {
-          "id": "d",
+          "id": "3-d",
           "text": "Input layer",
           "value": "d"
         }
@@ -85,22 +85,22 @@
       "question": "4. Which of the following can be considered as a trace of bias in AI technology?",
       "choices": [
         {
-          "id": "a",
+          "id": "4-a",
           "text": "A search engine only showing search results from sources near your location.",
           "value": "a"
         },
         {
-          "id": "b",
+          "id": "4-b",
           "text": "Not being able to unlock your phone using an unregistered biometrics.",
           "value": "b"
         },
         {
-          "id": "c",
+          "id": "4-c",
           "text": "Websites that reject photos of applicants with the memo saying, 'Subject's eyes closed.'",
           "value": "c"
         },
         {
-          "id": "d",
+          "id": "4-d",
           "text": "A camera not being able to detect a face in the dark.",
           "value": "d"
         }
@@ -112,22 +112,22 @@
       "question": "5. Despite being a relatively novel technology, the use of AI across all fields of work has begun and is continually evolving. Which of the following unprecedented scenarios are most likely to happen if we do not use AI technology wisely?",
       "choices": [
         {
-          "id": "a",
+          "id": "5-a",
           "text": "AI technology can take over human beings and we will all lose our jobs.",
           "value": "a"
         },
         {
-          "id": "b",
+          "id": "5-b",
           "text": "Users with malice intent may use the technology to harm others.",
           "value": "b"
         },
         {
-          "id": "c",
+          "id": "5-c",
           "text": "A global power outage may occur due to the large amount of resources needed to power AI.",
           "value": "c"
         },
         {
-          "id": "d",
+          "id": "5-d",
           "text": "Our devices will end up obsolete and we will all have to catch up with AI technologies.",
           "value": "d"
         }
@@ -139,22 +139,22 @@
       "question": "6. Typically consists of a binary question answerable by 'yes' or 'no,' this model is one of the vital components of algorithm making.",
       "choices": [
         {
-          "id": "a",
+          "id": "6-a",
           "text": "Generative text",
           "value": "a"
         },
         {
-          "id": "b",
+          "id": "6-b",
           "text": "Decision tree",
           "value": "b"
         },
         {
-          "id": "c",
+          "id": "6-c",
           "text": "Numeral network",
           "value": "c"
         },
         {
-          "id": "d",
+          "id": "6-d",
           "text": "Yes or no tree",
           "value": "d"
         }
@@ -166,22 +166,22 @@
       "question": "7. What preventive measures can we take in order for us to be more cautious of what we see online especially in an era where deep fakes have surfaced?",
       "choices": [
         {
-          "id": "a",
+          "id": "7-a",
           "text": "Delete social media.",
           "value": "a"
         },
         {
-          "id": "b",
+          "id": "7-b",
           "text": "Report every photo online that you feel is fake and generated.",
           "value": "b"
         },
         {
-          "id": "c",
+          "id": "7-c",
           "text": "Advocate against Generative AI and take action to be able to boycott it.",
           "value": "c"
         },
         {
-          "id": "d",
+          "id": "7-d",
           "text": "Educate people about AI and the different techniques on how to spot deep fakes.",
           "value": "d"
         }
@@ -193,22 +193,22 @@
       "question": "8. Texts, images, videos, and audio recordings used to test algorithms that have been successfully trained are called _____",
       "choices": [
         {
-          "id": "a",
+          "id": "8-a",
           "text": "Datasets",
           "value": "a"
         },
         {
-          "id": "b",
+          "id": "8-b",
           "text": "Test data",
           "value": "b"
         },
         {
-          "id": "c",
+          "id": "8-c",
           "text": "Content",
           "value": "c"
         },
         {
-          "id": "d",
+          "id": "8-d",
           "text": "Prediction",
           "value": "d"
         }
@@ -220,22 +220,22 @@
       "question": "9. These machine learning frameworks consist of two main components, namely the 'generator' and the 'discriminator.'",
       "choices": [
         {
-          "id": "a",
+          "id": "9-a",
           "text": "Machine Learning Algorithms",
           "value": "a"
         },
         {
-          "id": "b",
+          "id": "9-b",
           "text": "Teachable Machines",
           "value": "b"
         },
         {
-          "id": "c",
+          "id": "9-c",
           "text": "General Adversarial Networks",
           "value": "c"
         },
         {
-          "id": "d",
+          "id": "9-d",
           "text": "Generative AI Frameworks",
           "value": "d"
         }
@@ -247,22 +247,22 @@
       "question": "10. The following are examples of features of images and videos that will help you determine whether or not it is AI generated, EXCEPT:",
       "choices": [
         {
-          "id": "a",
+          "id": "10-a",
           "text": "Blurry eyelids",
           "value": "a"
         },
         {
-          "id": "b",
+          "id": "10-b",
           "text": "Side profile irregularities",
           "value": "b"
         },
         {
-          "id": "c",
+          "id": "10-c",
           "text": "Unintelligible backgrounds",
           "value": "c"
         },
         {
-          "id": "d",
+          "id": "10-d",
           "text": "None of the above",
           "value": "d"
         }
@@ -274,22 +274,22 @@
       "question": "11. Algorithms are used by most of the technology that we use today. Which of the following features can be considered to have the same functions of algorithm?",
       "choices": [
         {
-          "id": "a",
+          "id": "11-a",
           "text": "Spotify Wrapped, Facebook memories, Snapchat throwbacks.",
           "value": "a"
         },
         {
-          "id": "b",
+          "id": "11-b",
           "text": "YouTube recommendations, Facebook's 'people you may know,' TikTok for you page.",
           "value": "b"
         },
         {
-          "id": "c",
+          "id": "11-c",
           "text": "TikTok's profile views, Snapchat's screenshot alerts, YouTube's",
           "value": "c"
         },
         {
-          "id": "d",
+          "id": "11-d",
           "text": "All of the above",
           "value": "d"
         }
@@ -301,22 +301,22 @@
       "question": "12. The following sets of data can be used to classify the difference between the two, EXCEPT:",
       "choices": [
         {
-          "id": "a",
+          "id": "12-a",
           "text": "Photos of dogs, photos of carabaos, photos of humans",
           "value": "a"
         },
         {
-          "id": "b",
+          "id": "12-b",
           "text": "Clips of bicycle races, clips of race car races, clips of people running",
           "value": "b"
         },
         {
-          "id": "c",
+          "id": "12-c",
           "text": "Photos of books, photos of tablets, voice recordings of a child's voice",
           "value": "c"
         },
         {
-          "id": "d",
+          "id": "12-d",
           "text": "Audio recordings of the Ab note, audio recordings of a child crying, audio recordings of rain",
           "value": "d"
         }
@@ -328,22 +328,22 @@
       "question": "13. A neural network imitates what natural structure?",
       "choices": [
         {
-          "id": "a",
+          "id": "13-a",
           "text": "The human brain",
           "value": "a"
         },
         {
-          "id": "b",
+          "id": "13-b",
           "text": "The Fibonacci sequence",
           "value": "b"
         },
         {
-          "id": "c",
+          "id": "13-c",
           "text": "Heart beat intervals",
           "value": "c"
         },
         {
-          "id": "d",
+          "id": "13-d",
           "text": "Albert Einstein's energy quantization theory",
           "value": "d"
         }
@@ -355,22 +355,22 @@
       "question": "14. A Neural Network and a Decision Tree are identical and can be used for the same operations.",
       "choices": [
         {
-          "id": "a",
+          "id": "14-a",
           "text": "True",
           "value": "a"
         },
         {
-          "id": "b",
+          "id": "14-b",
           "text": "False",
           "value": "b"
         },
         {
-          "id": "c",
+          "id": "14-c",
           "text": "Partly true",
           "value": "c"
         },
         {
-          "id": "d",
+          "id": "14-d",
           "text": "Partly false",
           "value": "d"
         }
@@ -382,22 +382,22 @@
       "question": "15. There are different types of algorithms that serve different purposes. In terms of social media feed algorithms, which of the following sets of user data are taken into account?",
       "choices": [
         {
-          "id": "a",
+          "id": "15-a",
           "text": "Age, location, gender",
           "value": "a"
         },
         {
-          "id": "b",
+          "id": "15-b",
           "text": "Liked content, screen time, following lists",
           "value": "b"
         },
         {
-          "id": "c",
+          "id": "15-c",
           "text": "Search engine results, filtered content, hashtags used",
           "value": "c"
         },
         {
-          "id": "d",
+          "id": "15-d",
           "text": "All of the above",
           "value": "d"
         }

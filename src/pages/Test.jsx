@@ -2,6 +2,8 @@ import React, { useState, useContext, useEffect } from 'react';
 import styles from '../css/Test.module.css';
 import CustomButton from '../components/CustomButton'
 import { HandPlatter } from 'lucide-react';
+import { set } from 'firebase/database';
+import Loading from '../components/Loading';
 
 
 const Test = ({
@@ -9,19 +11,47 @@ const Test = ({
     testTitle,
     testDescription,
     inputType,
-    handleSubmit
+    handleUserAnswers,
+    handleSubmit,
+    isLoading
 }) => {
-    const [selectedChoices, setSelectedChoices] = useState({});
+    const initialChoices = {};
+    for (let i = 1; i <= data.questions.length; i++) {
+        initialChoices[i] = '';
+    }
+
+    const [selectedChoices, setSelectedChoices] = useState(initialChoices);
+    console.log(selectedChoices);
 
     const handleChoiceChange = (questionId, choiceValue) => {
-        console.log(choiceValue)
-        console.log(questionId)
-        setSelectedChoices(prevChoices => ({
-            ...prevChoices,
-            [questionId]: choiceValue
-        }));
-    };
+        if (inputType === 'radio') {
+            setSelectedChoices((prevChoices) => {
+                const updatedChoices = {
+                    ...prevChoices,
+                    [questionId]: choiceValue
+                };
+                handleUserAnswers(updatedChoices);
+                return updatedChoices;
+            });
+            console.log(questionId, choiceValue);
+        } else if (inputType === 'checkbox') {
 
+            setSelectedChoices((prevChoices) => {
+                const updatedChoices = {
+                    ...prevChoices,
+                    [questionId]: {
+                        ...prevChoices[questionId],
+                        // reverse the value of the choice
+                        [choiceValue]: !prevChoices[questionId][choiceValue]
+                    }
+                };
+                handleUserAnswers(updatedChoices);
+                return updatedChoices;
+            });
+            console.log(questionId, choiceValue);
+
+        }
+    };
 
     return (
         <div className={styles.mainContainer}>
@@ -37,8 +67,8 @@ const Test = ({
                             <div className={styles.questionContainer}>
                                 <p>{item.question}</p>
                                 {item.image && <img src={item.image} alt={item.question}></img>}
-                                <div className={styles.choicesContainer}>
-
+                                <div className={styles.choicesContainer}
+                                >
                                     {
                                         item.choices.map((choice, choiceIndex) => (
 
@@ -48,7 +78,9 @@ const Test = ({
                                                     value={choice.value}
                                                     name={`${item.question} - ${item.id}`}
                                                     // checked={selectedChoices[item.id] === choice.value}
-                                                    onChange={() => handleChoiceChange(questionIndex + 1, choice.value, item.correct)}
+                                                    onChange={() => {
+                                                        handleChoiceChange(choice.id.split('-')[0], choice.value)
+                                                    }}
                                                 />
                                                 <label htmlFor="">{choice.text}</label>
                                             </div>
@@ -62,8 +94,8 @@ const Test = ({
                         }
                         <div className={styles.btnWrapper}>
                             <CustomButton
-                                textContent="Submit"
-                                onClick={handleSubmit(selectedChoices)}
+                                textContent={isLoading ? <Loading /> : 'Submit'}
+                                onClick={handleSubmit}
 
                             ></CustomButton>
                         </div>

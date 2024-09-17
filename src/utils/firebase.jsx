@@ -1,4 +1,5 @@
 import { initializeApp } from 'firebase/app'
+import { useContext } from 'react';
 import { ref, set } from "firebase/database";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'firebase/auth';
 import { getDatabase } from 'firebase/database';
@@ -12,6 +13,7 @@ const firebaseConfig = {
     appId: "1:831704041330:web:548f66b512c763ee68ffeb",
     measurementId: "G-YL22G17R5M"
 }
+
 
 
 const app = initializeApp(firebaseConfig)
@@ -89,8 +91,8 @@ const signUpNewUser = async (
                 },
                 pretest: {
                     easy: 0,
-                    medium: 0, 
-                    hard: 0,
+                    intermediate: 0,
+                    difficult: 0,
                     completed: false
                 },
                 vark: {
@@ -171,25 +173,101 @@ const fetchUserData = (
     handleUserData,
     handleIsLoading
 ) => {
-        const userDataRef= ref(db, `user/${user.uid}`);
+    const userDataRef = ref(db, `user/${user.uid}`);
 
-        onValue(userDataRef, (snapshot) => {
-            const data = snapshot.val();
-            if (data) {
-                handleFetchUserData(data)
-                console.log(userData)
-                setIsLoading(false)
-            } else {
-                setIsLoading(false)
-                console.log('error fetching data...')
-            }
+    onValue(userDataRef, (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+            handleFetchUserData(data)
+            console.log(userData)
+            setIsLoading(false)
+        } else {
+            setIsLoading(false)
+            console.log('error fetching data...')
+        }
 
-        });
+    });
+}
+
+
+const writePreTestResults = async (
+    result,
+    handleIsLoading,
+    useruid
+) => {
+    console.log('writing pretest results...')
+
+    set(ref(db, `users/${useruid}/pretest`), {
+        // under the parent node specified above
+        // IMPROVE: just pass an object into this function
+        ...result,
+        completed: true
+        // spread the info
+    });
+
+    handleIsLoading(false)
+    console.log('finished writing pretest results...')
 
 
 }
 
-export { signUpNewUser, signInNewUser, signOutUser, checkAuthState, checkAuthPermission }
+
+const writePostTestResults = async (
+    result,
+    handleIsLoading,
+    useruid
+) => {
+    console.log('writing posttest results...')
+
+    set(ref(db, `users/${useruid}/posttest`), {
+        // under the parent node specified above
+        // IMPROVE: just pass an object to this function
+        ...result,
+        completed: true
+        // spread the info
+    });
+
+    handleIsLoading(false)
+    console.log('finished writing posttest results...')
+
+
+}
+
+
+const writeVarkTestResults = async (
+    result,
+    handleIsLoading,
+    useruid
+) => {
+    console.log('writing posttest results...')
+
+    set(ref(db, `users/${useruid}/vark`), {
+        // under the parent node specified above
+        // IMPROVE: just pass an object into this function
+        ...result,
+        completed: true
+        // spread the info
+    });
+
+    handleIsLoading(false)
+    console.log('finished writing posttest results...')
+    console.log(result)
+}
+
+
+
+
+
+export {
+    signUpNewUser,
+    signInNewUser,
+    signOutUser,
+    checkAuthState,
+    checkAuthPermission,
+    writePreTestResults,
+    writePostTestResults,
+    writeVarkTestResults
+}
 
 
 

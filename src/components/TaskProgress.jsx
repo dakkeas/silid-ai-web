@@ -4,9 +4,9 @@ import CustomButton from './CustomButton'
 import styles from '../css/TaskProgress.module.css'
 import { useNavigate } from 'react-router-dom'
 
-const TaskProgress = ({ id, taskName, status, result, taskRoute }) => {
-    const indicatorColor = status == "Completed" ? {color: "#239b56", bg: "#d5f5e3"} :  {color: "#a93226", bg: "#fadbd8"}
-
+const TaskProgress = ({ id, taskName, status, result, taskRoute, isDisabled }) => {
+    const indicatorColor = status == "Completed" ? { color: "#239b56", bg: "#d5f5e3" } : { color: "#a93226", bg: "#fadbd8" }
+    console.log(isDisabled)
     return (
         <div className={styles.taskProgressContainer}>
             <div className={styles.taskLogoWrapper}>
@@ -18,8 +18,8 @@ const TaskProgress = ({ id, taskName, status, result, taskRoute }) => {
                 <h3>{taskName}</h3>
             </div>
             <div className={styles.taskStatusWrapper}>
-                <div style={{backgroundColor: indicatorColor.bg}} className={styles.taskStatusBackground}>
-                    <div style={{backgroundColor: indicatorColor.color}} className={styles.indicator}></div>
+                <div style={{ backgroundColor: indicatorColor.bg }} className={styles.taskStatusBackground}>
+                    <div style={{ backgroundColor: indicatorColor.color }} className={styles.indicator}></div>
                     <h3 >{status}</h3>
                 </div>
             </div>
@@ -29,6 +29,7 @@ const TaskProgress = ({ id, taskName, status, result, taskRoute }) => {
             <CustomButton
                 textContent={'Start'}
                 onClick={taskRoute}
+                disabled={isDisabled}
             ></CustomButton>
         </div>
     )
