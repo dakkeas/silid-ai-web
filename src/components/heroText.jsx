@@ -6,7 +6,7 @@ import styles from '../css/HeroText.module.css'
 import '../css/global.css'
 
 // import components
-import CustomButton from '../components/CustomButton'
+import CustomButton from './CustomButton'
 
 import { useNavigate } from 'react-router-dom'
 

@@ -1,11 +1,6 @@
 import { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Context } from '../utils/AuthContext'
-import reactLogo from '/public/react.svg'
-
-import viteLogo from '../../public/vite.svg'
-import classNames from 'classnames'
-
 
 // import css
 import styles from '../css/App.module.css'
@@ -17,7 +12,6 @@ import Header from "../components/Header"
 import HeroText from "../components/HeroText"
 import FeatureCard from '../components/FeatureCard'
 import LearnerCard from '../components/LearnerCard'
-import CustomButton from '../components/CustomButton'
 import InformationBlock from '../components/InformationBlock'
 import About from '../components/About'
 import Footer from '../components/Footer'
@@ -88,6 +82,7 @@ function App() {
           <div className={styles.learnerCardContainer}>
             {staticData.learnerCardData.map((learner, index) => (
               <LearnerCard
+                key={index}
                 learner={learner}
               />
             ))}
