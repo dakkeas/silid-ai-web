@@ -6,6 +6,8 @@ import { ref, onValue, getDatabase } from "firebase/database";
 import { writePostTestResults } from '../utils/firebase';
 import { useNavigate, Navigate } from 'react-router-dom'
 import { Context } from '../utils/AuthContext';
+import ConfirmModal from '../components/ConfirmModal';
+import NoAnswersModal from '../components/NoAnswersModal';
 
 const PostTest = () => {
     // submit handler
@@ -16,6 +18,8 @@ const PostTest = () => {
     const [userAnswers, setUserAnswers] = useState()
     const [isLoading, setIsLoading] = useState(false)
     const [isTestCompleted, setIsTestCompleted] = useState(false)
+    const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false)
+    const [isNoAnswersModalOpen, setIsNoAnswersModalOpen] = useState(false)
 
     const handleIsLoading = (loading) => {
         // used to update loading status of btn
@@ -57,13 +61,7 @@ const PostTest = () => {
         score: 0
     }
 
-
-    const handleSubmit = (e) => {
-        console.log('submitting')
-        e.preventDefault()
-        setIsLoading(true)
-        // call when submit is clicked
-        console.log(userAnswers)
+    const writeAnswers = () => {
         Object.entries(userAnswers).forEach(([key, value]) => {
             console.log('user ans: ', value)
             console.log('correct ans:', correctAnswers[key - 1].correctAnswer)
@@ -80,15 +78,13 @@ const PostTest = () => {
 
         })
 
-        // write results 
-        console.log(result)
         writePostTestResults({ score: result }, handleIsLoading, user.uid)
-        // return to dashboard
-        /*
-        REPLACE THIS WITH A SUBMISSION COMPLETED PAGE!
-        */
         navigate('/dashboard')
+    }
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        userAnswers !== undefined ? setIsConfirmModalOpen(true) : setIsNoAnswersModalOpen(true)
     }
 
 
@@ -105,6 +101,16 @@ const PostTest = () => {
             justifyContent: 'center',
             alignItems: "center"
         }}>
+            <NoAnswersModal
+                isOpen={isNoAnswersModalOpen}
+                onClose={() => setIsNoAnswersModalOpen(false)}
+            ></NoAnswersModal>
+            <ConfirmModal
+                isOpen={isConfirmModalOpen}
+                onClose={() => setIsConfirmModalOpen(false)}
+                onConfirm={writeAnswers}
+
+            ></ConfirmModal>
             <Test
                 data={data}
                 testTitle={"PAILON VR Post Test"}

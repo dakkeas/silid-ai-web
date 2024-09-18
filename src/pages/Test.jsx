@@ -74,6 +74,7 @@ const Test = ({
 
                                             <div key={choice.id} className={styles.choiceWrapper}>
                                                 <input
+                                                
                                                     type={inputType}
                                                     value={choice.value}
                                                     name={`${item.question} - ${item.id}`}

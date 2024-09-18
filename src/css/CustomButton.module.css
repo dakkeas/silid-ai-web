@@ -1,5 +1,4 @@
 .button {
-    border: none;
     border-radius: 8px;
     color: white;
     padding: 10px 20px;
@@ -7,11 +6,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     background-color: var(--orange-theme);
-    border: none;
-    outline: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
 }
 
 
@@ -25,7 +20,7 @@ button, button:hover, button:active, button:focus {
 
 .button:active {
     /* background-color: #004494; */
-    transform: translatey(0);
+    /* transform: translatey(0); */
     background-color: var(--orange-darker-theme);
     border: none;
     outline: none;

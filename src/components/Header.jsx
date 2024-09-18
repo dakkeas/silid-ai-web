@@ -28,13 +28,12 @@ const Header = ({ loginBtnFunction }) => {
                             <li>
                                 <a>Contact</a>
                             </li>
-                            <li></li>
+                            <CustomButton
+                                textContent={'Login'}
+                                onClick={loginBtnFunction}
+                            ></CustomButton>
                         </ul>
                     </nav>
-                    <CustomButton
-                        textContent={'Login'}
-                        onClick={loginBtnFunction}
-                    ></CustomButton>
                 </div>
 
 

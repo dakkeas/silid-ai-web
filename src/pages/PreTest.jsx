@@ -1,21 +1,23 @@
 import React, { useEffect, useState, useContext } from 'react';
 import Test from './Test';
 import data from '../data/pretest.json';
-import { ref, onValue, getDatabase } from "firebase/database";
+import { ref, onValue, getDatabase, set } from "firebase/database";
 import { writePreTestResults } from '../utils/firebase';
 import { Context } from '../utils/AuthContext';
 import { useNavigate, Navigate } from 'react-router-dom'
-
-
+import ConfirmModal from '../components/ConfirmModal';
+import NoAnswersModal from '../components/NoAnswersModal';
 
 const PreTest = () => {
     // authorized access to pretest
     const { user } = useContext(Context)
     const navigate = useNavigate()
-
     const [userAnswers, setUserAnswers] = useState()
     const [isLoading, setIsLoading] = useState(false)
     const [isTestCompleted, setIsTestCompleted] = useState(false)
+    const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false)
+    const [isNoAnswersModalOpen, setIsNoAnswersModalOpen] = useState(false)
+
 
     useEffect(() => {
         // checks whether test is already completed
@@ -60,10 +62,10 @@ const PreTest = () => {
         setUserAnswers(userAnswers)
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
+    const writeAnswers = () => {
+
         setIsLoading(true)
-        // call when submit is clicked
+
         Object.entries(userAnswers).forEach(([key, value]) => {
             if (value == correctAnswers[key - 1].correctAnswer) {
                 // if answer is correct, update answer object
@@ -72,14 +74,16 @@ const PreTest = () => {
 
         })
 
-        // write results 
         writePreTestResults(result, handleIsLoading, user.uid)
-        // return to dashboard
-        /*
-        REPLACE THIS WITH A SUBMISSION COMPLETED PAGE!
-        */
         navigate('/dashboard')
 
+        setIsLoading(false)
+
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        userAnswers !== undefined ? setIsConfirmModalOpen(true) : setIsNoAnswersModalOpen(true)
     }
 
     if (isTestCompleted) {
@@ -96,6 +100,16 @@ const PreTest = () => {
             justifyContent: 'center',
             alignItems: "center"
         }}>
+            <NoAnswersModal
+                isOpen={isNoAnswersModalOpen}
+                onClose={() => setIsNoAnswersModalOpen(false)}
+            ></NoAnswersModal>
+            <ConfirmModal
+                isOpen={isConfirmModalOpen}
+                onClose={() => setIsConfirmModalOpen(false)}
+                onConfirm={writeAnswers}
+                
+            ></ConfirmModal>
             <Test
                 data={data}
                 testTitle={"PAILON VR Pre Test"}

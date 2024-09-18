@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../css/SignUp.module.css';
-import placeholder from '../../public/vr-kids-2.jpg'
+import placeholder from '/public/learners/documents.jpg'
 import CustomButton from '../components/CustomButton'
 import { signUpNewUser } from "../utils/firebase"
 import Loading from '../components/Loading'

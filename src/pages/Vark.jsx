@@ -5,7 +5,8 @@ import { ref, onValue, getDatabase } from "firebase/database";
 import { writeVarkTestResults } from '../utils/firebase';
 import { useNavigate, Navigate } from 'react-router-dom'
 import { Context } from '../utils/AuthContext';
-
+import ConfirmModal from '../components/ConfirmModal';
+import NoAnswersModal from '../components/NoAnswersModal';
 
 
 
@@ -18,6 +19,8 @@ const Vark = () => {
     const [userAnswers, setUserAnswers] = useState()
     const [isLoading, setIsLoading] = useState(false)
     const [isTestCompleted, setIsTestCompleted] = useState(false)
+    const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false)
+    const [isNoAnswersModalOpen, setIsNoAnswersModalOpen] = useState(false)
 
     const handleIsLoading = (loading) => {
         // used to update loading status of btn
@@ -61,14 +64,8 @@ const Vark = () => {
         kinesthetic: 0,
         visual: 0,
     }
-
-
-    const handleSubmit = (e) => {
-        console.log('submitting')
-        e.preventDefault()
-        setIsLoading(true)
-        // call when submit is clicked
-        console.log(userAnswers)
+    
+    const writeAnswers = () => {
         Object.entries(userAnswers).forEach(([key, value]) => {
             console.log('user ans: ', value)
             console.log('correct ans:', correctAnswers[key - 1].correctAnswer)
@@ -113,6 +110,13 @@ const Vark = () => {
     }
 
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+        userAnswers !== undefined ? setIsConfirmModalOpen(true) : setIsNoAnswersModalOpen(true)
+    }
+
+
     if (isTestCompleted) {
         // if test completed, return to dashboard
         return <Navigate to='/dashboard' />
@@ -127,6 +131,16 @@ const Vark = () => {
             justifyContent: 'center',
             alignItems: 'center'
         }}>
+            <NoAnswersModal
+                isOpen={isNoAnswersModalOpen}
+                onClose={() => setIsNoAnswersModalOpen(false)}
+            ></NoAnswersModal>
+            <ConfirmModal
+                isOpen={isConfirmModalOpen}
+                onClose={() => setIsConfirmModalOpen(false)}
+                onConfirm={writeAnswers}
+
+            ></ConfirmModal>
             <Test
                 data={data}
                 testTitle={"PAILON VR VARK Questionnaire"}

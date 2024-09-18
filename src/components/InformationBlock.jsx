@@ -5,7 +5,7 @@ import styles from '../css/InformationBlock.module.css';
 import '../css/global.css'
 
 
-import exampleImage from "/public/vr-kids.jpg";
+import exampleImage from "/public/data_gathering.jpg";
 
 const InformationBlock = ({ title, description, imageSrc }) => {
     return (

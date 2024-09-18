@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import { signOutUser, checkAuthState } from '../utils/firebase';
 import Loading from '../components/Loading';
 import { Context } from '../utils/AuthContext'
-
+import ConfirmModal from '../components/ConfirmModal';
 
 
 
@@ -50,6 +50,7 @@ const Dashboard = () => {
     const [userData, setUserData] = useState({})
     const [isLoading, setIsLoading] = useState(true)
     const [currentDate, setCurrentDate] = useState('')
+    const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false)
     const [tests, setTests] = useState([
         {
             taskName: "Pre Test",
@@ -153,14 +154,24 @@ const Dashboard = () => {
         }
     }
 
-    const handleLogOut = () => {
-        signOutUser(navigate)
+    const confirmLogOut = () => {
+        setIsConfirmModalOpen(true)
     }
 
     return (
 
 
         <div className={styles.mainContainer}>
+            <ConfirmModal
+                isOpen={isConfirmModalOpen}
+                onClose={() => setIsConfirmModalOpen(false)}
+                onConfirm={() => signOutUser()}
+                onConfirmTextBtn={"Confirm"}
+                confirmTitle={"Log Out"}
+                confirmMessage={"Are you sure you want to log out?"}
+
+
+            ></ConfirmModal>
 
             <div className={styles.dashboardContainer}>
                 <div className={styles.sidebar}>
@@ -188,7 +199,7 @@ const Dashboard = () => {
                                 <a>Help & Information</a>
                             </li>
                             <li
-                                onClick={handleLogOut}
+                                onClick={confirmLogOut}
                             >
                                 <LogOut color={'grey'} size={24}></LogOut>
                                 <a>Log Out</a>
