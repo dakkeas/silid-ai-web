@@ -3,26 +3,25 @@
         {
             "title": "Transform Education with VR Adaptive Learning",
             "description": "Our VR adaptive learning system at PUP Senior High School enhances student engagement and outcomes with personalized, immersive experiences.",
-            "imageSrc": "/public/vr-kids.jpg"
         }
     ],
     "featureCardData": [
         {
             "title": "Personalized Learning",
             "description": "Tailor-made content adapts to your learning style, pace, and preferences.",
-            "imgSrc": "/public/svg/user.svg",
+            "imgSrc": "/svg/user.svg",
             "imgAlt": "Personalized Learning"
         },
         {
             "title": "Engaging Experiences",
             "description": "Dynamic virtual environments foster deeper understanding and engagement.",
-            "imgSrc": "/public/svg/rocket-launch.svg",
+            "imgSrc": "/svg/rocket-launch.svg",
             "imgAlt": "Engaging Experiences"
         },
         {
             "title": "Flexible Accessibility",
             "description": "Access learning anytime, anywhere, breaking geographical barriers.",
-            "imgSrc": "/public/svg/alarm-clock.svg",
+            "imgSrc": "/svg/alarm-clock.svg",
             "imgAlt": "Flexible Accessibility"
         }
     ],
@@ -30,25 +29,25 @@
         {
             "title": "Visual",
             "description": "Visual learners prefer diagrams, videos, and infographics.",
-            "imgSrc": "/public/learners/scholarships.jpg",
+            "imgSrc": "/learners/scholarships.jpg",
             "imgAlt": "Visual Learning"
         },
         {
             "title": "Audial",
             "description": "Auditory learners thrive on lectures and discussions.",
-            "imgSrc": "/public/learners/academiccalendar.jpg",
+            "imgSrc": "/learners/academiccalendar.jpg",
             "imgAlt": "Audial Learning"
         },
         {
             "title": "Reading & Writing",
             "description": "Reading/Writing learners excel with textbooks and note-taking.",
-            "imgSrc": "/public/learners/studentsupport.jpg",
+            "imgSrc": "/learners/studentsupport.jpg",
             "imgAlt": "Reading & Writing Learning"
         },
         {
             "title": "Kinesthetic",
             "description": "Kinesthetic learners excel with hands-on activities.",
-            "imgSrc": "/public/learners/studentorg.jpg",
+            "imgSrc": "/learners/studentorg.jpg",
             "imgAlt": "Kinesthetic Learning"
         }
     ]
