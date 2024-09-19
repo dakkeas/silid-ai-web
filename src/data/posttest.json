@@ -81,7 +81,7 @@
                 }
             ],
             "correct": "b",
-            "image": "/public/questions/q3.png",
+            "image": "/questions/q3.png",
             "difficulty": ""
         },
         {
@@ -137,7 +137,7 @@
                 }
             ],
             "correct": "b",
-            "image": "/public/questions/q5.png",
+            "image": "/questions/q5.png",
             "difficulty": ""
         },
         {
@@ -249,7 +249,7 @@
                 }
             ],
             "correct": "b",
-            "image": "/public/questions/q9.png",
+            "image": "/questions/q9.png",
             "difficulty": ""
         },
         {
@@ -305,7 +305,7 @@
                 }
             ],
             "correct": "b",
-            "image": "/public/questions/q11.png",
+            "image": "/questions/q11.png",
             "difficulty": ""
         },
         {
@@ -361,7 +361,7 @@
                 }
             ],
             "correct": "a",
-            "image": "/public/questions/q13.png",
+            "image": "/questions/q13.png",
             "difficulty": ""
         },
         {
@@ -389,7 +389,7 @@
                 }
             ],
             "correct": "c",
-            "image": "/public/questions/q14.png",
+            "image": "/questions/q14.png",
             "difficulty": ""
         },
         {

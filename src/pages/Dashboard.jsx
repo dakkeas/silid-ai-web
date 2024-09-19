@@ -258,7 +258,7 @@ const Dashboard = () => {
                 <div className={styles.profileSection}>
                     <div className={styles.profileWrapper}>
                         <div className={styles.profilePicWrapper}>
-                            <img src="/public/anonymous.jpg" alt="pfp" />
+                            <img src="/anonymous.jpg" alt="pfp" />
                         </div>
                         <div className={styles.profileTextWrapper}>
                             <h3>{isLoading ? <Loading color="lightgrey"></Loading> : `${userData.firstName} ${userData.lastName}`}</h3>
