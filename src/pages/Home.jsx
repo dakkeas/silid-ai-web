@@ -1,10 +1,11 @@
-import { useState, useContext } from 'react'
+import { useState, useContext, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Context } from '../utils/AuthContext'
 import { motion } from 'framer-motion'
 
+
 // import css
-import styles from '../css/App.module.css'
+import styles from '../css/Home.module.css'
 import '../css/global.css'
 
 // import components
@@ -23,9 +24,13 @@ function App() {
 
 
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [hasAnimated, setHasAnimated] = useState(false)
   const navigate = useNavigate()
   const { user } = useContext(Context)
+
+  // scroll references
+  const learnerCardRef = useRef(null)
+  const contactRef = useRef(null)
+
 
   const handleCloseModal = () => {
     setIsModalOpen(false)
@@ -69,12 +74,15 @@ function App() {
 
           <Header
             loginBtnFunction={handleOpenModal}
+            learnMoreRef={learnerCardRef}
+            contactsRef={contactRef}
           ></Header>
           <motion.div
             variants={fadeUp}
             initial="hidden"
             whileInView={"visible"}
             viewport={{ once: true }}
+
           >
             <HeroText></HeroText>
           </motion.div>
@@ -98,7 +106,9 @@ function App() {
       </div>
 
 
-      <div className={styles.learnersSection}>
+      <div
+        ref={learnerCardRef}
+        className={styles.learnersSection}>
         <div className={styles.maxContentWidth}>
 
           <SectionBreak
@@ -139,6 +149,7 @@ function App() {
             initial="hidden"
             whileInView={"visible"}
             viewport={{ once: true }}
+            className={styles.informationBlockContainer}
           >
             {staticData.informationBlockData.map((block, index) => (
               <InformationBlock
@@ -152,7 +163,9 @@ function App() {
         </div>
       </div>
 
-      <div className={styles.aboutSection}>
+      <div
+        ref={contactRef}
+        className={styles.aboutSection}>
         <div className={styles.maxContentWidth}>
           <SectionBreak
             title={'About Us'}

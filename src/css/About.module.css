@@ -61,3 +61,11 @@
     font-size: 1em;
     color: #666;
 }
+
+
+@media (max-width: 600px) {
+    .profiles {
+        flex-direction: column;
+    }
+
+}

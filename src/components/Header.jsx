@@ -1,5 +1,5 @@
 
-import { React, useState } from 'react'
+import { React, useRef } from 'react'
 
 // import styles 
 import styles from '../css/Header.module.css'
@@ -10,8 +10,11 @@ import { useNavigate } from 'react-router-dom'
 
 
 
-const Header = ({ loginBtnFunction }) => {
+const Header = ({ loginBtnFunction, learnMoreRef, contactsRef }) => {
 
+    const scrollToSection = (ref) => {
+        ref.current.scrollIntoView({ behavior: 'smooth' })
+    }
     return (
         <>
             <header className={styles.headerWrapper}>
@@ -23,10 +26,14 @@ const Header = ({ loginBtnFunction }) => {
                     <nav>
                         <ul className={styles.listWrapper}>
                             <li>
-                                <a>Learn More</a>
+                                <a
+                                    onClick={() => scrollToSection(learnMoreRef)}
+                                >Learn More</a>
                             </li>
                             <li>
-                                <a>Contact</a>
+                                <a
+                                    onClick={() => scrollToSection(contactsRef)}
+                                >Contact</a>
                             </li>
                             <CustomButton
                                 textContent={'Login'}

@@ -151,13 +151,27 @@ const SignUp = () => {
             <motion.div
                 variants={fadeUp}
                 initial="hidden"
-                animate={"visible"}
+                animate="visible"
                 className={styles.mainContainer}>
                 <div className={styles.heroImageContainer}>
-                    <div className={styles.heroTextWrapper}>
+                    <motion.div
+                        variants={fadeUp}
+                        initial="hidden"
+                        animate={{
+                            scale: 1,
+                            opacity: 1,
+                            y: 0,
+                            transition: {
+                                duration: 1,
+                                type: "easeInOut",
+                                once: true,
+                                delay: 0.5,
+                            },
+                        }}
+                        className={styles.heroTextWrapper}>
                         <h2>Start your VR journey today.</h2>
                         <p>Embark on an immersive VR learning experience today.</p>
-                    </div>
+                    </motion.div>
                     <img src={placeholder} alt="" />
                 </div>
                 <div className={styles.signUpContainer}>

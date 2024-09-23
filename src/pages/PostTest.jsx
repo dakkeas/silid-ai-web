@@ -94,14 +94,9 @@ const PostTest = () => {
     }
 
     return (
-        <div style={{
-            height: '100%',
-            backgroundColor: 'whitesmoke',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: "center"
-        }}>
+        <>
             <NoAnswersModal
+
                 isOpen={isNoAnswersModalOpen}
                 onClose={() => setIsNoAnswersModalOpen(false)}
             ></NoAnswersModal>
@@ -121,7 +116,7 @@ const PostTest = () => {
                 isLoading={isLoading}
             // submitHandler
             ></Test>
-        </div>
+        </>
 
     );
 };

@@ -64,7 +64,7 @@ const Vark = () => {
         kinesthetic: 0,
         visual: 0,
     }
-    
+
     const writeAnswers = () => {
         Object.entries(userAnswers).forEach(([key, value]) => {
             console.log('user ans: ', value)
@@ -124,13 +124,7 @@ const Vark = () => {
 
 
     return (
-        <div style={{
-            height: '100%',
-            backgroundColor: 'whitesmoke',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
-        }}>
+        <>
             <NoAnswersModal
                 isOpen={isNoAnswersModalOpen}
                 onClose={() => setIsNoAnswersModalOpen(false)}
@@ -150,7 +144,7 @@ const Vark = () => {
                 handleSubmit={handleSubmit}
                 isLoading={isLoading}
             />
-        </div>
+        </>
     );
 }
 

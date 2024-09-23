@@ -14,35 +14,6 @@ import { motion } from 'framer-motion';
 
 
 
-const availableTests = [
-    {
-        logo: "https://example.com/pretest-logo.png",
-        nodeName: "pretest",
-        taskName: "Pre Test",
-        status: "",
-        result: "--",
-        learners: ['adaptive', 'traditional']
-    },
-    {
-        logo: "https://example.com/posttest-logo.png",
-        nodeName: "posttest",
-        taskName: "Post Test",
-        status: "",
-        result: "--",
-        learners: ['adaptive', 'traditional']
-
-    },
-    {
-        logo: "https://example.com/vark-logo.png",
-        taskName: "VARK Questionnaire",
-        nodeName: "vark",
-        status: "In Progress",
-        result: "N/A",
-        learners: ['adaptive']
-    }
-];
-
-
 
 const Dashboard = () => {
 
@@ -56,20 +27,20 @@ const Dashboard = () => {
         {
             taskName: "Pre Test",
             status: "",
-            result: "--",
+            result: "",
             learners: ['adaptive', 'traditional']
         },
         {
             taskName: "Post Test",
             status: "",
-            result: "--",
+            result: "",
             learners: ['adaptive', 'traditional']
 
         },
         {
             taskName: "VARK Questionnaire",
             status: "",
-            result: "--",
+            result: "",
             learners: ['adaptive',]
         }
     ])
@@ -203,7 +174,7 @@ const Dashboard = () => {
                 <div className={styles.sidebar}>
                     <p>Pailon VR</p>
 
-                    <ul>
+                    <ul className={styles.topNav}>
                         <li>
                             <House color={'grey'} size={24}></House>
                             <a href="#reports">Home</a>
@@ -242,7 +213,7 @@ const Dashboard = () => {
                             <p>Track all of your progress with Pailon VR here.</p>
                         </div>
 
-                        <div style={{ display: 'flex', flexDirection: "row" }} className={styles.dateWrapper}>
+                        <div className={styles.dateWrapper}>
                             <p>{isLoading ? <Loading color="lightgrey"></Loading> : currentDate}</p>
                             <div className={styles.logoWrapper}>
                                 <Calendar color={'#e06156'} size={24}></Calendar>

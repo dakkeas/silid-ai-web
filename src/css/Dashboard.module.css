@@ -34,7 +34,7 @@
   border-right: 3px solid rgb(247, 245, 245);
   color: white;
   padding: 30px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); */
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
   display: flex;
@@ -110,8 +110,7 @@
 .mainContent {
   flex-grow: 1;
   padding: 30px;
-  border-bottom-right-radius: 15px;
-  border-top-right-radius: 15px;
+  border-radius: 15px;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -124,6 +123,7 @@
 }
 
 .dateWrapper {
+  display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 10px;
@@ -172,13 +172,16 @@
 .profileSection {
   border-left: 3px solid rgb(247, 245, 245);
   padding: 30px;
-  width: 300px;
+  max-width: 300px;
+  display: flex;
+  justify-self: center;
+  align-items: flex-start;
 }
 
 .profileWrapper {
   background-color: rgb(233, 233, 233);
   border-radius: 8px;
-  flex: 1;
+  /* flex: 1; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -200,3 +203,63 @@
   text-align: center;
 }
 
+@media (max-width: 600px) {
+
+  .mainContainer {
+    height: 100%;
+    background-color: white;
+  }
+
+  .dashboardContainer {
+    box-shadow: none;
+    flex-direction: column;
+    height: 100%;
+
+  }
+
+  .sidebar {
+    border: none;
+    order: 3;
+    padding: 0px 0px 30px 0px;
+  }
+
+  .sidebar p {
+    display: none;
+  }
+
+  .topNav {
+    /* display: none; */
+  }
+
+  .mainContent {
+    padding: 30px 0px 30px 0px;
+    /* border: none; */
+  }
+
+  .profileSection {
+    border: none;
+    /* max-width: 200px; */
+    /* width: 100%; */
+    max-width: 100%;
+    /* width: 1000px; */
+    justify-content: center;
+    align-items: center;
+    /* padding: 60px; */
+    /* margin-left: 30px; */
+    /* margin-right: 30px; */
+
+    border-top: 3px solid rgb(247, 245, 245);
+  }
+
+  .mainContentGreet {
+    column-gap: 20px;
+  }
+
+
+  .dateWrapper {
+    display: none;
+  }
+
+
+
+}

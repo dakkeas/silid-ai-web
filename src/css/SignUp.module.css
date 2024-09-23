@@ -177,8 +177,7 @@
 }
 
 .errorLog,
-.errorLogLastName
- {
+.errorLogLastName {
     color: red;
     font-weight: 500;
     position: absolute;
@@ -186,8 +185,37 @@
     top: 63px;
     left: 5px;
 }
+
 .errorLogLastName {
 
     top: 63px;
     left: 195px;
+}
+
+
+@media (max-width: 600px) {
+    .background {
+        background-color: white;
+    }
+
+    .mainContainer {
+        flex-direction: column;
+        border-radius: 0px;
+        box-shadow: none;
+        height: 100%;
+    }
+
+    .heroImageContainer {
+        border-radius: 0px;
+        flex-direction: column;
+    }
+
+    .heroImageContainer img {
+        border-radius: 0px;
+    }
+
+    .heroTextWrapper {
+        left: 30px;
+        /* top: 150px; */
+    }
 }

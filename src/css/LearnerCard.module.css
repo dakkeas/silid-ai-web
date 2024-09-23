@@ -1,7 +1,8 @@
 .card {
     color: black;
     overflow: hidden;
-    width: 300px;
+    min-width: 300px;
+
 }
 
 .imageWrapper {

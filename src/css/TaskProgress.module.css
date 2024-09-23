@@ -15,12 +15,12 @@
   transform: translateY(-2px);
 }
 
-
 .taskProgressContainer h3 {
   color: black;
   font-weight: 500;
   font-size: 15px;
 }
+
 
 .taskNameWrapper,
 .taskStatusWrapper,
@@ -28,6 +28,16 @@
   flex: 1;
   display: flex;
   /* border: 1px solid red; */
+}
+
+.taskNameWrapper {
+  min-width: 200px;
+  overflow-y: hidden;
+}
+
+.taskDetailsWrapper {
+  display: flex;
+  flex-direction: row;
 }
 
 
@@ -62,4 +72,16 @@
   border-radius: 50%;
   background-color: grey;
   margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  .taskDetailsWrapper {
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .taskNameWrapper {
+    width: auto;
+  }
+
+
 }

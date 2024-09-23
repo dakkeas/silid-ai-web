@@ -14,14 +14,19 @@ const TaskProgress = ({ id, taskName, status, result, taskRoute, isDisabled }) =
                     <BookOpen color={'#e06156'} size={24}></BookOpen>
                 </div>
             </div>
-            <div className={styles.taskNameWrapper}>
-                <h3>{taskName}</h3>
-            </div>
-            <div className={styles.taskStatusWrapper}>
-                <div style={{ backgroundColor: indicatorColor.bg }} className={styles.taskStatusBackground}>
-                    <div style={{ backgroundColor: indicatorColor.color }} className={styles.indicator}></div>
-                    <h3 >{status}</h3>
+            <div
+            className={styles.taskDetailsWrapper}
+            >
+                <div className={styles.taskNameWrapper}>
+                    <h3>{taskName}</h3>
                 </div>
+                <div className={styles.taskStatusWrapper}>
+                    <div style={{ backgroundColor: indicatorColor.bg }} className={styles.taskStatusBackground}>
+                        <div style={{ backgroundColor: indicatorColor.color }} className={styles.indicator}></div>
+                        <h3 >{status}</h3>
+                    </div>
+                </div>
+
             </div>
             <div className={styles.taskResultWrapper}>
                 <h3>{result}</h3>

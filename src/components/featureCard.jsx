@@ -23,23 +23,21 @@ const FeatureCard = ({ feature, id }) => {
 
 
     return (
-        <>
 
-            <motiondiv 
+        <div
             className={styles.card}>
-                <div className={styles.contentWrapper}>
+            <div className={styles.contentWrapper}>
 
-                    <div className={styles.logoWrapper}>
-                        <img src={imgSrc} alt={title} />
-                    </div>
-                    <div className={styles.textWrapper}>
-                        <p className={styles.title} style={{ color: textColor }}>{title}</p>
-                        <p className={styles.description}>{description}</p>
-                    </div>
-
+                <div className={styles.logoWrapper}>
+                    <img src={imgSrc} alt={title} />
                 </div>
-            </motiondiv>
-        </>
+                <div className={styles.textWrapper}>
+                    <p className={styles.title} style={{ color: textColor }}>{title}</p>
+                    <p className={styles.description}>{description}</p>
+                </div>
+
+            </div>
+        </div>
     )
 }
 

@@ -5,7 +5,7 @@ import { ref, onValue, getDatabase, set } from "firebase/database";
 import { writePreTestResults } from '../utils/firebase';
 import { Context } from '../utils/AuthContext';
 import { useNavigate, Navigate } from 'react-router-dom'
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 import ConfirmModal from '../components/ConfirmModal';
 import NoAnswersModal from '../components/NoAnswersModal';
 
@@ -97,13 +97,7 @@ const PreTest = () => {
 
     return (
 
-        <div style={{
-            height: '100%',
-            backgroundColor: 'whitesmoke',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: "center"
-        }}>
+        <>
             <NoAnswersModal
                 isOpen={isNoAnswersModalOpen}
                 onClose={() => setIsNoAnswersModalOpen(false)}
@@ -112,7 +106,7 @@ const PreTest = () => {
                 isOpen={isConfirmModalOpen}
                 onClose={() => setIsConfirmModalOpen(false)}
                 onConfirm={writeAnswers}
-                
+
             ></ConfirmModal>
             <Test
                 data={data}
@@ -123,8 +117,8 @@ const PreTest = () => {
                 handleSubmit={handleSubmit}
                 isLoading={isLoading}
             ></Test>
-        </div>
 
+        </>
     );
 };
 
