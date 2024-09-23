@@ -5,6 +5,7 @@ import CustomButton from '../components/CustomButton'
 import { signUpNewUser } from "../utils/firebase"
 import Loading from '../components/Loading'
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion'
 
 
 const SignUp = () => {
@@ -124,11 +125,34 @@ const SignUp = () => {
             console.log('there is an error!')
         }
     }
+    const fadeUp = {
+        hidden: {
+            scale: 0.9,
+            opacity: 0,
+            y: 50,
+
+        },
+        visible: {
+            scale: 1,
+            opacity: 1,
+            y: 0,
+
+            transition: {
+                duration: 1,
+                type: "easeInOut",
+                once: true
+            },
+        },
+    }
 
     return (
 
         <div className={styles.background}>
-            <div className={styles.mainContainer}>
+            <motion.div
+                variants={fadeUp}
+                initial="hidden"
+                animate={"visible"}
+                className={styles.mainContainer}>
                 <div className={styles.heroImageContainer}>
                     <div className={styles.heroTextWrapper}>
                         <h2>Start your VR journey today.</h2>
@@ -253,7 +277,7 @@ const SignUp = () => {
                     </form>
                 </div>
 
-            </div>
+            </motion.div>
         </div>
     );
 };

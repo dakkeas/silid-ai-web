@@ -1,11 +1,11 @@
 import { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Context } from '../utils/AuthContext'
+import { motion } from 'framer-motion'
 
 // import css
 import styles from '../css/App.module.css'
 import '../css/global.css'
-
 
 // import components
 import Header from "../components/Header"
@@ -19,13 +19,11 @@ import SectionBreak from '../components/SectionBreak'
 import LoginModal from '../components/LoginModal'
 import staticData from '../data/static.json'
 
-
-
-
 function App() {
 
 
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [hasAnimated, setHasAnimated] = useState(false)
   const navigate = useNavigate()
   const { user } = useContext(Context)
 
@@ -43,7 +41,25 @@ function App() {
     }
 
   }
+  const fadeUp = {
+    hidden: {
+      scale: 0.9,
+      opacity: 0,
+      y: 20,
 
+    },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      y: 0,
+
+      transition: {
+        duration: 0.75,
+        type: "easeInOut",
+        once: true
+      },
+    },
+  }
 
   return (
     <div className={styles.background}>
@@ -54,8 +70,20 @@ function App() {
           <Header
             loginBtnFunction={handleOpenModal}
           ></Header>
-          <HeroText></HeroText>
-          <div className={styles.featureCardContainer}>
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView={"visible"}
+            viewport={{ once: true }}
+          >
+            <HeroText></HeroText>
+          </motion.div>
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView={"visible"}
+            viewport={{ once: true }}
+            className={styles.featureCardContainer}>
             {
               staticData.featureCardData.map((feature, index) => (
                 <FeatureCard
@@ -65,7 +93,7 @@ function App() {
                 ></FeatureCard>
               ))
             }
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -79,14 +107,19 @@ function App() {
           >
           </SectionBreak>
 
-          <div className={styles.learnerCardContainer}>
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView={"visible"}
+            viewport={{ once: true }}
+            className={styles.learnerCardContainer}>
             {staticData.learnerCardData.map((learner, index) => (
               <LearnerCard
                 key={index}
                 learner={learner}
               />
             ))}
-          </div>
+          </motion.div>
 
         </div>
 
@@ -101,7 +134,12 @@ function App() {
           >
           </SectionBreak>
 
-          <div>
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView={"visible"}
+            viewport={{ once: true }}
+          >
             {staticData.informationBlockData.map((block, index) => (
               <InformationBlock
                 key={index} // Added key prop
@@ -110,7 +148,7 @@ function App() {
                 imgSrc={block.imageSrc}
               />
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -121,13 +159,33 @@ function App() {
             description={'Dedicated and Striveful.'}
           >
           </SectionBreak>
-          <About></About>
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView={"visible"}
+            viewport={{ once: true }}
+          >
+            <About></About>
+          </motion.div>
         </div>
       </div>
-      <LoginModal
-        isOpen={isModalOpen}
-        onClose={handleCloseModal}
-      ></LoginModal>
+      <motion.div
+        initial={{
+          scale: 0,
+        }}
+        animate={{
+          scale: 1
+        }}
+        transition={{
+          duration: 1,
+          type: 'easeInOut'
+        }}
+      >
+        <LoginModal
+          isOpen={isModalOpen}
+          onClose={handleCloseModal}
+        ></LoginModal>
+      </motion.div>
 
       <Footer></Footer>
     </div>

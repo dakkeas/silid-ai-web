@@ -3,9 +3,10 @@ import { useEffect, React, useState } from 'react'
 // import styles
 
 import '../css/global.css'
+
 import styles from '../css/FeatureCard.module.css'
 
-const FeatureCard = ({ feature, id}) => {
+const FeatureCard = ({ feature, id }) => {
 
     const { title, description, imgSrc } = feature;
     const [textColor, setTextColor] = useState('');
@@ -23,7 +24,9 @@ const FeatureCard = ({ feature, id}) => {
 
     return (
         <>
-            <div className={styles.card}>
+
+            <motiondiv 
+            className={styles.card}>
                 <div className={styles.contentWrapper}>
 
                     <div className={styles.logoWrapper}>
@@ -35,7 +38,7 @@ const FeatureCard = ({ feature, id}) => {
                     </div>
 
                 </div>
-            </div>
+            </motiondiv>
         </>
     )
 }

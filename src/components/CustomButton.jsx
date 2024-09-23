@@ -3,8 +3,8 @@ import { React, useEffect, useState } from 'react';
 // import styles
 import styles from '../css/CustomButton.module.css';
 import '../css/global.css';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { motion } from "framer-motion"
+
 
 const CustomButton = ({ textContent, type, onClick, disabled }) => {
 
@@ -27,12 +27,19 @@ const CustomButton = ({ textContent, type, onClick, disabled }) => {
 
 
     return (
-        <button
+        <motion.button
+            whileHover={{
+                scale: 1.05,
+            }}
+            transition={{
+                duration: 0.125,
+                ease: "easeInOut"
+            }}
             className={styles.button}
             onClick={onClick}
             disabled={disabled}
             style={{ backgroundColor: disabled ? 'lightgrey' : backgroundColor }}
-        >{textContent}</button>
+        >{textContent}</motion.button>
     );
 };
 

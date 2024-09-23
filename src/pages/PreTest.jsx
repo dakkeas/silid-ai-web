@@ -5,6 +5,7 @@ import { ref, onValue, getDatabase, set } from "firebase/database";
 import { writePreTestResults } from '../utils/firebase';
 import { Context } from '../utils/AuthContext';
 import { useNavigate, Navigate } from 'react-router-dom'
+import {motion} from 'framer-motion'
 import ConfirmModal from '../components/ConfirmModal';
 import NoAnswersModal from '../components/NoAnswersModal';
 
@@ -90,6 +91,9 @@ const PreTest = () => {
         // if test completed, return to dashboard
         return <Navigate to='/dashboard' />
     }
+
+
+
 
     return (
 

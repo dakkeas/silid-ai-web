@@ -10,6 +10,7 @@ import { signOutUser, checkAuthState } from '../utils/firebase';
 import Loading from '../components/Loading';
 import { Context } from '../utils/AuthContext'
 import ConfirmModal from '../components/ConfirmModal';
+import { motion } from 'framer-motion';
 
 
 
@@ -157,11 +158,32 @@ const Dashboard = () => {
     const confirmLogOut = () => {
         setIsConfirmModalOpen(true)
     }
+    const fadeUp = {
+        hidden: {
+            scale: 1,
+            opacity: 0,
+            y: 25,
+
+        },
+        visible: {
+            scale: 1,
+            opacity: 1,
+            y: 0,
+
+            transition: {
+                duration: 0.75,
+                type: "easeInOut",
+                once: true
+            },
+        },
+    }
+
 
     return (
 
 
         <div className={styles.mainContainer}>
+
             <ConfirmModal
                 isOpen={isConfirmModalOpen}
                 onClose={() => setIsConfirmModalOpen(false)}
@@ -173,7 +195,11 @@ const Dashboard = () => {
 
             ></ConfirmModal>
 
-            <div className={styles.dashboardContainer}>
+            <motion.div
+                variants={fadeUp}
+                initial="hidden"
+                animate="visible"
+                className={styles.dashboardContainer}>
                 <div className={styles.sidebar}>
                     <p>Pailon VR</p>
 
@@ -267,11 +293,10 @@ const Dashboard = () => {
                     </div>
 
                     <div className={styles.profileInformationContainer}>
-
                     </div>
                 </div>
 
-            </div>
+            </motion.div>
         </div>
     );
 };

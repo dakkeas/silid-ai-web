@@ -3,6 +3,7 @@ import styles from '../css/Test.module.css';
 import CustomButton from '../components/CustomButton'
 import { HandPlatter } from 'lucide-react';
 import { set } from 'firebase/database';
+import { motion } from "framer-motion"
 import Loading from '../components/Loading';
 
 
@@ -52,9 +53,32 @@ const Test = ({
 
         }
     };
+    const fadeUp = {
+        hidden: {
+            scale: 1,
+            opacity: 0,
+            y: 25,
+
+        },
+        visible: {
+            scale: 1,
+            opacity: 1,
+            y: 0,
+
+            transition: {
+                duration: 0.75,
+                type: "easeInOut",
+                once: true
+            },
+        },
+    }
 
     return (
-        <div className={styles.mainContainer}>
+        <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            className={styles.mainContainer}>
 
             <div className={styles.card}>
                 <div className={styles.header}>
@@ -74,7 +98,7 @@ const Test = ({
 
                                             <div key={choice.id} className={styles.choiceWrapper}>
                                                 <input
-                                                
+
                                                     type={inputType}
                                                     value={choice.value}
                                                     name={`${item.question} - ${item.id}`}
@@ -103,7 +127,7 @@ const Test = ({
                     </form>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

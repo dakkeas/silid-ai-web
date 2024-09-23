@@ -16,16 +16,19 @@ const HeroText = () => {
 
     return (
         <>
-            <div className={styles.heroTextWrapper}>
-                <h2 className={styles.title}>Unlocking Potential with Adaptive VR Learning</h2>
-                <p className={styles.description}>Welcome to the future of learning! Step into a world where education knows no bounds. <br></br>
-                    Explore immersive experiences,
-                    personalized just for you, with cutting-edge Adaptive VR Learning.</p>
-                <CustomButton
-                    textContent={'Get Started'}
-                    onClick={() => navigate('/signup')}
-                ></CustomButton>
+            <div>
+                <div className={styles.heroTextWrapper}>
+                    <h2 className={styles.title}>Unlocking Potential with Adaptive VR Learning</h2>
+                    <p className={styles.description}>Welcome to the future of learning! Step into a world where education knows no bounds. <br></br>
+                        Explore immersive experiences,
+                        personalized just for you, with cutting-edge Adaptive VR Learning.</p>
 
+                    <CustomButton
+                        textContent={'Get Started'}
+                        onClick={() => navigate('/signup')}
+                    ></CustomButton>
+
+                </div>
             </div>
         </>
 

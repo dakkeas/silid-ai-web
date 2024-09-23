@@ -1,7 +1,9 @@
-import React, { useState, useEffect, useContext} from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import styles from '../css/LoginModal.module.css';
 import CustomButton from "../components/CustomButton";
 import Loading from '../components/Loading'
+import Backdrop from '../components/Backdrop';
+import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom';
 import { signInNewUser } from '../utils/firebase';
 
@@ -32,7 +34,7 @@ const LoginModal = ({ isOpen, onClose }) => {
         setIsLoading(boolean)
     }
 
-    const handleFormErrors = (name,value) => {
+    const handleFormErrors = (name, value) => {
         setFormErrors({
             ...formErrors,
             [name]: value
@@ -103,14 +105,39 @@ const LoginModal = ({ isOpen, onClose }) => {
         }
     }
 
-
+    const fadeIn = {
+        hidden: {
+            opacity: 0,
+            scale: 0.9,
+        },
+        visible: {
+            opacity: 1,
+            transition: {
+                duration: 0.5,
+                type: "easeInOut",
+            },
+        },
+        exit: {
+            opacity: 0,
+            transition: {
+                duration: 1,
+                type: "easeInOut",
+            },
+        },
+    };
 
 
     if (!isOpen) return null;
 
     return (
         <div className={styles.modalOverlay}>
-            <div className={styles.modalContent}>
+            <motion.div
+                variants={fadeIn}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+
+                className={styles.modalContent}>
                 <button className={styles.closeButton} onClick={onClose}>×</button>
                 <h2>Login</h2>
                 <p>Welcome back, user. </p>
@@ -150,7 +177,7 @@ const LoginModal = ({ isOpen, onClose }) => {
                         ></CustomButton>
                     </div>
                 </form>
-            </div>
+            </motion.div>
         </div>
     );
 };
