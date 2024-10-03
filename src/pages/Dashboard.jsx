@@ -4,7 +4,7 @@ import CustomButton from '../components/CustomButton';
 import { ref, set, onValue } from "firebase/database";
 import { getDatabase } from 'firebase/database';
 import TaskProgress from '../components/TaskProgress';
-import { House, Settings, Calendar, LogOut, Info, StickyNote } from 'lucide-react'
+import { House, Settings, Calendar, LogOut, Info, StickyNote, FileText } from 'lucide-react'
 import { useNavigate } from 'react-router-dom';
 import { signOutUser, checkAuthState } from '../utils/firebase';
 import Loading from '../components/Loading';
@@ -264,6 +264,13 @@ const Dashboard = () => {
                     </div>
 
                     <div className={styles.profileInformationContainer}>
+                    </div>
+                    <div className={styles.fileContainer}>
+                        <CustomButton
+                        textContent={"View Module"}
+                        onClick={() => navigate('/document')}
+                        ></CustomButton>
+
                     </div>
                 </div>
 

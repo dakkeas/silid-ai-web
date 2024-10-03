@@ -27,19 +27,21 @@ const CustomButton = ({ textContent, type, onClick, disabled }) => {
 
 
     return (
-        <motion.button
-            whileHover={{
-                scale: 1.05,
-            }}
-            transition={{
-                duration: 0.125,
-                ease: "easeInOut"
-            }}
-            className={styles.button}
-            onClick={onClick}
-            disabled={disabled}
-            style={{ backgroundColor: disabled ? 'lightgrey' : backgroundColor }}
-        >{textContent}</motion.button>
+        <div>
+            <motion.button
+                whileHover={{
+                    scale: 1.05,
+                }}
+                transition={{
+                    duration: 0.125,
+                    ease: "easeInOut"
+                }}
+                className={styles.button}
+                onClick={onClick}
+                disabled={disabled}
+                style={{ backgroundColor: disabled ? 'lightgrey' : backgroundColor }}
+            >{textContent}</motion.button>
+        </div>
     );
 };
 

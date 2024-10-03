@@ -12,6 +12,7 @@ import NotFound from './pages/NotFound.jsx'
 import Dashboard from './pages/Dashboard.jsx'
 import PostTest from './pages/PostTest.jsx'
 import PreTest from './pages/PreTest.jsx'
+import Document from './pages/Document.jsx'
 import Vark from './pages/Vark.jsx'
 import ProtectedRoutes from './utils/ProtectedRoutes.jsx'
 import AuthContext from './utils/AuthContext.jsx'
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
   {
     path: '/vark',
     element: <ProtectedRoutes><Vark></Vark></ProtectedRoutes>
+  },
+  {
+    path: '/document',
+    element: <ProtectedRoutes><Document></Document></ProtectedRoutes>
   }
 ])
 

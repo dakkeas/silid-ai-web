@@ -171,11 +171,13 @@
 
 .profileSection {
   border-left: 3px solid rgb(247, 245, 245);
+  row-gap: 10px;
   padding: 30px;
   max-width: 300px;
   display: flex;
   justify-self: center;
   align-items: flex-start;
+  flex-direction: column;
 }
 
 .profileWrapper {

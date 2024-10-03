@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { ref, set } from "firebase/database";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'firebase/auth';
 import { getDatabase } from 'firebase/database';
+
 const firebaseConfig = {
     apiKey: "AIzaSyCwhq2pVe0sSCZ9GdiaYW_TX3fzMBElOqE",
     authDomain: "silid-ai-939a6.firebaseapp.com",
@@ -266,7 +267,8 @@ export {
     checkAuthPermission,
     writePreTestResults,
     writePostTestResults,
-    writeVarkTestResults
+    writeVarkTestResults,
+    app
 }
 
 
